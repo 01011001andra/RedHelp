@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const Notfound = () => {
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center bg-white">
+    <div class="w-full h-screen flex flex-col items-center justify-center  bg-white">
       <img className="w-64 h-64" src="./404.gif" alt="404" />
-      <div className="flex flex-col items-center justify-center">
-        <p className="text-3xl md:text-4xl lg:text-5xl text-gray-800 mt-12">
+      <div class="flex flex-col items-center justify-center">
+        <p class="text-3xl md:text-4xl lg:text-5xl text-gray-800 mt-12">
           Page Not Found
         </p>
         <p className="md:text-lg lg:text-xl text-gray-600 mt-8">
