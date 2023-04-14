@@ -8,7 +8,7 @@ const Login = () => {
         <div className="flex flex-col justify-center w-full px-8 md:px-32 lg:px-24">
           <img src="./Logo.png" alt="Logo" className="w-64 mx-auto mb-3" />
           <form className="bg-white rounded-md shadow-2xl py-8 px-10">
-            <h1 className="text-gray-800 font-bold text-2xl mb-1">Masuk</h1>
+            <h1 className="text-gray-800 font-bold text-2xl mb-3">Masuk</h1>
             <div className="flex items-center border-2 mb-5 py-3 px-3 rounded-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +50,7 @@ const Login = () => {
                 type="password"
                 name="password"
                 id="password"
-                placeholder="Password"
+                placeholder="Kata Sandi"
               />
             </div>
             <button
