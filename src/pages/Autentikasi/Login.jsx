@@ -89,9 +89,13 @@ const Login = () => {
                   inset-0 
                   z-0"
         ></div>
-        <div className="w-full mx-auto px-20 flex-col items-center justify-center">
-          <img src="./LoginAuth.gif" alt="Login" />
-          <p className="text-center text-white">
+        <div className="w-full flex-col items-center justify-center">
+          <img
+            src="./LoginAuth.gif"
+            alt="Login"
+            className="w-96 h-96 mx-auto"
+          />
+          <p className="text-center text-white text-[32px] font-bold">
             Ayo donor darah lebih mudah <br />
             dengan RedHelp
           </p>
