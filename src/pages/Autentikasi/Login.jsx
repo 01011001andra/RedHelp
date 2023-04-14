@@ -1,18 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
     <div className="h-screen flex">
       <div className="flex w-full lg:w-1/2 justify-center items-center bg-white space-y-8">
-        <div className="w-full px-8 md:px-32 lg:px-24">
-          <form className="bg-white rounded-md shadow-2xl p-5 animate-spin">
-            <h1 className="text-gray-800 font-bold text-2xl mb-1">
-              Hello Again!
-            </h1>
-            <p className="text-sm font-normal text-gray-600 mb-8">
-              Welcome Back
-            </p>
-            <div className="flex items-center border-2 mb-8 py-2 px-3 rounded-2xl">
+        <div className="flex flex-col justify-center w-full px-8 md:px-32 lg:px-24">
+          <img src="./Logo.png" alt="Logo" className="w-64 mx-auto mb-3" />
+          <form className="bg-white rounded-md shadow-2xl py-8 px-10">
+            <h1 className="text-gray-800 font-bold text-2xl mb-3">Masuk</h1>
+            <div className="flex items-center border-2 mb-5 py-3 px-3 rounded-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5 text-gray-400"
@@ -32,10 +29,10 @@ const Login = () => {
                 className=" pl-2 w-full outline-none border-none"
                 type="email"
                 name="email"
-                placeholder="Email Address"
+                placeholder="Email"
               />
             </div>
-            <div className="flex items-center border-2 mb-12 py-2 px-3 rounded-2xl ">
+            <div className="flex items-center border-2 mb-5 py-3 px-3 rounded-md ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5 text-gray-400"
@@ -53,26 +50,35 @@ const Login = () => {
                 type="password"
                 name="password"
                 id="password"
-                placeholder="Password"
+                placeholder="Kata Sandi"
               />
             </div>
             <button
               type="submit"
-              className="block w-full bg-indigo-600 mt-5 py-2 rounded-2xl hover:bg-indigo-700 hover:-translate-y-1 transition-all duration-500 text-white font-semibold mb-2"
+              className="block w-full bg-primary mt-3 py-3 rounded-md hover:bg-red-500 hover:-translate-y-1 transition-all duration-500 text-white font-semibold mb-2"
             >
-              Login
+              Masuk
+            </button>
+            <button
+              type="button"
+              className="flex justify-center items-center gap-2 w-full bg-[#D9d9d9] mt-3 py-3 rounded-md hover:bg-gray-400 hover:-translate-y-1 transition-all duration-500 text-black font-semibold mb-2 "
+            >
+              <img src="./Google.png" alt="google" /> Masuk Dengan Akun Google
             </button>
             <div className="flex justify-between mt-4">
-              <span className="text-sm ml-2 hover:text-blue-500 cursor-pointer hover:-translate-y-1 duration-500 transition-all">
-                Forgot Password ?
-              </span>
-
-              <a
-                href="#"
+              <Link
+                to={"/lupapassword"}
                 className="text-sm ml-2 hover:text-blue-500 cursor-pointer hover:-translate-y-1 duration-500 transition-all"
               >
-                Don't have an account yet?
-              </a>
+                Lupa Password?
+              </Link>
+
+              <Link
+                to={"/register"}
+                className="text-sm ml-2 hover:text-blue-500 cursor-pointer hover:-translate-y-1 duration-500 transition-all"
+              >
+                Daftar?
+              </Link>
             </div>
           </form>
         </div>
