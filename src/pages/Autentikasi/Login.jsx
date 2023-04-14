@@ -5,7 +5,7 @@ const Login = () => {
     <div className="h-screen flex">
       <div className="flex w-full lg:w-1/2 justify-center items-center bg-white space-y-8">
         <div className="w-full px-8 md:px-32 lg:px-24">
-          <form className="bg-white rounded-md shadow-2xl p-5">
+          <form className="bg-white rounded-md shadow-2xl p-5 animate-spin">
             <h1 className="text-gray-800 font-bold text-2xl mb-1">
               Hello Again!
             </h1>
