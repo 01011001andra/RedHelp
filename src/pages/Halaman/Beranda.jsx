@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Navbar } from "../../Components";
+import { Footer, Navbar } from "../../Components";
 
 const Beranda = () => {
   const navigate = useNavigate();
@@ -13,6 +13,7 @@ const Beranda = () => {
       </button>
       <div className="h-screen"></div>
       <div className="h-screen"></div>
+      <Footer />
     </div>
   );
 };
