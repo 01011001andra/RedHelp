@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/Io";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { auth } from "../firebaseConfig";
 import { signOut } from "firebase/auth";
 import { onAuthStateChanged } from "firebase/auth";
@@ -12,7 +12,7 @@ const Navbar = () => {
   const [user, setUser] = useState(null);
   const [logOutButton, setLogOutButton] = useState(null);
   const navMenu = ["Beranda", "Jadwal", "Tentang", "Berita", "Notifikasi"];
-  const navLink = ["/", "/jadwal", "/tentang", "/berita", "/notifikasi"];
+  const navLinks = ["/", "/jadwal", "/tentang", "/berita", "/notifikasi"];
   const [bgNav, setBgNav] = useState(false);
 
   window.addEventListener("scroll", () => {
@@ -59,15 +59,19 @@ const Navbar = () => {
             <ul className="flex gap-[10px] md:gap-[20px] xl:gap-[50px] items-center">
               {navMenu.map((item, index) => {
                 return (
-                  <Link
+                  <NavLink
                     key={index}
-                    className="cursor-pointer font-thin hover:font-bold"
-                    to={navLink[index]}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "cursor-pointer font-thin hover:font-bold text-primary"
+                        : "cursor-pointer font-thin hover:font-bold"
+                    }
+                    to={navLinks[index]}
                     spy={true}
                     smooth={true}
                   >
                     {item}
-                  </Link>
+                  </NavLink>
                 );
               })}
             </ul>
@@ -141,10 +145,15 @@ const Navbar = () => {
           <ul className="flex flex-col">
             {navMenu.map((item, index) => {
               return (
-                <Link
+                <NavLink
                   key={index}
-                  className="cursor-pointer font-thin text-xl hover:font-bold border-y py-4"
-                  to={navLink[index]}
+                  // className="cursor-pointer font-thin text-xl hover:font-bold border-y py-4"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "cursor-pointer font-thin text-xl hover:font-bold border-y py-4 text-primary"
+                      : "cursor-pointer font-thin text-xl hover:font-bold border-y py-4"
+                  }
+                  to={navLinks[index]}
                   spy={true}
                   smooth={true}
                   onClick={() => {
@@ -152,7 +161,7 @@ const Navbar = () => {
                   }}
                 >
                   {item}
-                </Link>
+                </NavLink>
               );
             })}
           </ul>
