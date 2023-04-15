@@ -29,7 +29,7 @@ const Notfound = () => {
               clip-rule="evenodd"
             ></path>
           </svg>
-          <span>Return Home</span>
+          <span className="text-white">Kembali ke Beranda</span>
         </Link>
       </div>
     </div>

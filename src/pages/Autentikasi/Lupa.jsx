@@ -28,6 +28,7 @@ const Lupa = () => {
                 />
               </svg>
               <input
+                disabled={true}
                 id="email"
                 className=" pl-2 w-full outline-none border-none"
                 type="email"

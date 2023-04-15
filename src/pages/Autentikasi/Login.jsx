@@ -1,8 +1,24 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { auth } from "../../firebaseConfig";
 
 const Login = () => {
   const navigate = useNavigate();
+
+  function handleGoogleLogin() {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((res) => {
+        console.info(res.user);
+        localStorage.setItem("user", JSON.stringify(res.user));
+        navigate("/");
+      })
+      .catch((err) => {
+        return console.info(err);
+      });
+  }
+
   return (
     <div className="h-screen flex">
       <div className="flex w-full lg:w-1/2 justify-center items-center bg-white space-y-8">
@@ -26,6 +42,7 @@ const Login = () => {
                 />
               </svg>
               <input
+                disabled={true}
                 id="email"
                 className=" pl-2 w-full outline-none border-none"
                 type="email"
@@ -47,6 +64,7 @@ const Login = () => {
                 />
               </svg>
               <input
+                disabled={true}
                 className="pl-2 w-full outline-none border-none"
                 type="password"
                 name="password"
@@ -55,13 +73,14 @@ const Login = () => {
               />
             </div>
             <button
-              onClick={() => navigate("/")}
+              // onClick={() => navigate("/")}
               type="button"
               className="block w-full bg-primary mt-3 py-3 rounded-md hover:bg-red-500 hover:-translate-y-1 transition-all duration-500 text-white font-semibold mb-2"
             >
               Masuk
             </button>
             <button
+              onClick={handleGoogleLogin}
               type="button"
               className="flex justify-center text-sm  items-center gap-2 w-full bg-[#D9d9d9] mt-3 py-3 rounded-md hover:bg-gray-400 hover:-translate-y-1 transition-all duration-500 text-black font-semibold mb-2 px-4"
             >

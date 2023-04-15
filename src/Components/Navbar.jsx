@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/Io";
 import { Link, useNavigate } from "react-router-dom";
+import { auth } from "../firebaseConfig";
+import { signOut } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+  const [user, setUser] = useState(null);
+  const [logOutButton, setLogOutButton] = useState(null);
   const navMenu = ["Beranda", "Jadwal", "Tentang", "Berita", "Notifikasi"];
   const navLink = ["/", "/jadwal", "/tentang", "/berita", "/notifikasi"];
   const [bgNav, setBgNav] = useState(false);
@@ -17,6 +22,30 @@ const Navbar = () => {
       setBgNav(false);
     }
   });
+
+  function handleLogout() {
+    signOut(auth)
+      .then((res) => {
+        localStorage.clear();
+        navigate("/login");
+      })
+      .catch((err) => {
+        console.info(err);
+      });
+  }
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (result) => {
+      if (result) {
+        setLogOutButton(true);
+        return;
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    setUser(JSON.parse(localStorage.getItem("user")));
+  }, []);
   return (
     <>
       <div
@@ -44,18 +73,37 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex gap-[15px]">
-            <button
-              className="px-5 py-2 rounded-md border border-black"
-              onClick={() => navigate("/login")}
-            >
-              Masuk
-            </button>
-            <button
-              className="font-bold px-5 py-2 rounded-md bg-primary text-white"
-              onClick={() => navigate("/register")}
-            >
-              Daftar
-            </button>
+            {!logOutButton ? (
+              <>
+                <button
+                  className="px-5 py-2 rounded-md border border-black"
+                  onClick={() => navigate("/login")}
+                >
+                  Masuk
+                </button>
+                <button
+                  className="font-bold px-5 py-2 rounded-md bg-primary text-white"
+                  onClick={() => navigate("/register")}
+                >
+                  Daftar
+                </button>
+              </>
+            ) : (
+              <div className="flex items-center gap-6">
+                <div className="avatar flex items-center ">
+                  <div className="w-12 rounded-full">
+                    <img src={user?.photoURL} />
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleLogout}
+                  className="font-bold px-5 py-2 rounded-md bg-primary text-white"
+                >
+                  Logout
+                </button>
+              </div>
+            )}
           </div>
         </nav>
         <nav className="w-full h-full sm:hidden">
@@ -109,18 +157,37 @@ const Navbar = () => {
             })}
           </ul>
           <div className="flex gap-[15px] justify-between">
-            <button
-              className="px-5 py-2 rounded-md border border-black"
-              onClick={() => navigate("/login")}
-            >
-              Masuk
-            </button>
-            <button
-              className="font-bold px-5 py-2 rounded-md bg-primary text-white"
-              onClick={() => navigate("/register")}
-            >
-              Daftar
-            </button>
+            {!logOutButton ? (
+              <>
+                <button
+                  className="px-5 py-2 rounded-md border border-black"
+                  onClick={() => navigate("/login")}
+                >
+                  Masuk
+                </button>
+                <button
+                  className="font-bold px-5 py-2 rounded-md bg-primary text-white"
+                  onClick={() => navigate("/register")}
+                >
+                  Daftar
+                </button>
+              </>
+            ) : (
+              <div className="flex items-center gap-6 w-full">
+                <div className="avatar flex items-center ">
+                  <div className="w-12 rounded-full">
+                    <img src={user?.photoURL} />
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleLogout}
+                  className="font-bold px-5 py-2 rounded-md bg-primary text-white w-full"
+                >
+                  Logout
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
