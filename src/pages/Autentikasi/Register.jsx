@@ -1,8 +1,23 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { auth } from "../../firebaseConfig";
 
 const Register = () => {
   const navigate = useNavigate();
+
+  function handleGoogleRegister() {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((res) => {
+        console.info(res.user);
+        localStorage.setItem("user", JSON.stringify(res.user));
+        navigate("/");
+      })
+      .catch((err) => {
+        return console.info(err);
+      });
+  }
 
   return (
     <div className="h-screen flex">
@@ -19,6 +34,7 @@ const Register = () => {
                   <path d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z" />
                 </svg>
                 <input
+                  disabled={true}
                   id="depan"
                   className=" pl-2 w-full outline-none border-none"
                   type="depan"
@@ -31,6 +47,7 @@ const Register = () => {
                   <path d="M20.822 18.096c-3.439-.794-6.64-1.49-5.09-4.418 4.72-8.912 1.251-13.678-3.732-13.678-5.082 0-8.464 4.949-3.732 13.678 1.597 2.945-1.725 3.641-5.09 4.418-3.073.71-3.188 2.236-3.178 4.904l.004 1h23.99l.004-.969c.012-2.688-.092-4.222-3.176-4.935z" />
                 </svg>
                 <input
+                  disabled={true}
                   id="belakang"
                   className=" pl-2 w-full outline-none border-none"
                   type="belakang"
@@ -55,6 +72,7 @@ const Register = () => {
                 />
               </svg>
               <input
+                disabled={true}
                 id="email"
                 className=" pl-2 w-full outline-none border-none"
                 type="email"
@@ -76,6 +94,7 @@ const Register = () => {
                 />
               </svg>
               <input
+                disabled={true}
                 className="pl-2 w-full outline-none border-none"
                 type="password"
                 name="password"
@@ -97,6 +116,7 @@ const Register = () => {
                 />
               </svg>
               <input
+                disabled={true}
                 className="pl-2 w-full outline-none border-none"
                 type="password"
                 name="password"
@@ -105,17 +125,19 @@ const Register = () => {
               />
             </div>
             <button
-              onClick={() => navigate("/")}
-              type="submit"
+              disabled
+              // onClick={() => navigate("/")}
+              type="button"
               className="block w-full bg-primary mt-3 py-3 rounded-md hover:bg-red-500 hover:-translate-y-1 transition-all duration-500 text-white font-semibold mb-2"
             >
               Daftar
             </button>
             <button
+              onClick={handleGoogleRegister}
               type="button"
               className="flex justify-center text-sm  items-center gap-2 w-full bg-[#D9d9d9] mt-3 py-3 rounded-md hover:bg-gray-400 hover:-translate-y-1 transition-all duration-500 text-black font-semibold mb-2 px-4"
             >
-              <img src="./Google.png" alt="google" /> Masuk Dengan Akun Google
+              <img src="./Google.png" alt="google" /> Daftar Dengan Akun Google
             </button>
             <div className="flex justify-end mt-4">
               <Link
