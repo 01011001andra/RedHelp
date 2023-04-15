@@ -1,13 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <div className="h-screen flex">
       <div className="flex w-full lg:w-1/2 justify-center items-center bg-white space-y-8">
-        <div className="flex flex-col justify-center w-full px-8 md:px-32 lg:px-24">
+        <div className="flex flex-col justify-center w-full px-3 md:px-32 lg:px-24">
           <img src="./Logo.png" alt="Logo" className="w-64 mx-auto mb-3" />
-          <form className="bg-white rounded-md shadow-2xl py-8 px-10">
+          <form className="bg-white rounded-md shadow-2xl py-8 px-6">
             <h1 className="text-gray-800 font-bold text-2xl mb-3">Masuk</h1>
             <div className="flex items-center border-2 mb-5 py-3 px-3 rounded-md">
               <svg
@@ -54,14 +55,15 @@ const Login = () => {
               />
             </div>
             <button
-              type="submit"
+              onClick={() => navigate("/")}
+              type="button"
               className="block w-full bg-primary mt-3 py-3 rounded-md hover:bg-red-500 hover:-translate-y-1 transition-all duration-500 text-white font-semibold mb-2"
             >
               Masuk
             </button>
             <button
               type="button"
-              className="flex justify-center items-center gap-2 w-full bg-[#D9d9d9] mt-3 py-3 rounded-md hover:bg-gray-400 hover:-translate-y-1 transition-all duration-500 text-black font-semibold mb-2 "
+              className="flex justify-center text-sm  items-center gap-2 w-full bg-[#D9d9d9] mt-3 py-3 rounded-md hover:bg-gray-400 hover:-translate-y-1 transition-all duration-500 text-black font-semibold mb-2 px-4"
             >
               <img src="./Google.png" alt="google" /> Masuk Dengan Akun Google
             </button>

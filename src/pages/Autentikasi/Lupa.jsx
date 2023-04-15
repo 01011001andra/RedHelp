@@ -6,9 +6,9 @@ const Lupa = () => {
   return (
     <div className="h-screen flex">
       <div className="flex w-full lg:w-1/2 justify-center items-center bg-white space-y-8">
-        <div className="flex flex-col justify-center w-full px-8 md:px-32 lg:px-24">
+        <div className="flex flex-col justify-center w-full px-3 md:px-32 lg:px-24">
           <img src="./Logo.png" alt="Logo" className="w-64 mx-auto mb-3" />
-          <form className="bg-white rounded-md shadow-2xl py-8 px-10">
+          <form className="bg-white rounded-md shadow-2xl py-8 px-6">
             <h1 className="text-gray-800 font-bold text-2xl mb-3">
               Lupa Kata Sandi
             </h1>

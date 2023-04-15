@@ -5,5 +5,5 @@
 @tailwind utilities;
 
 * {
-  @apply font-poppins;
+  @apply font-poppins text-black;
 }
