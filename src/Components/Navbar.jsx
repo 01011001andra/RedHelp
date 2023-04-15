@@ -55,7 +55,7 @@ const Navbar = () => {
       >
         <nav className="w-full hidden xl:max-w-6xl mx-auto sm:flex justify-between items-center px-6 xl:px-0">
           <div className="flex gap-[85px]">
-            <img src="./Logo.png" alt="logo" className="w-52" />
+            <img src="./Logo.png" alt="logo" className="w-52 select-none" />
             <ul className="flex gap-[50px] items-center">
               {navMenu.map((item, index) => {
                 return (
@@ -128,7 +128,7 @@ const Navbar = () => {
       >
         <div className="w-full flex flex-col max-w-sm mx-auto px-3 gap-10 ">
           <div className="w-full flex justify-between items-center">
-            <img src="./Logo.png" alt="logo" className="w-52" />
+            <img src="./Logo.png" alt="logo" className="w-52 select-none" />
             <div
               className="cursor-pointer"
               onClick={() => {
