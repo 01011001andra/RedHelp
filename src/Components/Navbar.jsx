@@ -63,8 +63,8 @@ const Navbar = () => {
                     key={index}
                     className={({ isActive }) =>
                       isActive
-                        ? "cursor-pointer font-thin hover:font-bold text-primary"
-                        : "cursor-pointer font-thin hover:font-bold"
+                        ? "cursor-pointer font-thin hover:font-bold py-2 text-primary"
+                        : "cursor-pointer font-thin hover:border-b py-2 hover:border-primary transition-all duration-300"
                     }
                     to={navLinks[index]}
                     spy={true}
@@ -80,13 +80,13 @@ const Navbar = () => {
             {!logOutButton ? (
               <>
                 <button
-                  className="px-5 py-2 rounded-md border border-black"
+                  className="px-5 py-2 rounded-md border border-black hover:bg-black hover:text-white"
                   onClick={() => navigate("/login")}
                 >
                   Masuk
                 </button>
                 <button
-                  className="font-bold px-5 py-2 rounded-md bg-primary text-white"
+                  className="font-bold px-5 py-2 rounded-md bg-primary text-white hover:bg-black hover:text-white "
                   onClick={() => navigate("/register")}
                 >
                   Daftar
