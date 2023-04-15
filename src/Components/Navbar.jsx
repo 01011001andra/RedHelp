@@ -7,7 +7,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const navMenu = ["Beranda", "Jadwal", "Tentang", "Berita", "Notifikasi"];
-  const navLink = ["/", "/jadwal", "/tentang", "/berita", "/Notifikasi"];
+  const navLink = ["/", "/jadwal", "/tentang", "/berita", "/notifikasi"];
   const [bgNav, setBgNav] = useState(false);
 
   window.addEventListener("scroll", () => {
@@ -59,7 +59,7 @@ const Navbar = () => {
           </div>
         </nav>
         <nav className="w-full h-full sm:hidden">
-          <div className="w-full h-full max-w-xl flex items-center justify-between px-6">
+          <div className="w-full h-full max-w-xl flex items-center justify-between px-3 md:px-6">
             <img src="./Logo.png" alt="logo" className="w-40" />
 
             <div
@@ -96,7 +96,7 @@ const Navbar = () => {
                 <Link
                   key={index}
                   className="cursor-pointer font-thin text-xl hover:font-bold border-y py-4"
-                  to={item}
+                  to={navLink[index]}
                   spy={true}
                   smooth={true}
                   onClick={() => {
@@ -108,6 +108,20 @@ const Navbar = () => {
               );
             })}
           </ul>
+          <div className="flex gap-[15px] justify-between">
+            <button
+              className="px-5 py-2 rounded-md border border-black"
+              onClick={() => navigate("/login")}
+            >
+              Masuk
+            </button>
+            <button
+              className="font-bold px-5 py-2 rounded-md bg-primary text-white"
+              onClick={() => navigate("/register")}
+            >
+              Daftar
+            </button>
+          </div>
         </div>
       </div>
     </>
