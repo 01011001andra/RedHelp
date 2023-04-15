@@ -16,7 +16,8 @@ const Beranda = () => {
       <Navbar />
       <div className="hero min-h-screen bg-primary">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <img src="./Blood.png" className="" />
+          <img src="./Blood.png" />
+
           <div>
             <TypeAnimation
               sequence={["RedHelp", 2000, "We Help Everyone", 4000]}
