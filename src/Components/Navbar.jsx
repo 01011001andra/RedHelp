@@ -49,7 +49,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`w-full h-28 flex items-center sticky top-0 left-0 transition-all duration-500  ${
+        className={`w-full h-28 flex items-center fixed top-0 left-0 transition-all duration-500  ${
           bgNav ? "bg-slate-100/40" : "bg-white"
         }`}
       >
