@@ -32,7 +32,7 @@ const BerandaCrousel = () => {
     <div className="w-full flex flex-col xl:flex-row justify-between hero-content">
       <div className="w-3/6">
         <AnimationOnScroll duration={2} animateIn="animate__fadeInDown">
-          <p className="font-bold text-4xl text-center">
+          <p className="font-bold text-2xl md:text-3xl text-center">
             Ayo mengenal donor darah!!
           </p>
         </AnimationOnScroll>
@@ -49,8 +49,8 @@ const BerandaCrousel = () => {
             <SplideSlide key={index} className="md:px-6">
               <AnimationOnScroll duration={2} animateIn="animate__fadeInDown">
                 <div className="flex items-center justify-center gap-3">
-                  <p className="flex flex-col gap-4">
-                    <span className="text-3xl">{item.title}</span>
+                  <p className="flex flex-col gap-4 text-sm">
+                    <span className="text-xl md:text-3xl">{item.title}</span>
                     {item.content}
                   </p>
                   <img

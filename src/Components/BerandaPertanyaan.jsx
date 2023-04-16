@@ -22,7 +22,8 @@ const BerandaPertanyaan = () => {
     {
       tabIndex: 3,
       title: "Focus me to see content",
-      content: "tabIndex={3} attribute is necessary to make the div focusable",
+      content:
+        "tabIndex={3} attribute is necessary to make the div focusable Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni eum eius ut ipsa! Consectetur, perspiciatis at culpa temporibus optio aliquid? Vel et iste in nemo magnam dolor consequuntur quas doloribus est vero a qui, nulla autem laudantium, tempore veritatis consectetur aliquid ex ducimus? Laudantium laborum totam quasi numquam quod quaera",
     },
   ];
   return (

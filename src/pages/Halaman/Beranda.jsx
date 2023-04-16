@@ -21,7 +21,7 @@ const Beranda = () => {
   return (
     <>
       <Navbar />
-      <div className="hero min-h-screen bg-primary">
+      <div className="hero min-h-screen bg-primary pt-24 2xl:pt-0">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img src="./Blood.png" />
 
@@ -30,8 +30,7 @@ const Beranda = () => {
               sequence={["RedHelp", 2000, "We Help Everyone", 4000]}
               cursor={true}
               repeat={Infinity}
-              // style={{ fontSize: "2em" }}
-              className="text-5xl font-bold text-white"
+              className="text-3xl font-bold text-white"
             />
             <p className="py-6 text-white text-lg">
               Selamat datang{" "}
@@ -60,7 +59,7 @@ const Beranda = () => {
         <BerandaBerita />
       </div>
       <div className="hero min-h-screen bg-white">
-       <BerandaPertanyaan/>
+        <BerandaPertanyaan />
       </div>
       <Footer />
     </>
