@@ -6,6 +6,7 @@ const Berita = () => {
   const newsData = [
     {
       id: 1,
+      date: "16 April 2023",
       image: "./Berita1.png",
       title: "PMI Ungkap Kekhawatiran Merosotnya Stok Darah di Bulan Puasa",
       content:
@@ -13,6 +14,7 @@ const Berita = () => {
     },
     {
       id: 2,
+      date: "16 April 2023",
       image: "./Berita1.png",
       title: "PMI Ungkap Kekhawatiran Merosotnya Stok Darah di Bulan Puasa",
       content:
@@ -20,6 +22,7 @@ const Berita = () => {
     },
     {
       id: 3,
+      date: "16 April 2023",
       image: "./Berita1.png",
       title: "PMI Ungkap Kekhawatiran Merosotnya Stok Darah di Bulan Puasa",
       content:
@@ -27,6 +30,7 @@ const Berita = () => {
     },
     {
       id: 4,
+      date: "16 April 2023",
       image: "./Berita1.png",
       title: "PMI Ungkap Kekhawatiran Merosotnya Stok Darah di Bulan Puasa",
       content:
@@ -37,24 +41,33 @@ const Berita = () => {
     <>
       <Navbar />
       <div className="hero min-h-screen bg-white">
-        <Splide
-          aria-label="My Favorite Images"
-          options={{ type: "loop", padding: "10rem" }}
-        >
-          <SplideSlide>
-            <h1>Donor darah PMI</h1>
-            <img src="./Berita1.png" alt="Image 1" />
-          </SplideSlide>
-          <SplideSlide>
-            <img src="Berita1.png" alt="Image 2" />
-          </SplideSlide>
-          <SplideSlide>
-            <img src="Berita1.png" alt="Image 2" />
-          </SplideSlide>
-          <SplideSlide>
-            <img src="Berita1.png" alt="Image 2" />
-          </SplideSlide>
-        </Splide>
+        <div className="hero-content w-full flex flex-col pt-10 ">
+          <h1 className="text-black text-4xl font-bold ">Berita Terkini</h1>
+          <Splide
+            className="hero-content"
+            aria-label="My Favorite Images"
+            options={{ type: "loop", perPage: 3 }}
+          >
+            {newsData.map((item) => {
+              return (
+                <SplideSlide className="mr-6" key={item.id}>
+                  <div className="flex justify-center flex-col gap-3">
+                    <small>{item.date}</small>
+                    <h1 className="text-primary text-2xl font-bold">
+                      {item.title}
+                    </h1>
+                  </div>
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="flex justify-center"
+                  />
+                  <p>{item.content}</p>
+                </SplideSlide>
+              );
+            })}
+          </Splide>
+        </div>
       </div>
       <div className="hero min-h-screen bg-white w-full flex flex-col gap-8">
         <div className="hero-content w-full flex justify-start">
