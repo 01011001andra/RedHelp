@@ -126,7 +126,7 @@ const Navbar = () => {
         </nav>
       </div>
       <div
-        className={`w-3/4 h-screen  sm:hidden bg-white top-0 left-0 fixed  z-[2000] py-8 transform transition-all duration-700 ${
+        className={`w-3/4 h-screen  sm:hidden bg-white top-0 left-0 sticky  z-[2000] py-8 transform transition-all duration-700 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
