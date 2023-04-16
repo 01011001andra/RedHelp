@@ -10,10 +10,35 @@ import {
 } from "../../Components";
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-scroll";
+import VoicesTTS from "speechsynthesisutterance";
 
 const Beranda = () => {
   const [user, setUser] = useState(null);
   const navigate = useNavigate();
+  const [value, setValue] = useState(
+    `Selamat datang, kami hadir untuk membantu berkolaborasi dan mendukung program Palang Merah Indonesia atau PMI, Jika kamu membutuhkan bantuan bisa menghubungi nomor Whatsapp 0895611861777`
+  );
+  const VoicesTTSS = VoicesTTS.init({
+    lang: "id-ID",
+    volume: 1.0,
+    rate: 1.0,
+  });
+
+  const triggerSpeak = () => {
+    VoicesTTS.speak(value);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        triggerSpeak();
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   useEffect(() => {
     setUser(JSON.parse(localStorage.getItem("user")));
@@ -23,7 +48,7 @@ const Beranda = () => {
       <Navbar />
       <div className="hero min-h-screen bg-primary pt-24 2xl:pt-0">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <img src="./Blood.png" />
+          <img src="./Blood.png" onClick={triggerSpeak} />
 
           <div>
             <TypeAnimation
