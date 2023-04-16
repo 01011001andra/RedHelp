@@ -1,8 +1,15 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { BerandaCrousel, Footer, Navbar } from "../../Components";
+import {
+  BerandaBerita,
+  BerandaCrousel,
+  BerandaPertanyaan,
+  Footer,
+  Navbar,
+} from "../../Components";
 import { TypeAnimation } from "react-type-animation";
+import { Link } from "react-scroll";
 
 const Beranda = () => {
   const [user, setUser] = useState(null);
@@ -35,12 +42,25 @@ const Beranda = () => {
               Palang Merah Indonesia (PMI) untuk menyelesaikan permasalahan
               kekurangan darah di Indonesia.
             </p>
-            <button className="btn btn-primary rounded-md">Get Started</button>
+            <Link
+              className="btn btn-secondary bg-white text-primary rounded-md"
+              to="carousel"
+              spy={true}
+              smooth={true}
+            >
+              Ayo Mulai
+            </Link>
           </div>
         </div>
       </div>
-      <div className="hero min-h-screen bg-white">
+      <div className="hero min-h-screen bg-white" id="carousel">
         <BerandaCrousel />
+      </div>
+      <div className="hero min-h-screen bg-white">
+        <BerandaBerita />
+      </div>
+      <div className="hero min-h-screen bg-white">
+       <BerandaPertanyaan/>
       </div>
       <Footer />
     </>
