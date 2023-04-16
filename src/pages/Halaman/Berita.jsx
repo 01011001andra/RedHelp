@@ -41,28 +41,26 @@ const Berita = () => {
     <>
       <Navbar />
       <div className="hero min-h-screen bg-white">
-        <div className="hero-content w-full flex flex-col pt-10 ">
+        <div className="hero-content w-full flex flex-col pt-10">
           <h1 className="text-black text-4xl font-bold ">Berita Terkini</h1>
           <Splide
-            className="hero-content"
             aria-label="My Favorite Images"
-            options={{ type: "loop", perPage: 3 }}
+            options={{
+              rewind: true,
+            }}
+            className="w-full max-w-xs md:max-w-xl xl:max-w-none"
           >
             {newsData.map((item) => {
               return (
                 <SplideSlide className="mr-6" key={item.id}>
-                  <div className="flex justify-center flex-col gap-3">
-                    <small>{item.date}</small>
+                  <div className="flex justify-center flex-col gap-3 items-center">
                     <h1 className="text-primary text-2xl font-bold">
                       {item.title}
                     </h1>
+                    <img src={item.image} alt={item.title} />
+                    <small>{item.date}</small>
+                    <p>{item.content}</p>
                   </div>
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="flex justify-center"
-                  />
-                  <p>{item.content}</p>
                 </SplideSlide>
               );
             })}
