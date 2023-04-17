@@ -3,8 +3,6 @@ import { Footer, Navbar } from "../../Components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 const Berita = () => {
-  const [perPage, setPerPage] = useState(2);
-
   const newsData = [
     {
       id: 1,
@@ -40,20 +38,6 @@ const Berita = () => {
     },
   ];
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 640) {
-        setPerPage(1);
-      } else {
-        setPerPage(2);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <>
       <Navbar />
@@ -66,7 +50,7 @@ const Berita = () => {
             aria-label="My Favorite Images"
             options={{
               rewind: true,
-              perPage: perPage,
+              perPage: 1,
             }}
             className="w-full max-w-xs md:max-w-xl xl:max-w-none"
           >
