@@ -59,7 +59,9 @@ const Berita = () => {
       <Navbar />
       <div className="hero min-h-screen bg-white">
         <div className="hero-content w-full flex flex-col pt-10">
-          <h1 className="text-black text-4xl font-bold ">Berita Terkini</h1>
+          <h1 className="text-black text-4xl font-bold mt-24">
+            Berita Terkini
+          </h1>
           <Splide
             aria-label="My Favorite Images"
             options={{
