@@ -23,7 +23,7 @@ const BerandaBerita = () => {
   ];
   return (
     <div className="hero-content flex flex-col">
-      <h1 className="text-black text-4xl font-bold">Berita Terkini</h1>
+      <h1 className="text-black text-4xl font-bold">Update Terkini</h1>
       <div className="w-full flex flex-wrap hero-content">
         {beritaContent.map((item, index) => {
           return (

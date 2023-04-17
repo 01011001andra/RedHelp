@@ -26,6 +26,7 @@ const Beranda = () => {
 
   const triggerSpeak = () => {
     VoicesTTS.speak(value);
+    return;
   };
 
   useEffect(() => {
@@ -46,7 +47,7 @@ const Beranda = () => {
   return (
     <>
       <Navbar />
-      <div className="hero min-h-screen bg-primary pt-24 2xl:pt-0">
+      <div className="hero min-h-screen bg-primary py-24 2xl:py-0">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img src="./Blood.png" onClick={triggerSpeak} />
 

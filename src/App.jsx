@@ -6,7 +6,7 @@ import {
   Berita,
   Jadwal,
   Notfound,
-  Notifikasi,
+  Stock,
   Profile,
   Tentang,
 } from "./pages/Halaman";
@@ -60,7 +60,7 @@ function App() {
           <Route path="/jadwal" element={<Jadwal />} />
           <Route path="/tentang" element={<Tentang />} />
           <Route path="/berita" element={<Berita />} />
-          <Route path="/notifikasi" element={<Notifikasi />} />
+          <Route path="/stock" element={<Stock />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<Notfound />} />
         </Routes>
@@ -70,7 +70,7 @@ function App() {
           <Route path="/jadwal" element={<Jadwal />} />
           <Route path="/tentang" element={<Tentang />} />
           <Route path="/berita" element={<Berita />} />
-          <Route path="/notifikasi" element={<Notifikasi />} />
+          <Route path="/stock" element={<Stock />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />

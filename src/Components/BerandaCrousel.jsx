@@ -31,23 +31,30 @@ const BerandaCrousel = () => {
   return (
     <div className="w-full flex flex-col xl:flex-row justify-between hero-content">
       <div className="w-3/6">
-        <AnimationOnScroll duration={2} animateIn="animate__fadeInDown">
+        <AnimationOnScroll
+          duration={2}
+          animateIn="animate__fadeInDown"
+          className="w-full"
+        >
           <p className="font-bold text-2xl md:text-3xl text-center">
             Ayo mengenal donor darah!!
           </p>
         </AnimationOnScroll>
       </div>
-      <Splide
-        aria-label="My Favorite Images"
-        options={{
-          rewind: true,
-        }}
+      <AnimationOnScroll
+        duration={2}
+        animateIn="animate__fadeInDown"
         className="w-full max-w-xs md:max-w-none"
       >
-        {slides.map((item, index) => {
-          return (
-            <SplideSlide key={index} className="md:px-6">
-              <AnimationOnScroll duration={2} animateIn="animate__fadeInDown">
+        <Splide
+          aria-label="My Favorite Images"
+          options={{
+            rewind: true,
+          }}
+        >
+          {slides.map((item, index) => {
+            return (
+              <SplideSlide key={index} className="md:px-6">
                 <div className="flex items-center justify-center gap-3">
                   <p className="flex flex-col gap-4 text-sm">
                     <span className="text-xl md:text-3xl">{item.title}</span>
@@ -59,11 +66,11 @@ const BerandaCrousel = () => {
                     className="mx-auto w-64 hidden md:flex"
                   />
                 </div>
-              </AnimationOnScroll>
-            </SplideSlide>
-          );
-        })}
-      </Splide>
+              </SplideSlide>
+            );
+          })}
+        </Splide>
+      </AnimationOnScroll>
     </div>
   );
 };

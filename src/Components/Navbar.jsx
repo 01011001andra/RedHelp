@@ -11,8 +11,8 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState(null);
   const [logOutButton, setLogOutButton] = useState(null);
-  const navMenu = ["Beranda", "Jadwal", "Tentang", "Berita", "Notifikasi"];
-  const navLinks = ["/", "/jadwal", "/tentang", "/berita", "/notifikasi"];
+  const navMenu = ["Beranda", "Jadwal", "Tentang", "Berita", "Stock Darah"];
+  const navLinks = ["/", "/jadwal", "/tentang", "/berita", "/stock"];
   const [bgNav, setBgNav] = useState(false);
 
   window.addEventListener("scroll", () => {

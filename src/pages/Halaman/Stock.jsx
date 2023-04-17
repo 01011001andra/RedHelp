@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { Navbar, Footer } from "../../Components";
 import { auth } from "../../firebaseConfig";
 
-const Notifikasi = () => {
+const Stock = () => {
   const navigate = useNavigate("");
   const [display, setDisplay] = useState(null);
 
@@ -62,4 +62,4 @@ const Notifikasi = () => {
   );
 };
 
-export default Notifikasi;
+export default Stock;
