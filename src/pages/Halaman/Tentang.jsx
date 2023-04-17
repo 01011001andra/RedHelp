@@ -158,7 +158,7 @@ const Tentang = () => {
       {/* Contact US */}
       <div className="bg-white hero py-10">
         <div className="max-w-7xl w-full h-full flex flex-col py-8 gap-10 px-5 md:px-0">
-          <h1 className="text-center text-4xl font-bold">Contact US</h1>
+          <h1 className="text-center text-4xl font-bold">Hubungi Kami</h1>
           <div className="w-full flex flex-col md:flex-row items-center gap-14">
             <AnimationOnScroll
               animateIn="animate__slideInUp"
@@ -246,11 +246,23 @@ const Tentang = () => {
             </AnimationOnScroll>
 
             <div className="flex flex-col items-center justify-center w-1/2 h-full gap-5">
-              <h1>HUBUNGI V2</h1>
-              <div className="flex gap-20">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
+              <h1 className="font-bold text-3xl mb-10">
+                AYO PUBLIKASI EVENT DONOR DARAH
+                <span className="flex justify-center">DENGAN REDHELP</span>
+              </h1>
+              <div className="flex gap-20 mb-36">
+                <span>
+                  <img src="https://img.icons8.com/fluency/48/null/instagram-new.png" />
+                </span>
+                <span>
+                  <img src="https://img.icons8.com/color/48/null/gmail--v1.png" />
+                </span>
+                <span>
+                  <img src="https://img.icons8.com/color/48/null/whatsapp--v1.png" />
+                </span>
+                <span>
+                  <img src="https://img.icons8.com/color/48/null/twitter--v1.png" />
+                </span>
               </div>
             </div>
           </div>
