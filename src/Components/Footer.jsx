@@ -10,9 +10,13 @@ const Footer = () => {
     <footer className="footer p-10 bg-primary">
       <div className="max-w-6xl flex-col gap-10 lg:flex-row footer mx-auto justify-between">
         <div>
-          <img src="./Logo-white.PNG" alt="Logo" className="w-32 select-none" />
+          <img
+            src="../Logo-white.PNG"
+            alt="Logo"
+            className="w-32 select-none"
+          />
           <TfiClose size={30} className="mx-auto" />
-          <img src="./Il.png" alt="Logo" className="w-32 select-none" />
+          <img src=".,/Il.png" alt="Logo" className="w-32 select-none" />
         </div>
         <div className="text-white">
           <span className="font-bold text-white">
