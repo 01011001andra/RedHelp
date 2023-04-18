@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Navbar, Footer, Helm } from "../../Components";
 import { auth } from "../../firebaseConfig";
+import { animateScroll as scroll } from "react-scroll";
 
 const Stock = () => {
   const navigate = useNavigate("");
@@ -44,6 +45,11 @@ const Stock = () => {
         setDisplay(true);
         return;
       }
+    });
+    scroll.scrollToTop({
+      duration: 1000, // durasi animasi scroll (ms)
+      delay: 0, // jeda sebelum animasi dimulai (ms)
+      smooth: "easeInOutQuint", // jenis easing pada animasi scroll
     });
   }, []);
 

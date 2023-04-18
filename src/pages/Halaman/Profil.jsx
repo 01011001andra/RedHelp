@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Helm, ProfilCard } from "../../Components";
 
-
 const Profil = () => {
   const [user, setUser] = useState(null);
 

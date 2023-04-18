@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Footer, Navbar, Helm } from "../../Components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css/animate.min.css";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 
 const Berita = () => {
   const newsData = [
@@ -40,14 +41,20 @@ const Berita = () => {
         "Ketua Bidang Kerja Sama dan Kemitraan PMI DKI Jakarta Arya Sandhiyudha mengungkap kegelisahannya akan stok darah menjelang bulan puasa.Saat bulan puasa, masyarakat cenderung enggan melakukan donor darah dan hal tersebut akan berpengaruh pada stok darah yang tersedia[...]",
     },
   ];
-
+  useEffect(() => {
+    scroll.scrollToTop({
+      duration: 1000, // durasi animasi scroll (ms)
+      delay: 0, // jeda sebelum animasi dimulai (ms)
+      smooth: "easeInOutQuint", // jenis easing pada animasi scroll
+    });
+  }, []);
   return (
     <>
       <Helm title="Berita" />
       <Navbar position="fixed" />
       <div className="hero min-h-screen bg-white">
         <div className="hero-content w-full flex flex-col pt-10">
-          <h1 className="text-black text-4xl font-bold mt-24">
+          <h1 className="text-black text-4xl font-bold mt-24 2xl:mt-0">
             Berita Terkini
           </h1>
           <Splide

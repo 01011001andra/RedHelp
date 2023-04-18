@@ -12,6 +12,7 @@ import {
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-scroll";
 import VoicesTTS from "speechsynthesisutterance";
+import { animateScroll as scroll } from "react-scroll";
 
 const Beranda = () => {
   const [user, setUser] = useState(null);
@@ -46,12 +47,20 @@ const Beranda = () => {
   // COMPONENT DID MOUNT NGAMBIL DATA USER
   useEffect(() => {
     setUser(JSON.parse(localStorage.getItem("user")));
+    scroll.scrollToTop({
+      duration: 1000, // durasi animasi scroll (ms)
+      delay: 0, // jeda sebelum animasi dimulai (ms)
+      smooth: "easeInOutQuint", // jenis easing pada animasi scroll
+    });
   }, []);
   return (
     <>
       <Helm title="Beranda" />
       <Navbar position="fixed" />
-      <div className="hero min-h-screen bg-primary py-24 2xl:py-0">
+      <div
+        className="hero min-h-screen bg-primary py-24 pt-32 2xl:pt-0
+       2xl:py-0"
+      >
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img src="./Blood.png" onClick={triggerSpeak} />
 

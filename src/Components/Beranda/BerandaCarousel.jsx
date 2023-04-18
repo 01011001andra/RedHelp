@@ -36,7 +36,7 @@ const BerandaCarousel = () => {
           animateIn="animate__fadeInDown"
           className="w-full"
         >
-          <p className="font-bold text-2xl md:text-3xl text-center">
+          <p className="font-bold text-xl md:text-2xl text-center">
             Ayo mengenal donor darah!!
           </p>
         </AnimationOnScroll>

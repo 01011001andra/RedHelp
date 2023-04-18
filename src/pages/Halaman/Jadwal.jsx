@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Navbar, Footer, Helm } from "../../Components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { MdDateRange } from "react-icons/md";
+import { animateScroll as scroll } from "react-scroll";
 
 const Jadwal = () => {
   const newsData = [
@@ -35,6 +36,13 @@ const Jadwal = () => {
     },
   ];
 
+  useEffect(() => {
+    scroll.scrollToTop({
+      duration: 1000, // durasi animasi scroll (ms)
+      delay: 0, // jeda sebelum animasi dimulai (ms)
+      smooth: "easeInOutQuint", // jenis easing pada animasi scroll
+    });
+  }, []);
   return (
     <div className="bg-[#D9D9D9]">
       <Helm title="Jadwal" />

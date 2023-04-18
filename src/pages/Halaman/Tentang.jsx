@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { Navbar, Footer, Helm, Developer } from "../../Components";
 import emailjs from "@emailjs/browser";
@@ -9,6 +9,7 @@ import "@splidejs/react-splide/css";
 import "@splidejs/react-splide/css/skyblue";
 import "@splidejs/react-splide/css/sea-green";
 import "@splidejs/react-splide/css/core";
+import { animateScroll as scroll } from "react-scroll";
 
 const Tentang = () => {
   const form = useRef();
@@ -26,7 +27,7 @@ const Tentang = () => {
       .then(
         (result) => {
           console.log(result.text);
-          alert("Pesan Berhasil Terkirim");
+          alert("Pesanmu sudah kami terima, Terima kasih atas pesannya.");
           e.target.nama_lengkap.value = "";
           e.target.email.value = "";
           e.target.subject.value = "";
@@ -43,6 +44,13 @@ const Tentang = () => {
       );
   };
 
+  useEffect(() => {
+    scroll.scrollToTop({
+      duration: 1000, // durasi animasi scroll (ms)
+      delay: 0, // jeda sebelum animasi dimulai (ms)
+      smooth: "easeInOutQuint", // jenis easing pada animasi scroll
+    });
+  }, []);
   return (
     <div className="bg-primary">
       <Helm title="Tentang" />
@@ -93,14 +101,15 @@ const Tentang = () => {
       </div>
 
       {/* Visi Misi */}
-      <div className="w-full h-full hero bg-primary flex flex-col gap-20">
+      <div className="w-full h-full hero bg-primary flex flex-col">
         <div
           id="visi-misi"
           className="prose flex flex-col gap-3 hero-content mx-auto"
         >
           <AnimationOnScroll
             className="w-full max-w-xs md:max-w-none"
-            animateIn="animate__jackInTheBox"
+            animateIn="animate__fadeIn"
+            duration={2}
           >
             <Splide
               aria-label="My Favorite Images"
@@ -158,106 +167,115 @@ const Tentang = () => {
             </Splide>
           </AnimationOnScroll>
         </div>
-
-        <h1 className="font-bold text-white text-3xl xl:text-5xl">DEVELOPER</h1>
-        <div className="max-w-7xl w-full flex flex-col pt-10 pb-16 gap-24 xl:flex-row xl:gap-4 px-4">
-          <Developer
-            img={"./yandramuslim.jpeg"}
-            nama={"yandramuslim"}
-            ig={"@MusYandra"}
-            link={"https://www.instagram.com/yandramuslim/"}
-            panggilan={"Yandra"}
-            deskripsi={
-              "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
-            }
-            follower={"264"}
-            following={"333"}
-          />
-          <Developer
-            img={"./yandramuslim.jpeg"}
-            nama={"yandramuslim"}
-            ig={"@MusYandra"}
-            link={"https://www.instagram.com/yandramuslim/"}
-            panggilan={"Yandra"}
-            deskripsi={
-              "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
-            }
-            follower={"264"}
-            following={"333"}
-          />
-          <Developer
-            img={"./yandramuslim.jpeg"}
-            nama={"yandramuslim"}
-            ig={"@MusYandra"}
-            link={"https://www.instagram.com/yandramuslim/"}
-            panggilan={"Yandra"}
-            deskripsi={
-              "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
-            }
-            follower={"264"}
-            following={"333"}
-          />
-          <Developer
-            img={"./yandramuslim.jpeg"}
-            nama={"yandramuslim"}
-            ig={"@MusYandra"}
-            link={"https://www.instagram.com/yandramuslim/"}
-            panggilan={"Yandra"}
-            deskripsi={
-              "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
-            }
-            follower={"264"}
-            following={"333"}
-          />
-          <Developer
-            img={"./yandramuslim.jpeg"}
-            nama={"yandramuslim"}
-            ig={"@MusYandra"}
-            link={"https://www.instagram.com/yandramuslim/"}
-            panggilan={"Yandra"}
-            deskripsi={
-              "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
-            }
-            follower={"264"}
-            following={"333"}
-          />
-        </div>
-        <div className="max-w-7xl w-full flex flex-col pt-10 pb-16 gap-10 xl:gap-4">
+        <div className="max-w-7xl w-full h-full flex flex-col pt-10 pb-16 gap-10 xl:gap-4">
           <h1 className="font-bold text-white text-3xl xl:text-5xl text-center">
-            MENTOR GROUP
+            DEVELOPER
           </h1>
           <Splide
             aria-label="My Favorite Images"
             options={{
               rewind: true,
             }}
-            className="mx-auto max-w-sm sm:max-w-md md:max-w-lg w-full "
+            className="mx-auto max-w-sm sm:max-w-md md:max-w-lg w-full h-full"
           >
-            <SplideSlide className="md:px-6 pt-20 mr-5">
+            <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
               <Developer
-                img={"./kak_aulia.jpeg"}
-                nama={"Jessica Aulia Pardede"}
-                ig={"@jscaulia_"}
-                link={"https://www.instagram.com/jscaulia_/"}
-                panggilan={"Aulia"}
-                deskripsi={"Technical Mentor at Infinite Learning"}
-                follower={"2.086"}
-                following={"1.007"}
+                img={"./yandramuslim.jpeg"}
+                nama={"yandramuslim"}
+                ig={"@MusYandra"}
+                link={"https://www.instagram.com/yandramuslim/"}
+                panggilan={"Yandra"}
+                deskripsi={
+                  "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+                }
+                follower={"264"}
+                following={"333"}
               />
             </SplideSlide>
-            <SplideSlide className="md:px-6 pt-20">
+            <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
               <Developer
-                img={"./Kak_Jess.jpg"}
-                nama={"jessicavnsa"}
-                ig={"@jessicavnsa"}
-                link={"https://www.instagram.com/jessicavnsa/"}
-                panggilan={"Jessica"}
-                deskripsi={"Professional Mentor at Infinite Learning"}
-                follower={"702"}
-                following={"583"}
+                img={"./yandramuslim.jpeg"}
+                nama={"yandramuslim"}
+                ig={"@MusYandra"}
+                link={"https://www.instagram.com/yandramuslim/"}
+                panggilan={"Yandra"}
+                deskripsi={
+                  "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+                }
+                follower={"264"}
+                following={"333"}
+              />
+            </SplideSlide>
+            <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
+              <Developer
+                img={"./yandramuslim.jpeg"}
+                nama={"yandramuslim"}
+                ig={"@MusYandra"}
+                link={"https://www.instagram.com/yandramuslim/"}
+                panggilan={"Yandra"}
+                deskripsi={
+                  "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+                }
+                follower={"264"}
+                following={"333"}
+              />
+            </SplideSlide>
+            <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
+              <Developer
+                img={"./yandramuslim.jpeg"}
+                nama={"yandramuslim"}
+                ig={"@MusYandra"}
+                link={"https://www.instagram.com/yandramuslim/"}
+                panggilan={"Yandra"}
+                deskripsi={
+                  "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+                }
+                follower={"264"}
+                following={"333"}
+              />
+            </SplideSlide>
+            <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
+              <Developer
+                img={"./yandramuslim.jpeg"}
+                nama={"yandramuslim"}
+                ig={"@MusYandra"}
+                link={"https://www.instagram.com/yandramuslim/"}
+                panggilan={"Yandra"}
+                deskripsi={
+                  "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+                }
+                follower={"264"}
+                following={"333"}
               />
             </SplideSlide>
           </Splide>
+        </div>
+        <div className="max-w-7xl w-full h-full flex flex-col pt-10 pb-16 gap-16">
+          <h1 className="font-bold text-white text-3xl xl:text-5xl text-center">
+            MENTOR GRUP
+          </h1>
+          <div className="max-w-7xl w-full flex flex-col md:flex-row pt-10 pb-16 gap-24 xl:gap-4 px-4">
+            <Developer
+              img={"./kak_aulia.jpeg"}
+              nama={"Jessica Aulia Pardede"}
+              ig={"@jscaulia_"}
+              link={"https://www.instagram.com/jscaulia_/"}
+              panggilan={"Aulia"}
+              deskripsi={"Technical Mentor at Infinite Learning"}
+              follower={"2.086"}
+              following={"1.007"}
+            />
+            <Developer
+              img={"./Kak_Jess.jpg"}
+              nama={"jessicavnsa"}
+              ig={"@jessicavnsa"}
+              link={"https://www.instagram.com/jessicavnsa/"}
+              panggilan={"Jessica"}
+              deskripsi={"Professional Mentor at Infinite Learning"}
+              follower={"702"}
+              following={"583"}
+            />
+          </div>
         </div>
       </div>
 
@@ -291,7 +309,7 @@ const Tentang = () => {
                     name="nama_lengkap"
                     id="nama_lengkap"
                     placeholder="Masukkan Nama Lengkap"
-                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                     required
                   />
                 </div>
@@ -307,7 +325,7 @@ const Tentang = () => {
                     name="email"
                     id="email"
                     placeholder="contoh@domain.com"
-                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md invalid:text-red-500 "
+                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md invalid:text-red-500 "
                     required
                   />
                 </div>
@@ -323,7 +341,7 @@ const Tentang = () => {
                     name="subject"
                     id="subject"
                     placeholder="Masukkan subject"
-                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                     required
                   />
                 </div>
@@ -339,7 +357,7 @@ const Tentang = () => {
                     name="message"
                     id="message"
                     placeholder="Masukkan Pesan"
-                    className="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    className="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                     required
                   ></textarea>
                 </div>
@@ -378,7 +396,7 @@ const Tentang = () => {
       <div className="hero bg-white">
         <div className="max-w-7xl w-full py-28 flex flex-col gap-8 px-4 ">
           <h1 className="font-bold text-4xl text-center">Lokasi Kami</h1>
-          <AnimationOnScroll animateIn="animate__rotateIn">
+          <AnimationOnScroll animateIn="animate__zoomIn">
             <Iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.2411065018981!2d104.10047471523288!3d1.185416266300598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da27e2a4951e67%3A0xb4fde627f3a44477!2sNongsa%20Digital%20Park!5e0!3m2!1sen!2sid!4v1681683085390!5m2!1sen!2sid"
               className="rounded-xl w-full h-96"
