@@ -14,21 +14,21 @@ const Jadwal = () => {
     {
       id: 2,
       date: "16 April 2023",
-      image: "./pmi2.png",
+      image: "./pmi1.png",
       title: "PMI Bintan ",
       content: "Ketua Bidang Kerja",
     },
     {
       id: 3,
       date: "16 April 2023",
-      image: "./pmi3.png",
+      image: "./pmi1.png",
       title: "PMI Tanjung Pinang ",
       content: "Ketua Bidang Kerja ",
     },
     {
       id: 4,
       date: "16 April 2023",
-      image: "./pmi4.png",
+      image: "./pmi1.png",
       title: "PMI Lingga ",
       content: "Ketua Bidang ",
     },
@@ -41,7 +41,9 @@ const Jadwal = () => {
       <div className="hero min-h-screen bg-white">
         <div className="hero-content w-full flex flex-col pt-10">
           <div className="hero-content w-full flex justify-start">
-            <h1 className="text-black text-4xl font-bold ">Unit Donor Darah</h1>
+            <h1 className="text-black text-4xl font-bold mt-28">
+              Unit Donor Darah
+            </h1>
           </div>
           <Splide
             aria-label="My Favorite Images"
