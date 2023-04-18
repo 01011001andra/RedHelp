@@ -253,18 +253,18 @@ const Tentang = () => {
               <h1 className="font-bold text-xl md:text-3xl mb-10 text-center">
                 AYO PUBLIKASI EVENT DONOR DARAH DENGAN REDHELP
               </h1>
-              <div className="flex gap-20 mb-36">
+              <div className="gap-20 mb-36 flex flex-col md:flex-row">
                 <AnimationOnScroll animateIn="animate__rollIn">
-                  <img src="https://img.icons8.com/fluency/48/null/instagram-new.png" />
+                  <img src="./instagram.png" />
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn="animate__slideInDown">
-                  <img src="https://img.icons8.com/color/48/null/gmail--v1.png" />
+                  <img src="./gmail.png" />
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn="animate__slideInUp">
-                  <img src="https://img.icons8.com/color/48/null/whatsapp--v1.png" />
+                  <img src="./whatsapp.png" />
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn="animate__zoomInDown">
-                  <img src="https://img.icons8.com/color/48/null/twitter--v1.png" />
+                  <img src="./twitter.png" />
                 </AnimationOnScroll>
               </div>
             </div>
