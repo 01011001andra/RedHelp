@@ -69,7 +69,7 @@ const Jadwal = () => {
         </div>
 
         <div className="hero-content w-full">
-          <div className="card w-auto h-auto bg-white shadow-xl flex flex-col gap-8">
+          <div className="card w-full bg-white shadow-xl flex flex-col gap-8">
             {newsData.map((item) => {
               return (
                 <div className="card-body shadow-xl rounded-lg" key={item.id}>
