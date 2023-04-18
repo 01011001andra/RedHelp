@@ -158,6 +158,7 @@ const Tentang = () => {
             </Splide>
           </AnimationOnScroll>
         </div>
+
         <h1 className="font-bold text-white text-3xl xl:text-5xl">DEVELOPER</h1>
         <div className="max-w-7xl w-full flex flex-col pt-10 pb-16 gap-24 xl:flex-row xl:gap-4 px-4">
           <Developer
@@ -220,6 +221,47 @@ const Tentang = () => {
             follower={"264"}
             following={"333"}
           />
+        </div>
+        <div className="max-w-7xl w-full flex flex-col pt-10 pb-16 gap-10 xl:gap-4">
+          <h1 className="font-bold text-white text-3xl xl:text-5xl text-center">
+            MENTOR GROUP
+          </h1>
+          <Splide
+            aria-label="My Favorite Images"
+            options={{
+              rewind: true,
+            }}
+            className="mx-auto max-w-sm sm:max-w-md md:max-w-lg w-full "
+          >
+            <SplideSlide className="md:px-6 pt-20 mr-5">
+              <Developer
+                img={"./yandramuslim.jpeg"}
+                nama={"yandramuslim"}
+                ig={"@MusYandra"}
+                link={"https://www.instagram.com/yandramuslim/"}
+                panggilan={"Yandra"}
+                deskripsi={
+                  "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+                }
+                follower={"264"}
+                following={"333"}
+              />
+            </SplideSlide>
+            <SplideSlide className="md:px-6 pt-20">
+              <Developer
+                img={"./yandramuslim.jpeg"}
+                nama={"yandramuslim"}
+                ig={"@MusYandra"}
+                link={"https://www.instagram.com/yandramuslim/"}
+                panggilan={"Yandra"}
+                deskripsi={
+                  "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+                }
+                follower={"264"}
+                following={"333"}
+              />
+            </SplideSlide>
+          </Splide>
         </div>
       </div>
 
