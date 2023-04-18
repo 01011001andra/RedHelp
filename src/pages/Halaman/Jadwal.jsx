@@ -44,11 +44,11 @@ const Jadwal = () => {
     });
   }, []);
   return (
-    <div className="bg-[#D9D9D9]">
+    <>
       <Helm title="Jadwal" />
       <Navbar position="fixed" />
-      <div className="w-full min-h-screen bg-white">
-        <div className="hero-content w-full flex flex-col pt-10">
+      <div className="hero min-h-screen bg-white">
+        <div className="hero-content w-full flex flex-col pt-0 md:pt-10">
           <h1 className="text-black text-4xl font-bold text-center">
             Unit Donor Darah
           </h1>
@@ -58,7 +58,7 @@ const Jadwal = () => {
               rewind: true,
               perPage: 1,
             }}
-            className="w-full max-w-xs md:max-w-xl xl:max-w-none"
+            className="w-full md:max-w-xl xl:max-w-none"
           >
             {newsData.map((item) => {
               return (
@@ -72,16 +72,20 @@ const Jadwal = () => {
           </Splide>
         </div>
       </div>
+
       <div className="hero min-h-screen bg-white w-full flex flex-col gap-8">
         <div className="hero-content w-full flex justify-start">
           <h1 className="text-black text-4xl font-bold ">Event Donor Darah</h1>
         </div>
 
         <div className="hero-content w-full flex flex-col gap-8">
-          <div className="card w-full bg-white shadow-xl flex flex-col gap-8">
-            {newsData.map((item) => {
-              return (
-                <div className="card-body shadow-xl rounded-lg" key={item.id}>
+          {newsData.map((item) => {
+            return (
+              <div
+                className="card w-full bg-white shadow-md  flex flex-col gap-8"
+                key={item.id}
+              >
+                <div className="card-body shadow-xl rounded-lg">
                   <div className="flex gap-8">
                     <img
                       className="hidden md:flex"
@@ -99,19 +103,19 @@ const Jadwal = () => {
                       </div>
                     </p>
                     <div className="justify-end mt-36">
-                      <button className="btn bg-primary rounded-lg text-white hover:bg-primary">
+                      <button className="btn bg-primary rounded-lg text-white hover:bg-black">
                         Daftar
                       </button>
                     </div>
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

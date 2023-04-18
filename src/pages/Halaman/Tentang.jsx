@@ -132,31 +132,31 @@ const Tentang = () => {
                 <div className="flex flex-col items-center justify-center gap-3">
                   <h1 className="text-xl md:text-3xl text-white">Misi</h1>
                   <ol type="1" class="list-decimal list-inside">
-                    <li className="text-white">
+                    <li className="text-white text-xs">
                       Meningkatkan kesadaran masyarakat tentang pentingnya donor
                       darah secara rutin.
                     </li>
-                    <li className="text-white">
+                    <li className="text-white text-xs">
                       Menyediakan informasi yang akurat dan terpercaya tentang
                       donor darah dan manfaatnya bagi kesehatan.
                     </li>
-                    <li className="text-white">
+                    <li className="text-white text-xs">
                       Menyediakan jadwal kegiatan donor darah dari PMI untuk
                       memudahkan calon donor darah dalam melakukan donasi.
                     </li>
-                    <li className="text-white">
+                    <li className="text-white text-xs">
                       Menghubungkan PMI dengan para calon donor darah melalui
                       platform Redhelp.
                     </li>
-                    <li className="text-white">
+                    <li className="text-white text-xs">
                       Membantu PMI dalam mengumpulkan dan mengelola data donor
                       darah secara efektif dan efisien.
                     </li>
-                    <li className="text-white">
+                    <li className="text-white text-xs">
                       Menyajikan berita terkini seputar donor darah dan kegiatan
                       PMI.
                     </li>
-                    <li className="text-white">
+                    <li className="text-white text-xs">
                       Menyelenggarakan event-event yang bertujuan untuk
                       meningkatkan kesadaran masyarakat tentang pentingnya donor
                       darah.
