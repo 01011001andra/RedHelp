@@ -164,6 +164,7 @@ const Tentang = () => {
             img={"./yandramuslim.jpeg"}
             nama={"yandramuslim"}
             ig={"@MusYandra"}
+            link={"https://www.instagram.com/yandramuslim/"}
             panggilan={"Yandra"}
             deskripsi={
               "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
@@ -175,6 +176,7 @@ const Tentang = () => {
             img={"./yandramuslim.jpeg"}
             nama={"yandramuslim"}
             ig={"@MusYandra"}
+            link={"https://www.instagram.com/yandramuslim/"}
             panggilan={"Yandra"}
             deskripsi={
               "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
@@ -186,6 +188,7 @@ const Tentang = () => {
             img={"./yandramuslim.jpeg"}
             nama={"yandramuslim"}
             ig={"@MusYandra"}
+            link={"https://www.instagram.com/yandramuslim/"}
             panggilan={"Yandra"}
             deskripsi={
               "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
@@ -197,6 +200,7 @@ const Tentang = () => {
             img={"./yandramuslim.jpeg"}
             nama={"yandramuslim"}
             ig={"@MusYandra"}
+            link={"https://www.instagram.com/yandramuslim/"}
             panggilan={"Yandra"}
             deskripsi={
               "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
@@ -208,6 +212,7 @@ const Tentang = () => {
             img={"./yandramuslim.jpeg"}
             nama={"yandramuslim"}
             ig={"@MusYandra"}
+            link={"https://www.instagram.com/yandramuslim/"}
             panggilan={"Yandra"}
             deskripsi={
               "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"

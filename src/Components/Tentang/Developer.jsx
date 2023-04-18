@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Developer = ({
   img,
   nama,
   ig,
+  link,
   panggilan,
   deskripsi,
   follower,
@@ -16,7 +18,12 @@ const Developer = ({
         src={img}
         alt=""
       />
-      <div class="text-center mt-2 text-3xl font-medium">{nama}</div>
+      <Link
+        to={link}
+        class="text-center mt-2 text-3xl font-medium hover:text-primary"
+      >
+        {nama}
+      </Link>
       <div class="text-center mt-2 font-light text-sm">{ig}</div>
       <div class="text-center font-normal text-lg">{panggilan}</div>
       <div class="px-6 text-center mt-2 font-light text-sm">
