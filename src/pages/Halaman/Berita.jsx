@@ -3,6 +3,7 @@ import { Footer, Navbar, Helm } from "../../Components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css/animate.min.css";
+import { Link } from "react-router-dom";
 
 const Berita = () => {
   const newsData = [
@@ -78,14 +79,16 @@ const Berita = () => {
         <div className="hero-content w-full flex justify-start">
           <h1 className="text-black text-4xl font-bold ">Artikel Lainnya</h1>
         </div>
-        <div className="hero-content w-full">
-          <div className="card w-auto h-auto bg-white shadow-xl flex flex-col gap-8">
-            {newsData.map((item) => {
-              return (
+        <div className="hero-content w-full flex flex-col gap-8">
+          {newsData.map((item) => {
+            return (
+              <div
+                className="card w-full h-full bg-white shadow-xl rounded-xl p-5"
+                key={item.id}
+              >
                 <AnimationOnScroll
                   duration={1}
                   animateIn="animate__zoomIn"
-                  key={item.id}
                   className="w-full"
                 >
                   <div className="flex gap-8">
@@ -96,18 +99,17 @@ const Berita = () => {
                       style={{ width: "350px" }}
                     />
                     <p>
-                      <span className="card-title text-primary text-3xl">
+                      <Link className="card-title text-primary hover:text-black text-3xl">
                         {item.title}
-                      </span>
+                      </Link>
                       <br />
                       {item.content}
                     </p>
-                    <div className="card-actions justify-end"></div>
                   </div>
                 </AnimationOnScroll>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       </div>
       <Footer />
