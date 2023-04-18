@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import { Navbar, Footer, Helm } from "../../Components";
+import { Navbar, Footer, Helm, Developer } from "../../Components";
 import emailjs from "@emailjs/browser";
 import Iframe from "react-iframe";
 import { Link } from "react-scroll";
