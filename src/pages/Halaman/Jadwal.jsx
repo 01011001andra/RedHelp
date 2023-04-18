@@ -47,7 +47,7 @@ const Jadwal = () => {
     <>
       <Helm title="Jadwal" />
       <Navbar position="fixed" />
-      <div className="hero min-h-screen bg-white">
+      {/* <div className="hero min-h-screen bg-white">
         <div className="hero-content w-full flex flex-col pt-0 md:pt-10">
           <h1 className="text-black text-4xl font-bold text-center">
             Unit Donor Darahs
@@ -71,10 +71,10 @@ const Jadwal = () => {
             })}
           </Splide>
         </div>
-      </div>
+      </div> */}
 
-      <div className="hero min-h-screen bg-white w-full flex flex-col gap-8">
-        <div className="hero-content w-full flex justify-start">
+      <div className="hero min-h-screen bg-white w-full flex flex-col gap-8 pt-32">
+        <div className="hero-content w-full flex justify-center">
           <h1 className="text-black text-4xl font-bold ">Event Donor Darah</h1>
         </div>
 
