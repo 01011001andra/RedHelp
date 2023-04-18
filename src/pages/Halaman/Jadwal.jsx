@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Footer, Helm } from "../../Components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { MdDateRange } from "react-icons/md";
 
 const Jadwal = () => {
   const newsData = [
@@ -35,16 +36,14 @@ const Jadwal = () => {
   ];
 
   return (
-    <div className="bg-[#D9D9D9] mt-0">
+    <div className="bg-[#D9D9D9]">
       <Helm title="Jadwal" />
       <Navbar position="fixed" />
-      <div className="hero min-h-screen bg-white">
+      <div className="w-full min-h-screen bg-white">
         <div className="hero-content w-full flex flex-col pt-10">
-          <div className="hero-content w-full flex justify-start">
-            <h1 className="text-black text-4xl font-bold mt-28">
-              Unit Donor Darah
-            </h1>
-          </div>
+          <h1 className="text-black text-4xl font-bold text-center">
+            Unit Donor Darah
+          </h1>
           <Splide
             aria-label="My Favorite Images"
             options={{
@@ -70,7 +69,7 @@ const Jadwal = () => {
           <h1 className="text-black text-4xl font-bold ">Event Donor Darah</h1>
         </div>
 
-        <div className="hero-content w-full">
+        <div className="hero-content w-full flex flex-col gap-8">
           <div className="card w-full bg-white shadow-xl flex flex-col gap-8">
             {newsData.map((item) => {
               return (
@@ -87,7 +86,9 @@ const Jadwal = () => {
                         {item.title}
                       </span>
                       <br />
-                      {item.content}
+                      <div className="flex items-center gap-2">
+                        <MdDateRange /> {item.date}
+                      </div>
                     </p>
                     <div className="justify-end mt-36">
                       <button className="btn bg-primary rounded-lg text-white hover:bg-primary">
