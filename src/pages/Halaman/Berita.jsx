@@ -1,6 +1,8 @@
 import React from "react";
 import { Footer, Navbar, Helm } from "../../Components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import "animate.css/animate.min.css";
 
 const Berita = () => {
   const newsData = [
@@ -80,7 +82,12 @@ const Berita = () => {
           <div className="card w-auto h-auto bg-white shadow-xl flex flex-col gap-8">
             {newsData.map((item) => {
               return (
-                <div className="card-body shadow-xl rounded-lg" key={item.id}>
+                <AnimationOnScroll
+                  duration={1}
+                  animateIn="animate__zoomIn"
+                  key={item.id}
+                  className="w-full"
+                >
                   <div className="flex gap-8">
                     <img
                       className="hidden md:flex"
@@ -97,7 +104,7 @@ const Berita = () => {
                     </p>
                     <div className="card-actions justify-end"></div>
                   </div>
-                </div>
+                </AnimationOnScroll>
               );
             })}
           </div>
