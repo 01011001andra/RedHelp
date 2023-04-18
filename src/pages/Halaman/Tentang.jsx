@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import { Navbar, Footer, Helm } from "../../Components";
+import { Navbar, Footer, Helm, Developer } from "../../Components";
 import emailjs from "@emailjs/browser";
 import Iframe from "react-iframe";
 import { Link } from "react-scroll";
@@ -42,6 +42,7 @@ const Tentang = () => {
         }
       );
   };
+
   return (
     <div className="bg-primary">
       <Helm title="Tentang" />
@@ -92,7 +93,7 @@ const Tentang = () => {
       </div>
 
       {/* Visi Misi */}
-      <div className="w-full h-full hero bg-primary">
+      <div className="w-full h-full hero bg-primary flex flex-col gap-20">
         <div
           id="visi-misi"
           className="prose flex flex-col gap-3 hero-content mx-auto"
@@ -156,6 +157,64 @@ const Tentang = () => {
               </SplideSlide>
             </Splide>
           </AnimationOnScroll>
+        </div>
+        <h1 className="font-bold text-white text-3xl xl:text-5xl">DEVELOPER</h1>
+        <div className="max-w-7xl w-full flex flex-col pt-10 pb-16 gap-24 xl:flex-row xl:gap-4 px-4">
+          <Developer
+            img={"./yandramuslim.jpeg"}
+            nama={"yandramuslim"}
+            ig={"@MusYandra"}
+            panggilan={"Yandra"}
+            deskripsi={
+              "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+            }
+            follower={"264"}
+            following={"333"}
+          />
+          <Developer
+            img={"./yandramuslim.jpeg"}
+            nama={"yandramuslim"}
+            ig={"@MusYandra"}
+            panggilan={"Yandra"}
+            deskripsi={
+              "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+            }
+            follower={"264"}
+            following={"333"}
+          />
+          <Developer
+            img={"./yandramuslim.jpeg"}
+            nama={"yandramuslim"}
+            ig={"@MusYandra"}
+            panggilan={"Yandra"}
+            deskripsi={
+              "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+            }
+            follower={"264"}
+            following={"333"}
+          />
+          <Developer
+            img={"./yandramuslim.jpeg"}
+            nama={"yandramuslim"}
+            ig={"@MusYandra"}
+            panggilan={"Yandra"}
+            deskripsi={
+              "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+            }
+            follower={"264"}
+            following={"333"}
+          />
+          <Developer
+            img={"./yandramuslim.jpeg"}
+            nama={"yandramuslim"}
+            ig={"@MusYandra"}
+            panggilan={"Yandra"}
+            deskripsi={
+              "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+            }
+            follower={"264"}
+            following={"333"}
+          />
         </div>
       </div>
 
