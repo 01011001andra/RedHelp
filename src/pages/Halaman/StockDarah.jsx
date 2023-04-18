@@ -6,8 +6,8 @@ import { Navbar, Footer, Helm } from "../../Components";
 import { auth } from "../../firebaseConfig";
 import { animateScroll as scroll } from "react-scroll";
 
-const Stock = () => {
-  const navigate = useNavigate("");
+const StockDarah = () => {
+  const navigate = useNavigate();
   const [display, setDisplay] = useState(null);
 
   // JIKA BELUM LOGIN
@@ -63,7 +63,8 @@ const Stock = () => {
         ) : (
           <div className="w-full h-full flex items-center justify-center flex-col justify-col ">
             <h1 className="text-xl font-bold text-black">Info Stok Darah</h1>
-            <img src="./Grafik.png" alt="Grafik" />
+            <img src="./Grafik.png" alt="Grafik" className="px-4" />
+            <h1>Hello Guys</h1>
           </div>
         )}
       </div>
@@ -72,4 +73,4 @@ const Stock = () => {
   );
 };
 
-export default Stock;
+export default StockDarah;

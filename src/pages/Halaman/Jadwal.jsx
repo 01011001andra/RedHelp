@@ -50,7 +50,7 @@ const Jadwal = () => {
       <div className="hero min-h-screen bg-white">
         <div className="hero-content w-full flex flex-col pt-0 md:pt-10">
           <h1 className="text-black text-4xl font-bold text-center">
-            Unit Donor Darah
+            Unit Donor Darahs
           </h1>
           <Splide
             aria-label="My Favorite Images"
