@@ -236,29 +236,29 @@ const Tentang = () => {
             <SplideSlide className="md:px-6 pt-20 mr-5">
               <Developer
                 img={"./yandramuslim.jpeg"}
-                nama={"yandramuslim"}
-                ig={"@MusYandra"}
-                link={"https://www.instagram.com/yandramuslim/"}
-                panggilan={"Yandra"}
+                nama={"Jessica Aulia Pardede"}
+                ig={"@jscaulia_"}
+                link={"https://www.instagram.com/jscaulia_/"}
+                panggilan={"Aulia"}
                 deskripsi={
                   "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
                 }
-                follower={"264"}
-                following={"333"}
+                follower={"2.086"}
+                following={"1.007"}
               />
             </SplideSlide>
             <SplideSlide className="md:px-6 pt-20">
               <Developer
                 img={"./yandramuslim.jpeg"}
-                nama={"yandramuslim"}
-                ig={"@MusYandra"}
-                link={"https://www.instagram.com/yandramuslim/"}
-                panggilan={"Yandra"}
+                nama={"jessicavnsa"}
+                ig={"@jessicavnsa"}
+                link={"https://www.instagram.com/jessicavnsa/"}
+                panggilan={"Jessica"}
                 deskripsi={
                   "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
                 }
-                follower={"264"}
-                following={"333"}
+                follower={"702"}
+                following={"583"}
               />
             </SplideSlide>
           </Splide>
@@ -267,7 +267,7 @@ const Tentang = () => {
 
       {/* Contact US */}
       <div className="bg-white hero py-10">
-        <div className="max-w-7xl w-full h-full flex flex-col py-8 gap-10 px-5 md:px-0">
+        <div className="max-w-7xl w-full h-full flex flex-col py-8 gap-10 px-5">
           <h1 className="text-center text-4xl font-bold">Hubungi Kami</h1>
           <div className="w-full flex flex-col md:flex-row items-center gap-14">
             <AnimationOnScroll
@@ -355,11 +355,11 @@ const Tentang = () => {
               </form>
             </AnimationOnScroll>
 
-            <div className="flex flex-col items-center justify-center w-1/2 h-full gap-5">
+            <div className="flex flex-col items-center justify-center xl:w-1/2 w-full h-full gap-5">
               <h1 className="font-bold text-xl md:text-3xl mb-10 text-center">
                 AYO PUBLIKASI EVENT DONOR DARAH DENGAN REDHELP
               </h1>
-              <div className="gap-20 mb-36 flex flex-col md:flex-row">
+              <div className="gap-10 mb-36 flex flex-row ">
                 <AnimationOnScroll animateIn="animate__rollIn">
                   <img src="./instagram.png" />
                 </AnimationOnScroll>
@@ -380,7 +380,7 @@ const Tentang = () => {
 
       {/* Lokasi */}
       <div className="hero bg-white">
-        <div className="max-w-7xl w-full py-28 flex flex-col gap-8 px-4 md:px-0">
+        <div className="max-w-7xl w-full py-28 flex flex-col gap-8 px-4 ">
           <h1 className="font-bold text-4xl text-center">Lokasi Kami</h1>
           <AnimationOnScroll animateIn="animate__rotateIn">
             <Iframe
