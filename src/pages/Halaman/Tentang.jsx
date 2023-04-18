@@ -181,7 +181,7 @@ const Tentang = () => {
             <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
               <Developer
                 img={"./yandramuslim.jpeg"}
-                nama={"yandramuslim"}
+                nama={"Coder"}
                 ig={"@MusYandra"}
                 link={"https://www.instagram.com/yandramuslim/"}
                 panggilan={"Yandra"}
@@ -195,12 +195,12 @@ const Tentang = () => {
             <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
               <Developer
                 img={"./yandramuslim.jpeg"}
-                nama={"yandramuslim"}
+                nama={"Coder"}
                 ig={"@MusYandra"}
                 link={"https://www.instagram.com/yandramuslim/"}
-                panggilan={"Yandra"}
+                panggilan={"Budi"}
                 deskripsi={
-                  "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+                  "Mentee at Infinite Learning Studi Independent Batch 4"
                 }
                 follower={"264"}
                 following={"333"}
@@ -209,12 +209,12 @@ const Tentang = () => {
             <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
               <Developer
                 img={"./yandramuslim.jpeg"}
-                nama={"yandramuslim"}
+                nama={"Project Manager"}
                 ig={"@MusYandra"}
                 link={"https://www.instagram.com/yandramuslim/"}
-                panggilan={"Yandra"}
+                panggilan={"Nadila"}
                 deskripsi={
-                  "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+                  "Mentee at Infinite Learning Studi Independent Batch 4"
                 }
                 follower={"264"}
                 following={"333"}
@@ -223,12 +223,12 @@ const Tentang = () => {
             <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
               <Developer
                 img={"./yandramuslim.jpeg"}
-                nama={"yandramuslim"}
+                nama={"Designer"}
                 ig={"@MusYandra"}
                 link={"https://www.instagram.com/yandramuslim/"}
-                panggilan={"Yandra"}
+                panggilan={"Salma"}
                 deskripsi={
-                  "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+                  "Mentee at Infinite Learning Studi Independent Batch 4"
                 }
                 follower={"264"}
                 following={"333"}
@@ -237,12 +237,12 @@ const Tentang = () => {
             <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
               <Developer
                 img={"./yandramuslim.jpeg"}
-                nama={"yandramuslim"}
+                nama={"Designer"}
                 ig={"@MusYandra"}
                 link={"https://www.instagram.com/yandramuslim/"}
-                panggilan={"Yandra"}
+                panggilan={"Salma"}
                 deskripsi={
-                  "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+                  "Mentee at Infinite Learning Studi Independent Batch 4"
                 }
                 follower={"264"}
                 following={"333"}
