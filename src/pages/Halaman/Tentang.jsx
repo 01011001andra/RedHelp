@@ -166,7 +166,7 @@ const Tentang = () => {
           <div className="w-full flex flex-col md:flex-row items-center gap-14">
             <AnimationOnScroll
               animateIn="animate__zoomIn"
-              className="w-full h-full md:w-1/2 max-w-[700px] bg-primary p-8 lg:p-8 rounded-xl shadow-2xl transition-all animate-spin"
+              className="w-full h-full md:w-1/2 max-w-[700px] bg-primary p-8 lg:p-8 rounded-xl shadow-2xl"
             >
               <h1 className="text-white text-center text-3xl font-bold mb-8">
                 Berikan Pesan
