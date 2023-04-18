@@ -235,28 +235,24 @@ const Tentang = () => {
           >
             <SplideSlide className="md:px-6 pt-20 mr-5">
               <Developer
-                img={"./yandramuslim.jpeg"}
+                img={"./kak_aulia.jpeg"}
                 nama={"Jessica Aulia Pardede"}
                 ig={"@jscaulia_"}
                 link={"https://www.instagram.com/jscaulia_/"}
                 panggilan={"Aulia"}
-                deskripsi={
-                  "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
-                }
+                deskripsi={"Technical Mentor at Infinite Learning"}
                 follower={"2.086"}
                 following={"1.007"}
               />
             </SplideSlide>
             <SplideSlide className="md:px-6 pt-20">
               <Developer
-                img={"./yandramuslim.jpeg"}
+                img={"./Kak_Jess.jpg"}
                 nama={"jessicavnsa"}
                 ig={"@jessicavnsa"}
                 link={"https://www.instagram.com/jessicavnsa/"}
                 panggilan={"Jessica"}
-                deskripsi={
-                  "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
-                }
+                deskripsi={"Professional Mentor at Infinite Learning"}
                 follower={"702"}
                 following={"583"}
               />
