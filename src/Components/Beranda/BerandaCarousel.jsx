@@ -7,7 +7,7 @@ import "@splidejs/react-splide/css/core";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css/animate.min.css";
 
-const BerandaCrousel = () => {
+const BerandaCarousel = () => {
   const slides = [
     {
       title: "Apakah donor darah aman?",
@@ -75,4 +75,4 @@ const BerandaCrousel = () => {
   );
 };
 
-export default BerandaCrousel;
+export default BerandaCarousel;

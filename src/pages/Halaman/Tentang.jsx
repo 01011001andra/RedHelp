@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import { Navbar, Footer } from "../../Components";
+import { Navbar, Footer, Helm } from "../../Components";
 import emailjs from "@emailjs/browser";
 import Iframe from "react-iframe";
 import { Link } from "react-scroll";
@@ -44,7 +44,8 @@ const Tentang = () => {
   };
   return (
     <div className="bg-primary">
-      <Navbar />
+      <Helm title="Tentang" />
+      <Navbar position="fixed" />
       {/* HERO */}
       <div
         className="hero min-h-screen"
@@ -96,7 +97,10 @@ const Tentang = () => {
           id="visi-misi"
           className="prose flex flex-col gap-3 hero-content mx-auto"
         >
-          <div className="w-full max-w-xs md:max-w-none">
+          <AnimationOnScroll
+            className="w-full max-w-xs md:max-w-none"
+            animateIn="animate__jackInTheBox"
+          >
             <Splide
               aria-label="My Favorite Images"
               options={{
@@ -151,7 +155,7 @@ const Tentang = () => {
                 </div>
               </SplideSlide>
             </Splide>
-          </div>
+          </AnimationOnScroll>
         </div>
       </div>
 
@@ -161,8 +165,8 @@ const Tentang = () => {
           <h1 className="text-center text-4xl font-bold">Hubungi Kami</h1>
           <div className="w-full flex flex-col md:flex-row items-center gap-14">
             <AnimationOnScroll
-              animateIn="animate__slideInUp"
-              className="w-full h-full md:w-1/2 max-w-[700px] bg-primary p-8 lg:p-8 rounded-xl shadow-2xl"
+              animateIn="animate__zoomIn"
+              className="w-full h-full md:w-1/2 max-w-[700px] bg-primary p-8 lg:p-8 rounded-xl shadow-2xl transition-all animate-spin"
             >
               <h1 className="text-white text-center text-3xl font-bold mb-8">
                 Berikan Pesan
@@ -246,23 +250,22 @@ const Tentang = () => {
             </AnimationOnScroll>
 
             <div className="flex flex-col items-center justify-center w-1/2 h-full gap-5">
-              <h1 className="font-bold text-3xl mb-10">
-                AYO PUBLIKASI EVENT DONOR DARAH
-                <span className="flex justify-center">DENGAN REDHELP</span>
+              <h1 className="font-bold text-xl md:text-3xl mb-10 text-center">
+                AYO PUBLIKASI EVENT DONOR DARAH DENGAN REDHELP
               </h1>
               <div className="flex gap-20 mb-36">
-                <span>
+                <AnimationOnScroll animateIn="animate__rollIn">
                   <img src="https://img.icons8.com/fluency/48/null/instagram-new.png" />
-                </span>
-                <span>
+                </AnimationOnScroll>
+                <AnimationOnScroll animateIn="animate__slideInDown">
                   <img src="https://img.icons8.com/color/48/null/gmail--v1.png" />
-                </span>
-                <span>
+                </AnimationOnScroll>
+                <AnimationOnScroll animateIn="animate__slideInUp">
                   <img src="https://img.icons8.com/color/48/null/whatsapp--v1.png" />
-                </span>
-                <span>
+                </AnimationOnScroll>
+                <AnimationOnScroll animateIn="animate__zoomInDown">
                   <img src="https://img.icons8.com/color/48/null/twitter--v1.png" />
-                </span>
+                </AnimationOnScroll>
               </div>
             </div>
           </div>
@@ -273,10 +276,12 @@ const Tentang = () => {
       <div className="hero bg-white">
         <div className="max-w-7xl w-full py-28 flex flex-col gap-8 px-4 md:px-0">
           <h1 className="font-bold text-4xl text-center">Lokasi Kami</h1>
-          <Iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.2411065018981!2d104.10047471523288!3d1.185416266300598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da27e2a4951e67%3A0xb4fde627f3a44477!2sNongsa%20Digital%20Park!5e0!3m2!1sen!2sid!4v1681683085390!5m2!1sen!2sid"
-            className="rounded-xl w-full h-96"
-          />
+          <AnimationOnScroll animateIn="animate__rotateIn">
+            <Iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.2411065018981!2d104.10047471523288!3d1.185416266300598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da27e2a4951e67%3A0xb4fde627f3a44477!2sNongsa%20Digital%20Park!5e0!3m2!1sen!2sid!4v1681683085390!5m2!1sen!2sid"
+              className="rounded-xl w-full h-96"
+            />
+          </AnimationOnScroll>
         </div>
       </div>
       <Footer />

@@ -2,21 +2,23 @@ import { onAuthStateChanged } from "firebase/auth";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Navbar, Footer } from "../../Components";
+import { Navbar, Footer, Helm } from "../../Components";
 import { auth } from "../../firebaseConfig";
 
 const Stock = () => {
   const navigate = useNavigate("");
   const [display, setDisplay] = useState(null);
 
-  // JIKA LOGIN
+  // JIKA BELUM LOGIN
   const DisplayTrue = () => {
     return (
       <div className="w-full h-full items-center justify-center flex flex-col gap-10 max-w-xs xl:max-w-6xl mx-auto">
+        <Helm title="Stock Darah" />
         <p className="text-center">
           Kamu Tampaknya Belum <span className="font-bold">Login</span>,
-          Silahkan login untuk mendapatkan notifikasi dari kami. <br /> "Asyhadu
-          Alla Ilaha Illallah Wa Asyhadu Anna Muhammadar Rasulullah"
+          Silahkan login untuk mendapatkan informasi Stok Darah dari kami.{" "}
+          <br /> "Asyhadu Alla Ilaha Illallah Wa Asyhadu Anna Muhammadar
+          Rasulullah"
         </p>
         <div className="flex gap-8">
           <button
@@ -47,13 +49,14 @@ const Stock = () => {
 
   return (
     <div>
-      <Navbar />
+      <Helm title="Stock Darah" />
+      <Navbar position="fixed" />
       <div className="w-full h-screen flex">
         {!display ? (
           <DisplayTrue />
         ) : (
           <div>
-            <p>NOTIFIKASI</p>
+            <p>STOK DARAH YA GES</p>
           </div>
         )}
       </div>

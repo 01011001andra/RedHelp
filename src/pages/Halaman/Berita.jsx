@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Footer, Navbar } from "../../Components";
+import React from "react";
+import { Footer, Navbar, Helm } from "../../Components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 const Berita = () => {
@@ -40,7 +40,8 @@ const Berita = () => {
 
   return (
     <>
-      <Navbar />
+      <Helm title="Berita" />
+      <Navbar position="fixed" />
       <div className="hero min-h-screen bg-white">
         <div className="hero-content w-full flex flex-col pt-10">
           <h1 className="text-black text-4xl font-bold mt-24">

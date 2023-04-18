@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import BerandaCrousel from "./BerandaCrousel";
-import BerandaBerita from "./BerandaBerita";
-import BerandaPertanyaan from "./BerandaPertanyaan";
+import Helm from "./Helm";
 
-export { Navbar, Footer, BerandaCrousel, BerandaBerita, BerandaPertanyaan };
+export * from "./Beranda";
+export * from "./Profil";
+export { Navbar, Footer, Helm };

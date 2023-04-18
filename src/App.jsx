@@ -7,8 +7,9 @@ import {
   Jadwal,
   Notfound,
   Stock,
-  Profile,
+  Profil,
   Tentang,
+  ProfilDetail,
 } from "./pages/Halaman";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebaseConfig";
@@ -61,7 +62,8 @@ function App() {
           <Route path="/tentang" element={<Tentang />} />
           <Route path="/berita" element={<Berita />} />
           <Route path="/stock" element={<Stock />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profil" element={<Profil />} />
+          <Route path="/profil/detail" element={<ProfilDetail />} />
           <Route path="*" element={<Notfound />} />
         </Routes>
       ) : (
@@ -71,7 +73,6 @@ function App() {
           <Route path="/tentang" element={<Tentang />} />
           <Route path="/berita" element={<Berita />} />
           <Route path="/stock" element={<Stock />} />
-          <Route path="/profile" element={<Profile />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/lupapassword" element={<Lupa />} />

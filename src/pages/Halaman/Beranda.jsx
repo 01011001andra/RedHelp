@@ -3,9 +3,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   BerandaBerita,
-  BerandaCrousel,
+  BerandaCarousel,
   BerandaPertanyaan,
   Footer,
+  Helm,
   Navbar,
 } from "../../Components";
 import { TypeAnimation } from "react-type-animation";
@@ -29,6 +30,7 @@ const Beranda = () => {
     return;
   };
 
+  // COMPONENT DID MOUNT TRIGGER TOMBOL ESC
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
@@ -41,12 +43,14 @@ const Beranda = () => {
     };
   }, []);
 
+  // COMPONENT DID MOUNT NGAMBIL DATA USER
   useEffect(() => {
     setUser(JSON.parse(localStorage.getItem("user")));
   }, []);
   return (
     <>
-      <Navbar />
+      <Helm title="Beranda" />
+      <Navbar position="fixed" />
       <div className="hero min-h-screen bg-primary py-24 2xl:py-0">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img src="./Blood.png" onClick={triggerSpeak} />
@@ -79,7 +83,7 @@ const Beranda = () => {
         </div>
       </div>
       <div className="hero min-h-screen bg-white" id="carousel">
-        <BerandaCrousel />
+        <BerandaCarousel />
       </div>
       <div className="hero min-h-screen bg-white">
         <BerandaBerita />

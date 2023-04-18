@@ -6,7 +6,7 @@ import { auth } from "../firebaseConfig";
 import { signOut } from "firebase/auth";
 import { onAuthStateChanged } from "firebase/auth";
 
-const Navbar = () => {
+const Navbar = ({ position }) => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState(null);
@@ -49,13 +49,13 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`w-full h-28 flex items-center fixed top-0 left-0 z-[1000] transition-all duration-500  ${
+        className={`w-full h-28 flex items-center ${position} top-0 left-0 z-[1000] transition-all duration-500  ${
           bgNav ? "bg-slate-100/40" : "bg-white"
         }`}
       >
         <nav className="w-full hidden xl:max-w-6xl mx-auto xl:flex justify-between items-center px-6 xl:px-0 ">
           <div className="flex gap-[85px]">
-            <img src="./Logo.png" alt="logo" className="w-52 select-none" />
+            <img src="../Logo.png" alt="logo" className="w-52 select-none" />
             <ul className="flex gap-[10px] md:gap-[20px] xl:gap-[50px] items-center">
               {navMenu.map((item, index) => {
                 return (
@@ -94,11 +94,14 @@ const Navbar = () => {
               </>
             ) : (
               <div className="flex items-center gap-6">
-                <div className="avatar flex items-center ">
+                <Link
+                  to={"/profil"}
+                  className="avatar hover:ring hover:ring-primary flex items-center rounded-full"
+                >
                   <div className="w-12 rounded-full">
                     <img src={user?.photoURL} />
                   </div>
-                </div>
+                </Link>
                 <button
                   type="button"
                   onClick={handleLogout}
@@ -112,7 +115,7 @@ const Navbar = () => {
         </nav>
         <nav className="w-full h-full xl:hidden">
           <div className="w-full h-full max-w-7xl flex items-center justify-between px-3 md:px-6">
-            <img src="./Logo.png" alt="logo" className="w-40" />
+            <img src="../Logo.png" alt="logo" className="w-40" />
             <div
               className="cursor-pointer"
               onClick={() => {
@@ -125,13 +128,13 @@ const Navbar = () => {
         </nav>
       </div>
       <div
-        className={`w-3/4 sm:w-2/5 md:w-2/5 h-screen xl:hidden bg-white fixed top-0 left-0  z-[2000] py-8  transform transition-all duration-700 ${
+        className={`w-3/4 sm:w-2/5 md:w-2/5 h-screen xl:hidden bg-white ${position} top-0 left-0  z-[2000] py-8  transform transition-all duration-700 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
         <div className="w-full flex flex-col max-w-sm mx-auto px-3 gap-10 ">
           <div className="w-full flex justify-between items-center">
-            <img src="./Logo.png" alt="logo" className="w-52 select-none" />
+            <img src="../Logo.png" alt="logo" className="w-52 select-none" />
             <div
               className="cursor-pointer"
               onClick={() => {
@@ -182,11 +185,14 @@ const Navbar = () => {
               </>
             ) : (
               <div className="flex items-center gap-6 w-full">
-                <div className="avatar flex items-center ">
+                <Link
+                  to={"/profil"}
+                  className="avatar hover:ring hover:ring-primary flex items-center rounded-full"
+                >
                   <div className="w-12 rounded-full">
                     <img src={user?.photoURL} />
                   </div>
-                </div>
+                </Link>
                 <button
                   type="button"
                   onClick={handleLogout}
