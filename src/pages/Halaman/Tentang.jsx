@@ -42,6 +42,7 @@ const Tentang = () => {
         }
       );
   };
+
   return (
     <div className="bg-primary">
       <Helm title="Tentang" />
@@ -92,7 +93,7 @@ const Tentang = () => {
       </div>
 
       {/* Visi Misi */}
-      <div className="w-full h-full hero bg-primary">
+      <div className="w-full h-full hero bg-primary flex flex-col gap-20">
         <div
           id="visi-misi"
           className="prose flex flex-col gap-3 hero-content mx-auto"
