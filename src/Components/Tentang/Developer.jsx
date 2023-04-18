@@ -12,7 +12,7 @@ const Developer = ({
   following,
 }) => {
   return (
-    <div class="card w-96 mx-auto bg-white  shadow-xl hover:shadow">
+    <div class="card mx-auto bg-white  shadow-xl xl:px-2 hover:shadow">
       <img
         class="w-32 mx-auto rounded-full -mt-20 border-8 border-white"
         src={img}
