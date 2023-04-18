@@ -54,20 +54,21 @@ const Stock = () => {
   }, []);
 
   return (
-    <div>
+    <>
       <Helm title="Stock Darah" />
       <Navbar position="fixed" />
-      <div className="w-full h-screen flex">
+      <div className="hero min-h-screen">
         {!display ? (
           <DisplayTrue />
         ) : (
-          <div>
-            <p>STOK DARAH YA GES</p>
+          <div className="w-full h-full flex items-center justify-center flex-col justify-col ">
+            <h1 className="text-xl font-bold text-black">Info Stok Darah</h1>
+            <img src="./Grafik.png" alt="Grafik" />
           </div>
         )}
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
