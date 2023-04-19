@@ -47,31 +47,6 @@ const Jadwal = () => {
     <>
       <Helm title="Jadwal" />
       <Navbar position="fixed" />
-      {/* <div className="hero min-h-screen bg-white">
-        <div className="hero-content w-full flex flex-col pt-0 md:pt-10">
-          <h1 className="text-black text-4xl font-bold text-center">
-            Unit Donor Darahs
-          </h1>
-          <Splide
-            aria-label="My Favorite Images"
-            options={{
-              rewind: true,
-              perPage: 1,
-            }}
-            className="w-full md:max-w-xl xl:max-w-none"
-          >
-            {newsData.map((item) => {
-              return (
-                <SplideSlide className="mr-6" key={item.id}>
-                  <div className="flex justify-center flex-col gap-3 items-center">
-                    <img src={item.image} alt={item.title} />
-                  </div>
-                </SplideSlide>
-              );
-            })}
-          </Splide>
-        </div>
-      </div> */}
 
       <div className="hero min-h-screen bg-white w-full flex flex-col gap-8 pt-32">
         <div className="hero-content w-full flex justify-center">

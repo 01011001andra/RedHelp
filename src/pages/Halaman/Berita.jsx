@@ -5,48 +5,36 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css/animate.min.css";
 import { Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchNews } from "../../Features/news/newsSlice";
 
 const Berita = () => {
-  const newsData = [
-    {
-      id: 1,
-      date: "16 April 2023",
-      image: "./Berita1.png",
-      title: "PMI Ungkap Kekhawatiran Merosotnya Stok Darah di Bulan Puasa",
-      content:
-        "Ketua Bidang Kerja Sama dan Kemitraan PMI DKI Jakarta Arya Sandhiyudha mengungkap kegelisahannya akan stok darah menjelang bulan puasa.Saat bulan puasa, masyarakat cenderung enggan melakukan donor darah dan hal tersebut akan berpengaruh pada stok darah yang tersedia[...]",
-    },
-    {
-      id: 2,
-      date: "16 April 2023",
-      image: "./Berita1.png",
-      title: "PMI Ungkap Kekhawatiran Merosotnya Stok Darah di Bulan Puasa",
-      content:
-        "Ketua Bidang Kerja Sama dan Kemitraan PMI DKI Jakarta Arya Sandhiyudha mengungkap kegelisahannya akan stok darah menjelang bulan puasa.Saat bulan puasa, masyarakat cenderung enggan melakukan donor darah dan hal tersebut akan berpengaruh pada stok darah yang tersedia[...]",
-    },
-    {
-      id: 3,
-      date: "16 April 2023",
-      image: "./Berita1.png",
-      title: "PMI Ungkap Kekhawatiran Merosotnya Stok Darah di Bulan Puasa",
-      content:
-        "Ketua Bidang Kerja Sama dan Kemitraan PMI DKI Jakarta Arya Sandhiyudha mengungkap kegelisahannya akan stok darah menjelang bulan puasa.Saat bulan puasa, masyarakat cenderung enggan melakukan donor darah dan hal tersebut akan berpengaruh pada stok darah yang tersedia[...]",
-    },
-    {
-      id: 4,
-      date: "16 April 2023",
-      image: "./Berita1.png",
-      title: "PMI Ungkap Kekhawatiran Merosotnya Stok Darah di Bulan Puasa",
-      content:
-        "Ketua Bidang Kerja Sama dan Kemitraan PMI DKI Jakarta Arya Sandhiyudha mengungkap kegelisahannya akan stok darah menjelang bulan puasa.Saat bulan puasa, masyarakat cenderung enggan melakukan donor darah dan hal tersebut akan berpengaruh pada stok darah yang tersedia[...]",
-    },
-  ];
+  const dispatch = useDispatch();
+  const newsData = useSelector((state) => {
+    return state.news.news?.articles;
+  });
+  console.info(newsData);
+
+  function formatDate(dateString) {
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      timeZone: "Asia/Jakarta",
+    };
+    return new Date(dateString).toLocaleDateString("id-ID", options);
+  }
+
   useEffect(() => {
     scroll.scrollToTop({
       duration: 1000, // durasi animasi scroll (ms)
       delay: 0, // jeda sebelum animasi dimulai (ms)
       smooth: "easeInOutQuint", // jenis easing pada animasi scroll
     });
+
+    dispatch(fetchNews());
   }, []);
   return (
     <>
@@ -65,16 +53,35 @@ const Berita = () => {
             }}
             className="w-full max-w-xs md:max-w-xl xl:max-w-none"
           >
-            {newsData.map((item) => {
+            {newsData?.map((item, index) => {
               return (
-                <SplideSlide className="mr-6" key={item.id}>
+                <SplideSlide className="mr-6" key={index}>
                   <div className="flex justify-center flex-col gap-3 items-center">
-                    <h1 className="text-primary text-2xl font-bold">
+                    <h1 className="text-primary text-sm md:text-2xl font-bold">
                       {item.title}
                     </h1>
-                    <img src={item.image} alt={item.title} />
-                    <small>{item.date}</small>
-                    <p>{item.content}</p>
+                    <img
+                      src={item.urlToImage}
+                      alt={item.url}
+                      className="md:w-[400px] md:h-[300px]"
+                    />
+                    <div className="flex flex-col items-center">
+                      <small>Penulis: {item.author}</small>
+                      <small>
+                        Tanggal Dibuat: {formatDate(item.publishedAt)}
+                      </small>
+                    </div>
+
+                    <p className="text-sm md:text-lg">
+                      {item.content}{" "}
+                      <Link
+                        to={item.url}
+                        target={"_blank"}
+                        className="text-primary hover:text-black"
+                      >
+                        Baca Lebih Lengkap
+                      </Link>
+                    </p>
                   </div>
                 </SplideSlide>
               );
@@ -87,7 +94,7 @@ const Berita = () => {
           <h1 className="text-black text-4xl font-bold ">Artikel Lainnya</h1>
         </div>
         <div className="hero-content w-full flex flex-col gap-8">
-          {newsData.map((item) => {
+          {newsData?.map((item) => {
             return (
               <div
                 className="card w-full h-full bg-white shadow-xl rounded-xl p-5"
@@ -100,18 +107,29 @@ const Berita = () => {
                 >
                   <div className="flex gap-8">
                     <img
-                      className="hidden md:flex"
-                      src={item.image}
-                      alt={item.title}
-                      style={{ width: "350px" }}
+                      className="hidden md:flex w-96"
+                      src={item.urlToImage}
+                      alt={item.url}
                     />
-                    <p>
-                      <Link className="card-title text-primary hover:text-black text-3xl">
+                    <div className="flex flex-col gap-4">
+                      <h1
+                        target={"_blank"}
+                        to={item.url}
+                        className="card-title text-primary text-lg md:text-2xl"
+                      >
                         {item.title}
-                      </Link>
-                      <br />
-                      {item.content}
-                    </p>
+                      </h1>
+                      <p className="text-sm md:text-base">{item.content}</p>
+                      <div>
+                        <Link
+                          to={item.url}
+                          target={"_blank"}
+                          className="btn btn-primary bg-primary text-white hover:bg-black"
+                        >
+                          Baca Selengkapnya
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </AnimationOnScroll>
               </div>
