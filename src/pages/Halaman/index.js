@@ -6,11 +6,13 @@ import StockDarah from "./StockDarah";
 import Profil from "./Profil";
 import Tentang from "./Tentang";
 import ProfilDetail from "./ProfilDetail";
+import RegistrasiEvent from "./RegistrasiEvent";
 
 export {
   Beranda,
   Berita,
   Jadwal,
+  RegistrasiEvent,
   Notfound,
   StockDarah,
   Profil,

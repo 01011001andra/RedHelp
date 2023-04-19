@@ -3,6 +3,7 @@ import { Navbar, Footer, Helm } from "../../Components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { MdDateRange } from "react-icons/md";
 import { animateScroll as scroll } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const Jadwal = () => {
   const newsData = [
@@ -77,9 +78,12 @@ const Jadwal = () => {
                       </div>
                     </p>
                     <div className="justify-end mt-36">
-                      <button className="btn bg-primary rounded-lg text-white hover:bg-black">
+                      <Link
+                        to={"/registrasievent"}
+                        className="btn bg-primary rounded-lg text-white hover:bg-black"
+                      >
                         Daftar
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>

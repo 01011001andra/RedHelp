@@ -5,6 +5,7 @@ import {
   Beranda,
   Berita,
   Jadwal,
+  RegistrasiEvent,
   Notfound,
   Profil,
   Tentang,
@@ -59,6 +60,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Beranda />} />
           <Route path="/jadwal" element={<Jadwal />} />
+          <Route path="/registrasievent" element={<RegistrasiEvent />} />
           <Route path="/tentang" element={<Tentang />} />
           <Route path="/berita" element={<Berita />} />
           <Route path="/stock" element={<StockDarah />} />
