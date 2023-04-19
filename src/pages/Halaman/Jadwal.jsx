@@ -47,7 +47,6 @@ const Jadwal = () => {
     <>
       <Helm title="Jadwal" />
       <Navbar position="fixed" />
-
       <div className="hero min-h-screen bg-white w-full flex flex-col gap-8 pt-32">
         <div className="hero-content w-full flex justify-center">
           <h1 className="text-black text-4xl font-bold ">Event Donor Darah</h1>

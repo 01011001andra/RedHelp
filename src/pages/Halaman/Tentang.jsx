@@ -194,58 +194,58 @@ const Tentang = () => {
             </SplideSlide>
             <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
               <Developer
-                img={"./yandramuslim.jpeg"}
+                img={"./Budi.jpg"}
                 nama={"Coder"}
-                ig={"@MusYandra"}
-                link={"https://www.instagram.com/yandramuslim/"}
+                ig={"@budiiprayogaa"}
+                link={"https://www.instagram.com/budiiprayogaa/"}
                 panggilan={"Budi"}
                 deskripsi={
                   "Mentee at Infinite Learning Studi Independent Batch 4"
                 }
-                follower={"264"}
-                following={"333"}
+                follower={"253"}
+                following={"178"}
               />
             </SplideSlide>
             <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
               <Developer
-                img={"./yandramuslim.jpeg"}
+                img={"./Nadila.jpg"}
                 nama={"Project Manager"}
-                ig={"@MusYandra"}
-                link={"https://www.instagram.com/yandramuslim/"}
+                ig={"@nadilaardd"}
+                link={"https://www.instagram.com/nadilaardd/"}
                 panggilan={"Nadila"}
                 deskripsi={
                   "Mentee at Infinite Learning Studi Independent Batch 4"
                 }
-                follower={"264"}
-                following={"333"}
+                follower={"1.256"}
+                following={"1.006"}
               />
             </SplideSlide>
             <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
               <Developer
-                img={"./yandramuslim.jpeg"}
+                img={"./Salma.jpg"}
                 nama={"Designer"}
-                ig={"@MusYandra"}
-                link={"https://www.instagram.com/yandramuslim/"}
+                ig={"@salma6.2"}
+                link={"https://www.instagram.com/salma6.2/"}
                 panggilan={"Salma"}
                 deskripsi={
                   "Mentee at Infinite Learning Studi Independent Batch 4"
                 }
-                follower={"264"}
-                following={"333"}
+                follower={"226"}
+                following={"498"}
               />
             </SplideSlide>
             <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
               <Developer
-                img={"./yandramuslim.jpeg"}
+                img={"./Rizki.jpg"}
                 nama={"Designer"}
-                ig={"@MusYandra"}
-                link={"https://www.instagram.com/yandramuslim/"}
-                panggilan={"Salma"}
+                ig={"@w.rizkyramadhan"}
+                link={"https://www.instagram.com/w.rizkyramadhan/"}
+                panggilan={"Rizky"}
                 deskripsi={
                   "Mentee at Infinite Learning Studi Independent Batch 4"
                 }
-                follower={"264"}
-                following={"333"}
+                follower={"469"}
+                following={"281"}
               />
             </SplideSlide>
           </Splide>
