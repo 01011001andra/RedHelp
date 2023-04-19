@@ -1,9 +1,54 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Footer, Navbar } from "../../Components";
 import { useNavigate } from "react-router";
+import { getFirestore, collection, doc, setDoc } from "firebase/firestore";
 
 const RegistrasiEvent = () => {
+  const [user, setUser] = useState(null);
+  const [data, setData] = useState();
   const navigate = useNavigate();
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+
+  //   const {
+  //     nama,
+  //     alamat,
+  //     kelurahan,
+  //     kecamatan,
+  //     kode,
+  //     nik,
+  //     gender,
+  //     tempat,
+  //     nomor,
+  //     golongan,
+  //     berat,
+  //   } = e.target.elements;
+
+  //   setData({
+  //     nama: nama.value,
+  //     alamat: alamat.value,
+  //     kelurahan: kelurahan.value,
+  //     kecamatan: kecamatan.value,
+  //     kode: kode.value,
+  //     nik: nik.value,
+  //     gender: gender.value,
+  //     tempat: tempat.value,
+  //     nomor: nomor.value,
+  //     golongan: golongan.value,
+  //     berat: berat.value,
+  //   });
+
+  //   // Mengirim data ke Firestore
+  //   const db = getFirestore();
+  //   await setDoc(doc(collection(db, "users", user.uid, "data")), data);
+
+  //   alert(
+  //     "Selamat anda berhasil registrasi, Selanjutnya silahkan tunjukan tiket ke penyelenggara"
+  //   );
+  //   navigate("/tiket");
+  // };
+
   function handleNavigate() {
     alert(
       "Selamat anda berhasil registrasi, Selanjutnya silahkan tunjukan tiket ke penyelenggara"
@@ -11,6 +56,10 @@ const RegistrasiEvent = () => {
     navigate("/tiket");
     return;
   }
+
+  useEffect(() => {
+    setUser(JSON.parse(localStorage.getItem("user")));
+  }, []);
 
   return (
     <>
