@@ -4,13 +4,29 @@ import { Footer, Navbar } from "../../Components";
 const ProfilDetail = () => {
   return (
     <>
-      <Navbar position={"fixed"} titik={"."} />
-      <div className="min-h-screen py-[120px] xl:px-0">
-        <div className="max-w-7xl mx-auto px-4 xl:px-0">
-          <form className="py-10 px-4 bg-primary rounded-xl">
+      <Navbar position={"fixed"} />
+      <div className="min-h-screen py-[120px] xl:px-0 bg-white">
+        <div className="mx-auto px-4 xl:px-0 max-w-sm md:max-w-md xl:max-w-3xl">
+          <form className="py-10 px-4 bg-primary rounded-xl ">
             <h1 className="text-white text-2xl font-bold text-center pb-5">
               DATA PROFIL
             </h1>
+            <div className="mb-6">
+              <label
+                for="email"
+                className="block mb-2 text-sm font-medium text-white "
+              >
+                Email address
+              </label>
+              <input
+                disabled={true}
+                type="email"
+                id="email"
+                className="input input-bordered w-full rounded-lg "
+                placeholder="john.doe@company.com"
+                required
+              />
+            </div>
             <div className="w-full h-full flex flex-col">
               <div className="grid gap-6 mb-6 md:grid-cols-2">
                 <div>
@@ -21,9 +37,10 @@ const ProfilDetail = () => {
                     First name
                   </label>
                   <input
+                    disabled={true}
                     type="text"
                     id="first_name"
-                    className="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                    className="input input-bordered w-full rounded-lg "
                     placeholder="John"
                     required
                   />
@@ -36,143 +53,72 @@ const ProfilDetail = () => {
                     Last name
                   </label>
                   <input
+                    disabled={true}
                     type="text"
                     id="last_name"
-                    className="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                    className="input input-bordered w-full rounded-lg "
                     placeholder="Doe"
                     required
                   />
                 </div>
                 <div>
                   <label
-                    for="company"
+                    for="Nomor"
                     className="block mb-2 text-sm font-medium text-white "
                   >
-                    Company
+                    Nomor
                   </label>
                   <input
+                    disabled={true}
                     type="text"
-                    id="company"
-                    className="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                    placeholder="Flowbite"
+                    id="Nomor"
+                    className="input input-bordered w-full rounded-lg  "
+                    placeholder="089519113444"
                     required
                   />
                 </div>
                 <div>
                   <label
-                    for="phone"
+                    for="tanggal"
                     className="block mb-2 text-sm font-medium text-white "
                   >
-                    Phone number
+                    Tanggal Lahir
                   </label>
                   <input
-                    type="tel"
-                    id="phone"
-                    className="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                    placeholder="123-45-678"
+                    disabled={true}
+                    type="date"
+                    id="tanggal"
+                    className="input input-bordered w-full rounded-lg  "
+                    placeholder=""
                     pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                     required
                   />
                 </div>
-                <div>
-                  <label
-                    for="website"
-                    className="block mb-2 text-sm font-medium text-white "
-                  >
-                    Website URL
-                  </label>
-                  <input
-                    type="url"
-                    id="website"
-                    className="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                    placeholder="flowbite.com"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    for="visitors"
-                    className="block mb-2 text-sm font-medium text-white "
-                  >
-                    Unique visitors (per month)
-                  </label>
-                  <input
-                    type="number"
-                    id="visitors"
-                    className="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                    placeholder=""
-                    required
-                  />
-                </div>
               </div>
               <div className="mb-6">
                 <label
-                  for="email"
+                  for="golongan"
                   className="block mb-2 text-sm font-medium text-white "
                 >
-                  Email address
+                  Golongan darah
                 </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                  placeholder="john.doe@company.com"
-                  required
-                />
-              </div>
-              <div className="mb-6">
-                <label
-                  for="password"
-                  className="block mb-2 text-sm font-medium text-white "
-                >
-                  Password
-                </label>
-                <input
-                  type="password"
-                  id="password"
-                  className="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                  placeholder="•••••••••"
-                  required
-                />
-              </div>
-              <div className="mb-6">
-                <label
-                  for="confirm_password"
-                  className="block mb-2 text-sm font-medium text-white "
-                >
-                  Confirm password
-                </label>
-                <input
-                  type="password"
-                  id="confirm_password"
-                  className="bg-gray-50 border border-gray-300 text-white text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                  placeholder="•••••••••"
-                  required
-                />
-              </div>
-              <div className="flex items-start mb-6">
-                <div className="flex items-center h-5">
-                  <input
-                    id="remember"
-                    type="checkbox"
-                    value=""
-                    className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
-                    required
-                  />
-                </div>
-                <label
-                  for="remember"
-                  className="ml-2 text-sm font-medium text-white dark:text-gray-300"
-                >
-                  I agree with the{" "}
-                  <a
-                    href="#"
-                    className="text-blue-600 hover:underline dark:text-blue-500"
-                  >
-                    terms and conditions
-                  </a>
-                  .
-                </label>
+                <select className="select w-full rounded-lg placeholder-gray-600">
+                  <option disabled selected>
+                    Pilih Golongan Darah Anda
+                  </option>
+                  <option disabled selected>
+                    A
+                  </option>
+                  <option disabled selected>
+                    B
+                  </option>
+                  <option disabled selected>
+                    AB
+                  </option>
+                  <option disabled selected>
+                    O
+                  </option>
+                </select>
               </div>
               <div className="flex flex-col gap-4">
                 <button
