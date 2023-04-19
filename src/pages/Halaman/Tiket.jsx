@@ -33,49 +33,37 @@ const Tiket = () => {
             <div className="w-full h-full flex flex-col">
               <div className="grid gap-6 mb-6 md:grid-cols-2">
                 <div>
-                  <label for="nama" className="block mb-2 text-sm font-medium ">
+                  <label for="nama" className="block mb-2 text-sm font-bold">
                     Nama Lengkap
                   </label>
                   Kanaya Putri Sari
                 </div>
                 <div>
-                  <label
-                    for="alamat"
-                    className="block mb-2 text-sm font-medium "
-                  >
+                  <label for="alamat" className="block mb-2 text-sm font-bold ">
                     Alamat
                   </label>
                   Perumahan crownhill estate f.62, Batam
                 </div>
                 <div>
-                  <label
-                    for="nomor"
-                    className="block mb-2 text-sm font-medium "
-                  >
+                  <label for="nomor" className="block mb-2 text-sm font-bold ">
                     Nomor Handphone
                   </label>
                   0887322873481
                 </div>
                 <div>
-                  <label for="nik" className="block mb-2 text-sm font-medium ">
+                  <label for="nik" className="block mb-2 text-sm font-bold">
                     NIK
                   </label>
                   3322617219310002
                 </div>
                 <div>
-                  <label
-                    for="gender"
-                    className="block mb-2 text-sm font-medium "
-                  >
+                  <label for="gender" className="block mb-2 text-sm font-bold ">
                     Jenis Kelamin
                   </label>
                   Perempuan
                 </div>
                 <div>
-                  <label
-                    for="tempat"
-                    className="block mb-2 text-sm font-medium "
-                  >
+                  <label for="tempat" className="block mb-2 text-sm font-bold">
                     Tempat, Tanggal Lahir
                   </label>
                   Batam, 17 September 2002
@@ -83,36 +71,27 @@ const Tiket = () => {
                 <div>
                   <label
                     for="golongan"
-                    className="block mb-2 text-sm font-medium "
+                    className="block mb-2 text-sm font-bold "
                   >
                     Golongan Darah
                   </label>
                   A
                 </div>
                 <div>
-                  <label
-                    for="berat"
-                    className="block mb-2 text-sm font-medium "
-                  >
+                  <label for="berat" className="block mb-2 text-sm font-bold ">
                     Berat Badan
                   </label>
                   52
                 </div>
                 <div>
-                  <label
-                    for="alamat"
-                    className="block mb-2 text-sm font-medium "
-                  >
+                  <label for="alamat" className="block mb-2 text-sm font-bold">
                     Alamat Donor darah
                   </label>
                   Jl. Cemp., Tlk. Tering, Kec. Batam Kota, Kota Batam, Kepulauan
                   Riau 29444
                 </div>
                 <div>
-                  <label
-                    for="alamat"
-                    className="block mb-2 text-sm font-medium "
-                  >
+                  <label for="alamat" className="block mb-2 text-sm font-bold">
                     Lokasi donor darah
                   </label>
 
