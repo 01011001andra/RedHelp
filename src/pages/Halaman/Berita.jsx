@@ -13,7 +13,6 @@ const Berita = () => {
   const newsData = useSelector((state) => {
     return state.news.news?.articles;
   });
-  console.info(newsData);
 
   function formatDate(dateString) {
     const options = {
