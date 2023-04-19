@@ -1,46 +1,55 @@
 import React from "react";
-import { Footer, Navbar } from "../../Components";
+import { CardStock, Footer, Navbar } from "../../Components";
 
 const DetailStock = () => {
   return (
     <>
       <Navbar position={"fixed"} />
-      <div className="w-full max-w-xs sm:max-w-xl md:max-w-3xl xl:max-w-6xl 2xl:max-w-7xl mx-auto pt-32 min-h-screen flex flex-wrap">
-        {/* card */}
-        <div className="w-32 h-32 flex flex-col justify-between items-center shadow-lg">
-          <div></div>
-          <div className="w-full flex gap-5 items-center justify-center">
-            <h1 className="font-bold text-2xl">A+</h1>
-            <img src="./blood1.png" alt="bloods" className="h-10 w-10" />
-          </div>
-          <small className="w-full text-start pl-5">2</small>
+      <div className="w-full py-32 min-h-screen ">
+        <div className="max-w-xs sm:max-w-xl md:max-w-3xl xl:max-w-6xl 2xl:max-w-7xl mx-auto flex flex-wrap gap-8 px-4">
+          <CardStock />
+          <CardStock />
+          <CardStock />
+          <CardStock />
+          <CardStock />
+          <CardStock />
+          <CardStock />
+          <CardStock />
+          <CardStock />
+          <CardStock />
+          <CardStock />
+          <CardStock />
+          <CardStock />
+          <CardStock />
         </div>
-        {/* card */}
-        <div className="w-32 h-32 flex flex-col justify-between items-center shadow-lg">
-          <div></div>
-          <div className="w-full flex gap-5 items-center justify-center">
-            <h1 className="font-bold text-2xl">A+</h1>
-            <img src="./blood1.png" alt="bloods" className="h-10 w-10" />
+        <div className="max-w-xs sm:max-w-xl md:max-w-3xl xl:max-w-6xl 2xl:max-w-7xl mx-auto flex flex-wrap gap-8 px-4">
+          {/* Card */}
+          <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 xl:w-64 xl:h-64 2xl:w-72 2xl:h-72 flex justify-center items-center shadow-lg">
+            <div className="w-full flex items-center justify-center px-8">
+              <img src="blood1.png" alt="blood1" className="h-10 w-10" />
+              <h1 className="w-full text-sm xl:text-2xl flex items-center justify-center">
+                Total Donor: 5
+              </h1>
+            </div>
           </div>
-          <small className="w-full text-start pl-5">2</small>
-        </div>
-        {/* card */}
-        <div className="w-32 h-32 flex flex-col justify-between items-center shadow-lg">
-          <div></div>
-          <div className="w-full flex gap-5 items-center justify-center">
-            <h1 className="font-bold text-2xl">A+</h1>
-            <img src="./blood1.png" alt="bloods" className="h-10 w-10" />
+          {/* Card */}
+          <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 xl:w-64 xl:h-64 2xl:w-72 2xl:h-72 flex justify-center items-center shadow-lg">
+            <div className="w-full flex items-center justify-center px-8">
+              <img src="blood1.png" alt="blood1" className="h-10 w-10" />
+              <h1 className="w-full text-sm xl:text-2xl flex items-center justify-center">
+                Total Permintaan: 5
+              </h1>
+            </div>
           </div>
-          <small className="w-full text-start pl-5">2</small>
-        </div>
-        {/* card */}
-        <div className="w-32 h-32 flex flex-col justify-between items-center shadow-lg">
-          <div></div>
-          <div className="w-full flex gap-5 items-center justify-center">
-            <h1 className="font-bold text-2xl">A+</h1>
-            <img src="./blood1.png" alt="bloods" className="h-10 w-10" />
+          {/* Card */}
+          <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 xl:w-64 xl:h-64 2xl:w-72 2xl:h-72 flex justify-center items-center shadow-lg">
+            <div className="w-full flex items-center justify-center px-8">
+              <img src="blood1.png" alt="blood1" className="h-10 w-10" />
+              <h1 className="w-full text-sm xl:text-2xl flex items-center justify-center">
+                Total Darah: 5
+              </h1>
+            </div>
           </div>
-          <small className="w-full text-start pl-5">2</small>
         </div>
       </div>
       <Footer />

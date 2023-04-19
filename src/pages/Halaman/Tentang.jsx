@@ -131,7 +131,7 @@ const Tentang = () => {
               <SplideSlide className="md:px-6">
                 <div className="flex flex-col items-center justify-center gap-3">
                   <h1 className="text-xl md:text-3xl text-white">Misi</h1>
-                  <ol type="1" class="list-decimal list-inside">
+                  <ol type="1" className="list-decimal list-inside">
                     <li className="text-white text-xs">
                       Meningkatkan kesadaran masyarakat tentang pentingnya donor
                       darah secara rutin.

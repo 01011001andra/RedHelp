@@ -1,7 +1,7 @@
 import { onAuthStateChanged } from "firebase/auth";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Navbar, Footer, Helm } from "../../Components";
 import { MdDateRange } from "react-icons/md";
 import { auth } from "../../firebaseConfig";
@@ -86,6 +86,12 @@ const StockDarah = () => {
                 Info Stok Darah
               </h1>
               <img src="./Grafik.png" alt="Grafik" width={250} height={250} />
+              <Link
+                to={"/detailstock"}
+                className="text-primary hover:text-black"
+              >
+                Lihat Disini
+              </Link>
             </div>
             <div className="hero min-h-screen bg-white w-full flex flex-col gap-8 ">
               <h1 className="text-black text-xl xl:text-3xl font-bold ">
