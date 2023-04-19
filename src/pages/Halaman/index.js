@@ -7,6 +7,7 @@ import Profil from "./Profil";
 import Tentang from "./Tentang";
 import ProfilDetail from "./ProfilDetail";
 import RegistrasiEvent from "./RegistrasiEvent";
+import Tiket from "./Tiket";
 
 export {
   Beranda,
@@ -18,4 +19,5 @@ export {
   Profil,
   Tentang,
   ProfilDetail,
+  Tiket,
 };
