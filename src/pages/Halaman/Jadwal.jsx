@@ -1,11 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar, Footer, Helm } from "../../Components";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { MdDateRange } from "react-icons/md";
 import { animateScroll as scroll } from "react-scroll";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../../firebaseConfig";
 
 const Jadwal = () => {
+  const [display, setDisplay] = useState(null);
+  const navigate = useNavigate();
+
   const newsData = [
     {
       id: 1,
@@ -37,7 +41,23 @@ const Jadwal = () => {
     },
   ];
 
+  function handleBelumLogin() {
+    if (display === true) {
+      navigate("/registrasievent");
+      return;
+    }
+    alert("Harap Login Terlebih Dahulu");
+    navigate("/login");
+    return;
+  }
+
   useEffect(() => {
+    onAuthStateChanged(auth, (result) => {
+      if (result) {
+        setDisplay(true);
+        return;
+      }
+    });
     scroll.scrollToTop({
       duration: 1000, // durasi animasi scroll (ms)
       delay: 0, // jeda sebelum animasi dimulai (ms)
@@ -78,12 +98,12 @@ const Jadwal = () => {
                       </div>
                     </p>
                     <div className="justify-end mt-36">
-                      <Link
-                        to={"/registrasievent"}
+                      <button
+                        onClick={handleBelumLogin}
                         className="btn bg-primary rounded-lg text-white hover:bg-black"
                       >
                         Daftar
-                      </Link>
+                      </button>
                     </div>
                   </div>
                 </div>

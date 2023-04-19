@@ -37,20 +37,18 @@ const StockDarah = () => {
       <div className="w-full min-h-screen items-center justify-center flex flex-col gap-10 max-w-xs xl:max-w-6xl mx-auto">
         <Helm title="Stock Darah" />
         <p className="text-center">
-          Kamu Tampaknya Belum <span className="font-bold">Login</span>,
-          Silahkan login untuk mendapatkan informasi Stok Darah dari kami.{" "}
-          <br /> "Asyhadu Alla Ilaha Illallah Wa Asyhadu Anna Muhammadar
-          Rasulullah"
+          Kamu Tampaknya belum <span className="font-bold">Masuk</span>,
+          Silahkan Masuk untuk mendapatkan informasi Stok Darah dari kami.
         </p>
         <div className="flex gap-8">
           <button
-            className="px-5 py-2 rounded-md border border-black"
+            className="px-5 py-2 rounded-md border border-black hover:bg-black hover:text-white"
             onClick={() => navigate("/login")}
           >
             Masuk
           </button>
           <button
-            className="font-bold px-5 py-2 rounded-md bg-primary text-white"
+            className="font-bold px-5 py-2 rounded-md bg-primary text-white hover:bg-black hover:text-white"
             onClick={() => navigate("/register")}
           >
             Daftar
