@@ -113,10 +113,52 @@ const StockDarah = () => {
                             <p className="flex items-center gap-2">
                               {item.content}
                             </p>
+
                             <div className="flex justify-end">
-                              <button className="btn bg-primary rounded-lg text-white hover:bg-black">
-                                Daftar
-                              </button>
+                              {/* The button to open modal */}
+                              <label
+                                htmlFor="my-modal"
+                                className="btn bg-primary rounded-lg text-white hover:bg-black"
+                              >
+                                Lihat
+                              </label>
+
+                              {/* Put this part before </body> tag */}
+                              <input
+                                type="checkbox"
+                                id="my-modal"
+                                className="modal-toggle"
+                              />
+                              <div className="modal ">
+                                <div className="modal-box">
+                                  <h3 className="font-bold text-lg text-center">
+                                    Dibutuhkan Golongan Darah AB+
+                                  </h3>
+                                  <img
+                                    src="./BloodBank.png"
+                                    alt="BloddBank"
+                                    className="mx-auto"
+                                  />
+                                  <p className="py-4">
+                                    Halo, saya Joko Subianto dari Kota Batam.
+                                    Saat ini teman saya yang bernama Puan Elina
+                                    Maharani sedang membutuhkan sebuah darah
+                                    yang bergolongan AB+. Saat ini, teman saya
+                                    saat ini sedang dirawat di RS. Awal Bros,
+                                    kota Batam. Untuk teman-teman yang memiliki
+                                    golongan darah AB dan sukarela untuk
+                                    mendonorkan darahnya bida datang ke Rumah
+                                    Sakit Awal Bros yang beralamatkan di Jalan
+                                    Gajah Mada, No.Kav.1, Kec. Lubuk Baja atau
+                                    dapat dihubungi Nomor ini: 0858721456881
+                                  </p>
+                                  <div className="modal-action">
+                                    <label htmlFor="my-modal" className="btn">
+                                      Close
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>

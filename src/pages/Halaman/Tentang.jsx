@@ -194,7 +194,7 @@ const Tentang = () => {
             </SplideSlide>
             <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
               <Developer
-                img={"./Budi.jpg"}
+                img={"./Budi.png"}
                 nama={"Coder"}
                 ig={"@budiiprayogaa"}
                 link={"https://www.instagram.com/budiiprayogaa/"}
@@ -222,16 +222,16 @@ const Tentang = () => {
             </SplideSlide>
             <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
               <Developer
-                img={"./Salma.jpg"}
+                img={"./Salma1.jpg"}
                 nama={"Designer"}
-                ig={"@salma6.2"}
-                link={"https://www.instagram.com/salma6.2/"}
+                ig={"@hy_saalma"}
+                link={"https://www.instagram.com/hy_saalma/"}
                 panggilan={"Salma"}
                 deskripsi={
                   "Mentee at Infinite Learning Studi Independent Batch 4"
                 }
-                follower={"226"}
-                following={"498"}
+                follower={"189"}
+                following={"235"}
               />
             </SplideSlide>
             <SplideSlide className="md:px-4 pt-20 mr-5 h-full">

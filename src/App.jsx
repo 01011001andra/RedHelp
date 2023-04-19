@@ -12,6 +12,7 @@ import {
   ProfilDetail,
   StockDarah,
   Tiket,
+  DetailStock,
 } from "./pages/Halaman";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebaseConfig";
@@ -66,6 +67,7 @@ function App() {
           <Route path="/tentang" element={<Tentang />} />
           <Route path="/berita" element={<Berita />} />
           <Route path="/stock" element={<StockDarah />} />
+          <Route path="/detailstock" element={<DetailStock />} />
           <Route path="/profil" element={<Profil />} />
           <Route path="/profil/detail" element={<ProfilDetail />} />
           <Route path="*" element={<Notfound />} />
