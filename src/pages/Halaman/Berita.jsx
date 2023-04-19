@@ -39,7 +39,7 @@ const Berita = () => {
     <>
       <Helm title="Berita" />
       <Navbar position="fixed" />
-      <div className="hero min-h-screen bg-white">
+      <div className="hero min-h-screen bg-white overflow-x-hidden">
         <div className="hero-content w-full flex flex-col pt-10">
           <h1 className="text-black text-4xl font-bold mt-24 2xl:mt-0">
             Berita Terkini

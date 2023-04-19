@@ -34,7 +34,7 @@ const StockDarah = () => {
   // JIKA BELUM LOGIN
   const DisplayTrue = () => {
     return (
-      <div className="w-full h-full items-center justify-center flex flex-col gap-10 max-w-xs xl:max-w-6xl mx-auto">
+      <div className="w-full min-h-screen items-center justify-center flex flex-col gap-10 max-w-xs xl:max-w-6xl mx-auto">
         <Helm title="Stock Darah" />
         <p className="text-center">
           Kamu Tampaknya Belum <span className="font-bold">Login</span>,
@@ -78,58 +78,58 @@ const StockDarah = () => {
     <>
       <Helm title="Stock Darah" />
       <Navbar position="fixed" />
-      <div className=" min-h-screen bg-white">
+      <div className=" bg-white">
         {!display ? (
           <DisplayTrue />
         ) : (
-          <div className="w-full h-full flex items-center justify-center flex-col justify-col pt-32 hero-content ">
-            <h1 className="text-xl font-bold text-black">Info Stok Darah</h1>
-            <img src="./Grafik.png" alt="Grafik" width={250} height={250} />
-          </div>
-        )}
-      </div>
-
-      <div className="hero min-h-screen bg-white w-full flex flex-col gap-8 pt-32">
-        <div className="hero-content w-full flex justify-center">
-          <h1 className="text-black text-4xl font-bold ">
-            Informasi Kebutuhan Stok Darah
-          </h1>
-        </div>
-        <div className="hero-content w-full flex flex-col gap-8">
-          {newsData.map((item) => {
-            return (
-              <div
-                className="card w-full bg-white shadow-md  flex flex-col gap-8"
-                key={item.id}
-              >
-                <div className="card-body shadow-xl rounded-lg">
-                  <div className="flex">
-                    <img
-                      className="hidden md:flex"
-                      src={item.image}
-                      alt={item.title}
-                      style={{ width: "150px", height: "150px" }}
-                    />
-                    <p>
-                      <span className="card-title text-primary text-3xl">
-                        {item.title}
-                      </span>
-                      <br />
-                      <div className="flex items-center gap-2">
-                        {item.content}
+          <>
+            <div className="w-full h-full flex items-center justify-center flex-col justify-col pt-32 hero-content mx-auto">
+              <h1 className="text-xl xl:text-3xl font-bold text-black">
+                Info Stok Darah
+              </h1>
+              <img src="./Grafik.png" alt="Grafik" width={250} height={250} />
+            </div>
+            <div className="hero min-h-screen bg-white w-full flex flex-col gap-8 ">
+              <h1 className="text-black text-xl xl:text-3xl font-bold ">
+                Informasi Kebutuhan Stok Darah
+              </h1>
+              <div className="hero-content w-full flex flex-col gap-8">
+                {newsData.map((item) => {
+                  return (
+                    <div
+                      className="card w-full bg-white shadow-md  flex flex-col gap-8"
+                      key={item.id}
+                    >
+                      <div className="card-body shadow-xl rounded-lg">
+                        <div className="flex gap-8">
+                          <img
+                            className="hidden md:flex"
+                            src={item.image}
+                            alt={item.title}
+                            style={{ width: "150px", height: "150px" }}
+                          />
+                          <div className="flex flex-col gap-4 w-full h-full">
+                            <span className="card-title text-primary text-lg xl:text-3xl">
+                              {item.title}
+                            </span>
+                            <p className="flex items-center gap-2">
+                              {item.content}
+                            </p>
+                            <div className="flex justify-end">
+                              <button className="btn bg-primary rounded-lg text-white hover:bg-black">
+                                Daftar
+                              </button>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </p>
-                    <div className="mt-36">
-                      <button className="btn bg-primary rounded-lg text-white hover:bg-black">
-                        Daftar
-                      </button>
                     </div>
-                  </div>
-                </div>
+                  );
+                })}
               </div>
-            );
-          })}
-        </div>
+            </div>
+          </>
+        )}
       </div>
       <Footer />
     </>
