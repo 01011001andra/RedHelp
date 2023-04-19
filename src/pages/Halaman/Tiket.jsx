@@ -1,12 +1,32 @@
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 import React from "react";
 import { Footer, Navbar } from "../../Components";
 import Iframe from "react-iframe";
 
 const Tiket = () => {
+  const [userData, setUserData] = React.useState(null);
   const [user, setUser] = React.useState(null);
+  // const currentUserUid = user?.uid; // UID pengguna yang sedang login
+
   React.useEffect(() => {
     setUser(JSON.parse(localStorage.getItem("user")));
   }, []);
+
+  // React.useEffect(() => {
+  //   async function fetchUserData() {
+  //     const db = getFirestore();
+  //     const userDocRef = doc(db, "users", currentUserUid, "data",); // "users" adalah nama koleksi di Firestore
+  //     console.info(userDocRef);
+  //     const userDoc = await getDoc(userDocRef);
+  //     if (userDoc.exists()) {
+  //       setUserData(userDoc.data());
+  //       console.info(userDoc.data());
+  //     } else {
+  //       console.log("User not found");
+  //     }
+  //   }
+  //   fetchUserData();
+  // }, [currentUserUid]);
   return (
     <>
       <Navbar position={"fixed"} />
