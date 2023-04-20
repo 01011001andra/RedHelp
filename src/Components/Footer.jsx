@@ -53,7 +53,7 @@ const Footer = () => {
           </Link>
         </div>
         <div>
-          <span className="font-bold text-white">Made with</span>
+          <span className="font-bold text-white">Made with ❤️</span>
           <div className="flex flex-wrap gap-2">
             <img src="./html.png" alt="html" className="w-8" />
             <img

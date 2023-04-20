@@ -44,6 +44,10 @@ const Beranda = () => {
 
   const triggerSpeak = () => {
     VoicesTTS.speak(value);
+    alert(
+      "Nanti ada yang ngomong, jangan di spam click biar gk ngulang dia ngejelasinnya😡😡 - Admin Yandra"
+    );
+
     return;
   };
 
@@ -52,6 +56,9 @@ const Beranda = () => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
         triggerSpeak();
+        alert(
+          "Nanti ada yang ngomong, jangan di spam click biar gk ngulang dia ngejelasinnya😡😡 - Admin Yandra"
+        );
       }
     };
     document.addEventListener("keydown", handleKeyDown);
