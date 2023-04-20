@@ -72,6 +72,17 @@ const Login = () => {
                 placeholder="Kata Sandi"
               />
             </div>
+            <div className="text-xs flex gap-1 justify-end">
+              Saya sudah setuju dengan{" "}
+              <Link
+                to="/syarat.pdf"
+                target="_blank"
+                download
+                className="text-primary hover:text-black"
+              >
+                Syarat dan Ketentuan.
+              </Link>
+            </div>
             <button
               // onClick={() => navigate("/")}
               type="button"
