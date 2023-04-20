@@ -8,26 +8,6 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css/animate.min.css";
 
 const BerandaCarousel = () => {
-  const slides = [
-    {
-      title: "Apakah donor darah aman?",
-      content:
-        "Orang yang berdonor darah adalah orang yang sehat. Kemudian darah yang didonorkan akan melalui uji saring untuk memastikan darah yang siap ditransfusi adalah darah yang sehat dan aman.",
-      image: "BloodBag.png",
-    },
-    {
-      title: "Kenapa harus donor darah?",
-      content:
-        "Karena kita mempunyai kebutuhan tahunan untuk pasien di rumah sakit. Jumlahnya sekitar 5 juta kantong setiap tahun. Prosedur yang dijalankan oleh PMI dalam pengelolaan darah adalah untuk menghasilkan darah yang aman bagi pasien yang harus diselamatkan.",
-      image: "salaman.jpg",
-    },
-    {
-      title: "Kenapa harus donor darah?",
-      content:
-        "Karena kita mempunyai kebutuhan tahunan untuk pasien di rumah sakit. Jumlahnya sekitar 5 juta kantong setiap tahun. Prosedur yang dijalankan oleh PMI dalam pengelolaan darah adalah untuk menghasilkan darah yang aman bagi pasien yang harus diselamatkan.",
-      image: "salaman.jpg",
-    },
-  ];
   return (
     <div className="w-full flex flex-col xl:flex-row justify-between hero-content">
       <div className="w-3/6">
@@ -52,23 +32,60 @@ const BerandaCarousel = () => {
             rewind: true,
           }}
         >
-          {slides.map((item, index) => {
-            return (
-              <SplideSlide key={index} className="md:px-6">
-                <div className="flex items-center justify-center gap-3">
-                  <p className="flex flex-col gap-4 text-sm">
-                    <span className="text-xl md:text-3xl">{item.title}</span>
-                    {item.content}
-                  </p>
-                  <img
-                    src={item.image}
-                    alt="Yandra Muslim"
-                    className="mx-auto w-64 hidden md:flex"
-                  />
-                </div>
-              </SplideSlide>
-            );
-          })}
+          <SplideSlide className="md:px-6">
+            <div className="flex items-center justify-center gap-3">
+              <p className="flex flex-col gap-4 text-sm">
+                <span className="text-xl md:text-3xl">
+                  Apakah donor darah aman?
+                </span>
+                Orang yang berdonor darah adalah orang yang sehat. Kemudian
+                darah yang didonorkan akan melalui uji saring untuk memastikan
+                darah yang siap ditransfusi adalah darah yang sehat dan aman.
+              </p>
+              <img
+                src="./BloodBag.png"
+                alt="RedHelp"
+                className="mx-auto w-64 hidden md:flex"
+              />
+            </div>
+          </SplideSlide>
+          <SplideSlide className="md:px-6">
+            <div className="flex items-center justify-center gap-3">
+              <p className="flex flex-col gap-4 text-sm">
+                <span className="text-xl md:text-2xl">
+                  Apa saja syarat donor darah?
+                </span>
+                <ol type="1" className="list-decimal list-inside">
+                  <li className="text-black text-xs">
+                    Berat badan minimal 45 kg.
+                  </li>
+                  <li className="text-black text-xs">
+                    Tekanan darah, denyut nadi, dan kadar hemoglobin dalam batas
+                    normal yang ditetapkan.
+                  </li>
+                  <li className="text-black text-xs">
+                    Tidak sedang dalam keadaan sakit atau mengonsumsi
+                    obat-obatan tertentu yang dapat mempengaruhi kesehatan atau
+                    kualitas darah.
+                  </li>
+                  <li className="text-black text-xs">
+                    Tidak sedang hamil atau menyusui.
+                  </li>
+                  <li className="text-black text-xs">
+                    Tidak pernah melakukan tindakan-tindakan yang berisiko
+                    tinggi terhadap penularan penyakit menular, seperti
+                    melakukan hubungan seksual tidak aman, menggunakan narkoba
+                    suntik, atau mengonsumsi obat-obatan terlarang.
+                  </li>
+                </ol>
+              </p>
+              <img
+                src="./salaman.jpg"
+                alt="RedHelp"
+                className="mx-auto w-64 hidden md:flex"
+              />
+            </div>
+          </SplideSlide>
         </Splide>
       </AnimationOnScroll>
     </div>

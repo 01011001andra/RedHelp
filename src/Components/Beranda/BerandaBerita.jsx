@@ -6,24 +6,24 @@ import { Link } from "react-router-dom";
 const BerandaBerita = () => {
   const beritaContent = [
     {
-      image: "Blood.png",
-      title: "Manusia Ini Kekurangan Darah",
-      text: "Cepat Tolong bantu manusia ini membutuhkan darah yang sangat banyak karena baru saja terjadi kecelakaan",
+      image: "BeritaBeranda1.png",
+      title: "Bolehkah Donor Darah Saat Puasa?",
+      text: "Bulan ramadan menjadi bulan yang paling meresahkan bagi Palang Merah Indonesia.",
     },
     {
-      image: "Blood.png",
-      title: "Manusia Ini Kekurangan Darah",
-      text: "Cepat Tolong bantu manusia ini membutuhkan darah yang sangat banyak karena baru saja terjadi kecelakaan",
+      image: "BeritaBeranda2.jpg",
+      title: "Stok Darah PMI Jakarta Menipis",
+      text: "Palang Merah Indonesia Menyatakan Persediaan Darah di Ibu Kota Jakarta Menipis, Hanya Bisa Memenuhi Kebutuhan Hingga 10 Hari Mendatang",
     },
     {
-      image: "Blood.png",
-      title: "Manusia Ini Kekurangan Darah",
-      text: "Cepat Tolong bantu manusia ini membutuhkan darah yang sangat banyak karena baru saja terjadi kecelakaan",
+      image: "BeritaBeranda3.png",
+      title: "Walikota Ajak Donor Darah",
+      text: "PMI Kota Bandung optimis bisa mencapai target 400 kantong darah dalam kegiatan Hari Donor Darah Sedunia, pada Selasa, 14 Juni 2022.",
     },
   ];
   return (
     <div className="hero-content flex flex-col">
-      <h1 className="text-black text-4xl font-bold">Update Terkini</h1>
+      <h1 className="text-black text-4xl font-bold">Berita Terkini</h1>
       <div className="w-full flex flex-wrap hero-content">
         {beritaContent.map((item, index) => {
           return (
