@@ -11,21 +11,30 @@ const StockDarah = () => {
   const newsData = [
     {
       id: 1,
-      image: "./BloodBank.png",
-      title: "Ada Yang Membutuhkan Darah!!! ",
-      content: "Ayo Tolong Dia!",
+      image: "./Sakit.jpg",
+      title: "Membutuhkan Golongan Darah AB+ ! ",
+      heading: "Butuh segera golongan darah AB+",
+      content:
+        "Halo, saya Joko Subianto dari Kota Batam. Saat ini teman saya yang bernama Puan Elina Maharani sedang membutuhkan sebuah darah yang bergolongan AB+.",
+      isi: "Halo, saya Joko Subianto dari Kota Batam. Saat ini teman saya yang bernama Puan Elina Maharani sedang membutuhkan sebuah darah yang bergolongan AB+. Saat ini, teman saya saat ini sedang dirawat di RS. Awal Bros, kota Batam. Untuk teman-teman yang memiliki golongan darah AB dan sukarela untukmendonorkan darahnya bida datang ke Rumah Sakit Awal Bros yang beralamatkan di Jalan Gajah Mada, No.Kav.1, Kec. Lubuk Baja atau dapat dihubungi Nomor ini: 0858721456881",
     },
     {
       id: 2,
-      image: "./BloodBank.png",
-      title: "Ada Yang Membutuhkan Darah!!!",
-      content: "Ayo Tolong Dia!",
+      image: "./sakit1.jpg",
+      title: "Membutuhkan Golongan Darah B !",
+      heading: "Butuh segera golongan darah B",
+      content:
+        "Halo, saya Dwi dari Kota batam Mohon bantuan anak saya sedang membutuhkan transfusi darah secepatnya. Saya sangat berharap ada yang bisa mendonorkan darah B kepada anak saya.",
+      isi: "Halo, saya Dwi dari Kota batam Mohon bantuan semua orang yang memiliki kemampuan untuk mendonorkan darah, anak saya sedang membutuhkan transfusi darah secepatnya dan stok darah di rumah sakit sangat minim. Saya sangat berharap ada yang bisa membantu menyelamatkan nyawa anak saya dengan menjadi pendonor darah. Jika ada yang bersedia mendonorkan darahnya untuk anak saya bisa menghubungi nomor ini: 081264751052",
     },
     {
       id: 3,
-      image: "./BloodBank.png",
-      title: "Ada Yang Membutuhkan Darah!!!",
-      content: "Ayo Tolong Dia!",
+      image: "./Sakit2.jpg",
+      title: "Membutuhkan Golongan Darah O !",
+      heading: "Butuh segera golongan darah O",
+      content:
+        "Halo, saya Tasya dari Kota batam Saya mohon bantuan dari siapa saja yang memiliki kemampuan untuk mendonorkan darah O. Dikarenakan stok darah O di rumah sakit sedang tidak ada.",
+      isi: "Halo, saya Tasya dari Kota batam Mohon bantuan semua orang yang memiliki kemampuan untuk mendonorkan darah, saya sedang membutuhkan transfusi darah secepatnya dan stok darah di rumah sakit sedang tidak ada. Jika ada yang bersedia mendonorkan darahnya untuk saya bisa menghubungi nomor ini: 087843678956",
     },
   ];
   const navigate = useNavigate();
@@ -110,7 +119,7 @@ const StockDarah = () => {
                             className="hidden md:flex"
                             src={item.image}
                             alt={item.title}
-                            style={{ width: "150px", height: "150px" }}
+                            style={{ width: "150px", height: "140px" }}
                           />
                           <div className="flex flex-col gap-4 w-full h-full">
                             <span className="card-title text-primary text-lg xl:text-3xl">
@@ -123,7 +132,7 @@ const StockDarah = () => {
                             <div className="flex justify-end">
                               {/* The button to open modal */}
                               <label
-                                htmlFor="my-modal"
+                                htmlFor={item.id}
                                 className="btn bg-primary rounded-lg text-white hover:bg-black"
                               >
                                 Lihat
@@ -132,34 +141,23 @@ const StockDarah = () => {
                               {/* Put this part before </body> tag */}
                               <input
                                 type="checkbox"
-                                id="my-modal"
+                                id={item.id}
                                 className="modal-toggle"
                               />
                               <div className="modal ">
                                 <div className="modal-box">
                                   <h3 className="font-bold text-lg text-center">
-                                    Dibutuhkan Golongan Darah AB+
+                                    {item.heading}
                                   </h3>
                                   <img
-                                    src="./BloodBank.png"
+                                    src={item.image}
                                     alt="BloddBank"
                                     className="mx-auto"
+                                    style={{ width: "250px", height: "150px" }}
                                   />
-                                  <p className="py-4">
-                                    Halo, saya Joko Subianto dari Kota Batam.
-                                    Saat ini teman saya yang bernama Puan Elina
-                                    Maharani sedang membutuhkan sebuah darah
-                                    yang bergolongan AB+. Saat ini, teman saya
-                                    saat ini sedang dirawat di RS. Awal Bros,
-                                    kota Batam. Untuk teman-teman yang memiliki
-                                    golongan darah AB dan sukarela untuk
-                                    mendonorkan darahnya bida datang ke Rumah
-                                    Sakit Awal Bros yang beralamatkan di Jalan
-                                    Gajah Mada, No.Kav.1, Kec. Lubuk Baja atau
-                                    dapat dihubungi Nomor ini: 0858721456881
-                                  </p>
+                                  <p className="py-4">{item.isi}</p>
                                   <div className="modal-action">
-                                    <label htmlFor="my-modal" className="btn">
+                                    <label htmlFor={item.id} className="btn">
                                       Close
                                     </label>
                                   </div>
