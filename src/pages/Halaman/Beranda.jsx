@@ -16,10 +16,26 @@ import { animateScroll as scroll } from "react-scroll";
 
 const Beranda = () => {
   const [user, setUser] = useState(null);
+  let [mulai, setMulai] = useState(0);
   const navigate = useNavigate();
   const [value, setValue] = useState(
     `Selamat datang, kami hadir untuk membantu berkolaborasi dan mendukung program Palang Merah Indonesia atau PMI, Jika kamu membutuhkan bantuan bisa menghubungi nomor Whatsapp 0895611861777`
   );
+
+  function handleMulai() {
+    const intervalId = setInterval(() => {
+      setMulai((prevMulai) => {
+        if (prevMulai >= 100) {
+          clearInterval(intervalId);
+          return 0;
+        }
+        return prevMulai + 1;
+      });
+    }, 10);
+
+    return () => clearInterval(intervalId);
+  }
+
   const VoicesTTSS = VoicesTTS.init({
     lang: "id-ID",
     volume: 1.0,
@@ -53,6 +69,12 @@ const Beranda = () => {
       smooth: "easeInOutQuint", // jenis easing pada animasi scroll
     });
   }, []);
+
+  useEffect(() => {
+    if (mulai > 90) {
+      scroll.scrollMore(1000);
+    }
+  }, [mulai]);
   return (
     <>
       <Helm title="Beranda" />
@@ -62,8 +84,21 @@ const Beranda = () => {
        2xl:py-0"
       >
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <img src="./Blood.png" onClick={triggerSpeak} />
-
+          <div className="w-full h-full relative">
+            {/* <h1 className="top-0 left-4 absolute text-warning border border-black bg-primary p-3 rounded-xl font-bold text-sm transition-all animate-pulse">
+              
+            </h1> */}
+            <div className="chat chat-start md:chat-end absolute left-1/2 md:right-1/2 md:left-0 transition-all animate-bounce duration-1000">
+              <div
+                onClick={triggerSpeak}
+                className="chat-bubble bg-primary border text-xs sm:text-sm shadow-2xl text-warning select-none"
+              >
+                KLIK GAMBAR INI ATAU TEKAN TOMBOL <br /> "ESC" UNTUK BANTUAN
+                (Accesibility)
+              </div>
+            </div>
+            <img src="./Blood.png" onClick={triggerSpeak} />
+          </div>
           <div>
             <TypeAnimation
               sequence={["RedHelp", 2000, "We Help Everyone", 4000]}
@@ -82,16 +117,22 @@ const Beranda = () => {
             </p>
             <Link
               className="btn btn-secondary bg-white text-primary rounded-md"
-              to="carousel"
               spy={true}
               smooth={true}
+              onClick={handleMulai}
             >
               Ayo Mulai
             </Link>
+            <div
+              className="radial-progress ml-10 text-white transition-all duration-1000"
+              style={{ "--value": `${mulai}` }}
+            >
+              {mulai}%
+            </div>
           </div>
         </div>
       </div>
-      <div className="hero min-h-screen bg-white" id="carousel">
+      <div className="hero min-h-screen bg-white" id="carousel" name="wtf">
         <BerandaCarousel />
       </div>
       <div className="hero min-h-screen bg-white">
