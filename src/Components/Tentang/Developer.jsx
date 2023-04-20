@@ -15,7 +15,6 @@ const Developer = ({
   return (
     <AnimationOnScroll
       duration={1}
-      animateOnce={true}
       animateIn="animate__zoomIn"
       className="card mx-auto bg-white shadow-xl xl:px-2 hover:shadow w-full"
     >
