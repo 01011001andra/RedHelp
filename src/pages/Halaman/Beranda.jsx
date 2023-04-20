@@ -44,6 +44,10 @@ const Beranda = () => {
 
   const triggerSpeak = () => {
     VoicesTTS.speak(value);
+    alert(
+      "Nanti ada yang ngomong, jangan di spam click biar gk ngulang dia ngejelasinnya😡😡 - Admin Yandra"
+    );
+
     return;
   };
 
@@ -52,6 +56,9 @@ const Beranda = () => {
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
         triggerSpeak();
+        alert(
+          "Nanti ada yang ngomong, jangan di spam click biar gk ngulang dia ngejelasinnya😡😡 - Admin Yandra"
+        );
       }
     };
     document.addEventListener("keydown", handleKeyDown);
@@ -85,9 +92,6 @@ const Beranda = () => {
       >
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="w-full h-full relative">
-            {/* <h1 className="top-0 left-4 absolute text-warning border border-black bg-primary p-3 rounded-xl font-bold text-sm transition-all animate-pulse">
-              
-            </h1> */}
             <div className="chat chat-start md:chat-end absolute left-1/2 md:right-1/2 md:left-0 transition-all animate-pulse duration-1000">
               <div
                 onClick={triggerSpeak}
@@ -116,7 +120,7 @@ const Beranda = () => {
               kekurangan darah di Indonesia.
             </p>
             <Link
-              className="btn btn-secondary bg-white text-primary rounded-md"
+              className="btn btn-secondary bg-white text-primary rounded-md hover:-translate-y-1 transition-all duration-500"
               spy={true}
               smooth={true}
               onClick={handleMulai}

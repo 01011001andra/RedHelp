@@ -52,6 +52,24 @@ const Footer = () => {
             Tentang Kami
           </Link>
         </div>
+        <div>
+          <span className="font-bold text-white">Made with ❤️</span>
+          <div className="flex flex-wrap gap-2">
+            <img src="./html.png" alt="html" className="w-8" />
+            <img
+              src="./tailwindcss.png"
+              alt="tailwindcss"
+              className="w-8 h-6 my-auto"
+            />
+            <img src="./js.png" alt="js" className="w-8" />
+            <img src="./react.png" alt="react" className="w-8" />
+            <img src="./redux-icon.png" alt="redux" className="w-8" />
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <img src="./daisyui.png" alt="daisyui" className="w-20" />
+            <img src="./firebase.png" alt="firebase" className="w-24" />
+          </div>
+        </div>
       </div>
     </footer>
   );
