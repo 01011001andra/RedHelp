@@ -72,7 +72,7 @@ const Beranda = () => {
 
   useEffect(() => {
     if (mulai > 90) {
-      scroll.scrollMore(1000);
+      scroll.scrollTo(930);
     }
   }, [mulai]);
   return (
@@ -88,12 +88,12 @@ const Beranda = () => {
             {/* <h1 className="top-0 left-4 absolute text-warning border border-black bg-primary p-3 rounded-xl font-bold text-sm transition-all animate-pulse">
               
             </h1> */}
-            <div className="chat chat-start md:chat-end absolute left-1/2 md:right-1/2 md:left-0 transition-all animate-bounce duration-1000">
+            <div className="chat chat-start md:chat-end absolute left-1/2 md:right-1/2 md:left-0 transition-all animate-pulse duration-1000">
               <div
                 onClick={triggerSpeak}
-                className="chat-bubble bg-primary border text-xs sm:text-sm shadow-2xl text-warning select-none"
+                className="chat-bubble bg-primary border text-xs sm:text-sm shadow-2xl text-warning select-none max-w-xs md:max-w-sm w-full"
               >
-                KLIK GAMBAR INI ATAU TEKAN TOMBOL <br /> "ESC" UNTUK BANTUAN
+                KLIK GAMBAR INI ATAU TEKAN TOMBOL "ESC" UNTUK BANTUAN
                 (Accesibility)
               </div>
             </div>
