@@ -186,7 +186,7 @@ const Tentang = () => {
                 link={"https://www.instagram.com/yandramuslim/"}
                 panggilan={"Yandra"}
                 deskripsi={
-                  "Mentee Infinite Learning yang bercita-cita menjadi frontend devloper - Reactjs"
+                  "Mentee Infinite Learning yang ingin menjadi frontend developer Reactjs"
                 }
                 follower={"264"}
                 following={"333"}
@@ -280,7 +280,7 @@ const Tentang = () => {
       </div>
 
       {/* Contact US */}
-      <div className="bg-white hero py-10">
+      <div className="bg-white hero">
         <div className="max-w-7xl w-full h-full flex flex-col py-8 gap-10 px-5">
           <h1 className="text-center text-4xl font-bold">Hubungi Kami</h1>
           <div className="w-full flex flex-col md:flex-row items-center gap-14">
@@ -309,7 +309,7 @@ const Tentang = () => {
                     name="nama_lengkap"
                     id="nama_lengkap"
                     placeholder="Masukkan Nama Lengkap"
-                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-xs md:text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                     required
                   />
                 </div>
@@ -325,7 +325,7 @@ const Tentang = () => {
                     name="email"
                     id="email"
                     placeholder="contoh@domain.com"
-                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md invalid:text-red-500 "
+                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-xs md:text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md invalid:text-red-500 "
                     required
                   />
                 </div>
@@ -341,7 +341,7 @@ const Tentang = () => {
                     name="subject"
                     id="subject"
                     placeholder="Masukkan subject"
-                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-xs md:text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                     required
                   />
                 </div>
@@ -357,7 +357,7 @@ const Tentang = () => {
                     name="message"
                     id="message"
                     placeholder="Masukkan Pesan"
-                    className="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    className="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-xs md:text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                     required
                   ></textarea>
                 </div>
@@ -369,7 +369,7 @@ const Tentang = () => {
               </form>
             </AnimationOnScroll>
 
-            <div className="flex flex-col items-center justify-center xl:w-1/2 w-full h-full gap-5">
+            <div className="flex flex-col items-center justify-center md:w-1/2 w-full h-full gap-5">
               <h1 className="font-bold text-xl md:text-3xl mb-10 text-center">
                 AYO PUBLIKASI EVENT DONOR DARAH DENGAN REDHELP
               </h1>
@@ -394,7 +394,7 @@ const Tentang = () => {
 
       {/* Lokasi */}
       <div className="hero bg-white">
-        <div className="max-w-7xl w-full py-28 flex flex-col gap-8 px-4 ">
+        <div className="max-w-7xl w-full pb-28 flex flex-col gap-8 px-4 ">
           <h1 className="font-bold text-4xl text-center">Lokasi Kami</h1>
           <AnimationOnScroll animateIn="animate__zoomIn">
             <Iframe

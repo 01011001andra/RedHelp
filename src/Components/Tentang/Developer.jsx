@@ -24,14 +24,16 @@ const Developer = ({
         src={img}
         alt=""
       />
+      <h1 className="text-center mt-2 text-xl xl:text-3xl font-medium ">
+        {nama}
+      </h1>
       <Link
         to={link}
         target={"_blank"}
-        className="text-center mt-2 text-xl xl:text-3xl font-medium hover:text-primary"
+        className="text-center mt-2 font-light text-sm hover:text-primary underline"
       >
-        {nama}
+        {ig}
       </Link>
-      <div className="text-center mt-2 font-light text-sm">{ig}</div>
       <div className="text-center font-normal text-lg">{panggilan}</div>
       <div className="mt-2 font-light text-sm w-full">
         <p className="w-full text-center px-4">{deskripsi}</p>
