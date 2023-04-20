@@ -6,24 +6,29 @@ const BerandaPertanyaan = () => {
   const pertanyaan = [
     {
       tabIndex: 0,
-      title: "Focus me to see content",
-      content: "tabIndex={0} attribute is necessary to make the div focusable",
+      title: "Apa Itu RedHelp?",
+      content:
+        "RedHelp adalah sebuah platform kemanusiaan yang berfokus pada membantu orang-orang yang membutuhkan donor darah darurat di Indonesia. RedHelp memfasilitasi koordinasi antara pendonor darah dan pihak rumah sakit atau keluarga pasien yang membutuhkan darah. Dengan menggunakan teknologi digital, RedHelp menyediakan sistem yang memudahkan proses pencarian dan pengiriman darah, serta memastikan keamanan dan kualitas darah yang disumbangkan. Selain itu, RedHelp juga memberikan edukasi dan promosi mengenai pentingnya donor darah, serta mengadakan kampanye donor darah untuk meningkatkan kesadaran masyarakat tentang pentingnya donor darah. RedHelp didirikan oleh sekelompok mahasiswa yang peduli dengan krisis donor darah di Indonesia dan berupaya untuk memberikan solusi inovatif untuk mengatasi masalah tersebut.",
     },
     {
       tabIndex: 1,
-      title: "Focus me to see content",
-      content: "tabIndex={1} attribute is necessary to make the div focusable",
+      title: "Apakah RedHelp kerjasama dengan PMI?",
+      content:
+        "Untuk saat ini RedHelp belum bekerjasama dengan PMI dikarenakan RedHelp masih berada pada tahap pengembangan ",
     },
     {
       tabIndex: 2,
-      title: "Focus me to see content",
-      content: "tabIndex={2} attribute is necessary to make the div focusable",
+      title:
+        "Bagaimana RedHelp membantu dalam mencari donor darah yang dibutuhkan dengan cepat?",
+      content:
+        "RedHelp membantu dalam mencari donor darah yang dibutuhkan dengan cepat melalui platform digitalnya yang memungkinkan para pendonor darah untuk terhubung langsung dengan pihak yang membutuhkan darah secara real-time.",
     },
     {
       tabIndex: 3,
-      title: "Focus me to see content",
+      title:
+        "Bagaimana cara menampilkan  data stock darah pada aplikasi RedHelp?",
       content:
-        "tabIndex={3} attribute is necessary to make the div focusable Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni eum eius ut ipsa! Consectetur, perspiciatis at culpa temporibus optio aliquid? Vel et iste in nemo magnam dolor consequuntur quas doloribus est vero a qui, nulla autem laudantium, tempore veritatis consectetur aliquid ex ducimus? Laudantium laborum totam quasi numquam quod quaera",
+        "Untuk menampilkan data stock darah pada Website RedHelp, User harus melakukan login terlebih dahulu lalu setelah user melakukan login. User bisa menuju ke halaman stock darah lalu setalah itu user dapat mengklik tulisan lihat disini untuk melihat data stock darah yang lebih detail",
     },
   ];
   return (

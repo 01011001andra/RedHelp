@@ -375,16 +375,40 @@ const Tentang = () => {
               </h1>
               <div className="gap-10 mb-36 flex flex-row ">
                 <AnimationOnScroll animateIn="animate__rollIn">
-                  <img src="./instagram.png" />
+                  <a
+                    href="https://www.instagram.com/palangmerah_indonesia/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="./instagram.png" />
+                  </a>
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn="animate__slideInDown">
-                  <img src="./gmail.png" />
+                  <a
+                    href="mailto:contoh@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="./gmail.png" />
+                  </a>
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn="animate__slideInUp">
-                  <img src="./whatsapp.png" />
+                  <a
+                    href="https://wa.me/089519113444"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="./whatsapp.png" />
+                  </a>
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn="animate__zoomInDown">
-                  <img src="./twitter.png" />
+                  <a
+                    href="https://twitter.com/jokowi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src="./twitter.png" />
+                  </a>
                 </AnimationOnScroll>
               </div>
             </div>

@@ -19,9 +19,7 @@ const Footer = () => {
           <img src="../Il.png" alt="Logo" className="w-32 select-none" />
         </div>
         <div className="text-white">
-          <span className="font-bold text-white">
-            https://redhelp-65f27.web.app
-          </span>
+          <span className="font-bold text-white">https://redhelp.my.id/</span>
           <Link
             className="flex items-center gap-2"
             to={"https://www.instagram.com/infinitelearning_id/"}
