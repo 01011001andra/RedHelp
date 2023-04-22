@@ -68,7 +68,7 @@ const Jadwal = () => {
     <>
       <Helm title="Jadwal" />
       <Navbar position="fixed" />
-      <div className="hero min-h-screen bg-white w-full flex flex-col gap-8 pt-32">
+      <div className="hero min-h-screen bg-white dark:bg-accent w-full flex flex-col gap-8 pt-32">
         <div className="hero-content w-full flex justify-center">
           <h1 className="text-black text-4xl font-bold ">Event Donor Darah</h1>
         </div>
@@ -77,7 +77,7 @@ const Jadwal = () => {
           {newsData.map((item) => {
             return (
               <div
-                className="card w-full bg-white shadow-md  flex flex-col gap-8"
+                className="card w-full bg-white dark:bg-secondary shadow-md  flex flex-col gap-8"
                 key={item.id}
               >
                 <div className="card-body shadow-xl rounded-lg">

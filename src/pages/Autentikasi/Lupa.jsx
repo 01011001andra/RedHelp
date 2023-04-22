@@ -5,10 +5,10 @@ const Lupa = () => {
   const navigate = useNavigate();
   return (
     <div className="h-screen flex">
-      <div className="flex w-full lg:w-1/2 justify-center items-center bg-white space-y-8">
+      <div className="flex w-full lg:w-1/2 justify-center items-center bg-white dark:bg-accent space-y-8">
         <div className="flex flex-col justify-center w-full px-3 md:px-32 lg:px-24">
           <img src="./Logo.png" alt="Logo" className="w-64 mx-auto mb-3" />
-          <form className="bg-white rounded-md shadow-2xl py-8 px-6">
+          <form className="bg-white dark:bg-secondary rounded-md shadow-2xl py-8 px-6">
             <h1 className="text-gray-800 font-bold text-2xl mb-3">
               Lupa Kata Sandi
             </h1>
@@ -47,7 +47,7 @@ const Lupa = () => {
             <button
               onClick={() => navigate("/Login")}
               type="button"
-              className="block w-full bg-white mt-3 py-3 rounded-md hover:bg-black hover:border-primary hover:border-2 hover:-translate-y-1 transition-all duration-500 text-primary font-semibold mb-2 border border-black"
+              className="block w-full bg-white mt-3 py-3 rounded-md dark:bg-accent hover:bg-black hover:border-primary hover:border-2 hover:-translate-y-1 transition-all duration-500 text-primary font-semibold mb-2 border border-black"
             >
               Back
             </button>
@@ -56,7 +56,7 @@ const Lupa = () => {
       </div>
       <div
         className="hidden lg:flex w-full lg:w-1/2
-          justify-center items-center bg-primary"
+        justify-center items-center bg-primary dark:bg-secondary"
       >
         <div
           className=" 

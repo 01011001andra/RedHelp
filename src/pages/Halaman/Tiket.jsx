@@ -30,7 +30,7 @@ const Tiket = () => {
   return (
     <>
       <Navbar position={"fixed"} />
-      <div className="min-h-screen py-[120px] xl:px-0 bg-white">
+      <div className="min-h-screen py-[120px] xl:px-0 bg-white dark:bg-accent">
         <div className="mx-auto px-4 xl:px-0 max-w-sm md:max-w-md xl:max-w-3xl">
           <div className="flex flex-col items-center gap-5">
             <h1 className="text-primary font-bold text-2xl">
@@ -56,37 +56,37 @@ const Tiket = () => {
                   <label for="nama" className="block mb-2 text-sm font-bold">
                     Nama Lengkap
                   </label>
-                  Kanaya Putri Sari
+                  {user?.displayName}
                 </div>
                 <div>
                   <label for="alamat" className="block mb-2 text-sm font-bold ">
                     Alamat
                   </label>
-                  Perumahan crownhill estate f.62, Batam
+                  xxxxxxxxxxxxxxxxxxxxxx
                 </div>
                 <div>
                   <label for="nomor" className="block mb-2 text-sm font-bold ">
                     Nomor Handphone
                   </label>
-                  0887322873481
+                  xxxxxxxxxxxxxxxxxx
                 </div>
                 <div>
                   <label for="nik" className="block mb-2 text-sm font-bold">
                     NIK
                   </label>
-                  3322617219310002
+                  xxxxxxxxxxxxxx
                 </div>
                 <div>
                   <label for="gender" className="block mb-2 text-sm font-bold ">
                     Jenis Kelamin
                   </label>
-                  Perempuan
+                  xxxxxx
                 </div>
                 <div>
                   <label for="tempat" className="block mb-2 text-sm font-bold">
                     Tempat, Tanggal Lahir
                   </label>
-                  Batam, 17 September 2002
+                  xxxxxxxxxxxxxxxxxxx
                 </div>
                 <div>
                   <label
@@ -95,20 +95,19 @@ const Tiket = () => {
                   >
                     Golongan Darah
                   </label>
-                  A
+                  x
                 </div>
                 <div>
                   <label for="berat" className="block mb-2 text-sm font-bold ">
                     Berat Badan
                   </label>
-                  52
+                  xx
                 </div>
                 <div>
                   <label for="alamat" className="block mb-2 text-sm font-bold">
                     Alamat Donor darah
                   </label>
-                  Jl. Cemp., Tlk. Tering, Kec. Batam Kota, Kota Batam, Kepulauan
-                  Riau 29444
+                  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                 </div>
                 <div>
                   <label for="alamat" className="block mb-2 text-sm font-bold">

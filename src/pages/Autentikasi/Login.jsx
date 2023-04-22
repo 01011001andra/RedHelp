@@ -21,15 +21,15 @@ const Login = () => {
 
   return (
     <div className="h-screen flex">
-      <div className="flex w-full lg:w-1/2 justify-center items-center bg-white space-y-8">
+      <div className="flex w-full lg:w-1/2 justify-center items-center bg-white dark:bg-accent space-y-8">
         <div className="flex flex-col justify-center w-full px-3 md:px-32 lg:px-24">
           <img src="./Logo.png" alt="Logo" className="w-64 mx-auto mb-3" />
-          <form className="bg-white rounded-md shadow-2xl py-8 px-6">
-            <h1 className="text-gray-800 font-bold text-2xl mb-3">Masuk</h1>
+          <form className="bg-white dark:bg-secondary rounded-md shadow-2xl py-8 px-6">
+            <h1 className="text-gray-800  font-bold text-2xl mb-3">Masuk</h1>
             <div className="flex items-center border-2 mb-5 py-3 px-3 rounded-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-gray-400"
+                className="h-5 w-5 text-black dark:text-black"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -72,13 +72,13 @@ const Login = () => {
                 placeholder="Kata Sandi"
               />
             </div>
-            <div className="text-xs flex gap-1 justify-end">
+            <div className="text-xs flex flex-col md:flex-row md:justify-end md:gap-1 items-end">
               Saya sudah setuju dengan{" "}
               <Link
                 to="/syarat.pdf"
                 target="_blank"
                 download
-                className="text-primary hover:text-black"
+                className="text-primary dark:text-primary dark:hover:text-slate-500 hover:text-black"
               >
                 Syarat dan Ketentuan.
               </Link>
@@ -93,7 +93,7 @@ const Login = () => {
             <button
               onClick={handleGoogleLogin}
               type="button"
-              className="flex justify-center text-sm  items-center gap-2 w-full bg-[#D9d9d9] mt-3 py-3 rounded-md hover:bg-gray-400 hover:-translate-y-1 transition-all duration-500 text-black font-semibold mb-2 px-4"
+              className="flex justify-center text-sm  items-center gap-2 w-full bg-[#D9d9d9] dark:bg-accent mt-3 py-3 rounded-md hover:bg-gray-400 hover:-translate-y-1 transition-all duration-500 text-black font-semibold mb-2 px-4"
             >
               <img src="./Google.png" alt="google" /> Masuk Dengan Akun Google
             </button>
@@ -117,7 +117,7 @@ const Login = () => {
       </div>
       <div
         className="hidden lg:flex w-full lg:w-1/2
-          justify-center items-center bg-primary"
+          justify-center items-center bg-primary dark:bg-secondary"
       >
         <div
           className=" 

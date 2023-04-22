@@ -16,7 +16,7 @@ const Developer = ({
     <AnimationOnScroll
       duration={1}
       animateIn="animate__zoomIn"
-      className="card mx-auto bg-white shadow-xl xl:px-2 hover:shadow w-full"
+      className="card mx-auto bg-white dark:bg-accent shadow-xl xl:px-2 hover:shadow w-full"
     >
       <img
         className="w-32 mx-auto rounded-full -mt-20 border-8 border-white"

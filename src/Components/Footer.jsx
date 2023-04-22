@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="footer p-10 bg-primary">
+    <footer className="footer p-10 bg-primary dark:bg-secondary">
       <div className="max-w-6xl flex-col gap-10 lg:flex-row footer mx-auto justify-between">
         <div>
           <img
@@ -67,7 +67,11 @@ const Footer = () => {
           </div>
           <div className="flex flex-wrap gap-2">
             <img src="./daisyui.png" alt="daisyui" className="w-20" />
-            <img src="./firebase.png" alt="firebase" className="w-24" />
+            <img
+              src="./firebase.png"
+              alt="firebase"
+              className="w-24 dark:bg-white"
+            />
           </div>
         </div>
       </div>

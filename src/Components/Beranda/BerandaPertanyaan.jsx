@@ -33,7 +33,7 @@ const BerandaPertanyaan = () => {
   ];
   return (
     <div className="hero-content flex flex-col w-full">
-      <h1 className="text-primary text-2xl md:text-4xl font-bold mb-8 text-center">
+      <h1 className="text-primary  text-2xl md:text-4xl font-bold mb-8 text-center">
         Pertanyaan yang Sering ditanyakan
       </h1>
       {pertanyaan.map((item, index) => (

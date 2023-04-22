@@ -87,7 +87,7 @@ const Beranda = () => {
       <Helm title="Beranda" />
       <Navbar position="fixed" />
       <div
-        className="hero min-h-screen bg-primary py-24 pt-32 2xl:pt-0
+        className="hero min-h-screen dark:bg-secondary bg-primary py-24 pt-32 2xl:pt-0
        2xl:py-0"
       >
         <div className="hero-content flex-col lg:flex-row-reverse">
@@ -120,7 +120,7 @@ const Beranda = () => {
               kekurangan darah di Indonesia.
             </p>
             <Link
-              className="btn btn-secondary bg-white text-primary rounded-md hover:-translate-y-1 transition-all duration-500"
+              className="btn btn-secondary bg-white text-primary dark:text-primary rounded-md hover:-translate-y-1 transition-all duration-500"
               spy={true}
               smooth={true}
               onClick={handleMulai}
@@ -136,13 +136,17 @@ const Beranda = () => {
           </div>
         </div>
       </div>
-      <div className="hero min-h-screen bg-white" id="carousel" name="wtf">
+      <div
+        className="hero min-h-screen bg-white dark:bg-accent"
+        id="carousel"
+        name="wtf"
+      >
         <BerandaCarousel />
       </div>
-      <div className="hero min-h-screen bg-white">
+      <div className="hero min-h-screen bg-white dark:bg-accent">
         <BerandaBerita />
       </div>
-      <div className="hero min-h-screen bg-white">
+      <div className="hero min-h-screen bg-white dark:bg-accent">
         <BerandaPertanyaan />
       </div>
       <Footer />

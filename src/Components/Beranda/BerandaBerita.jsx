@@ -32,7 +32,7 @@ const BerandaBerita = () => {
               animateIn="animate__bounceIn"
               key={index}
             >
-              <div className="card card-compact w-72 shadow-xl md:w-96 hover:-translate-y-4 transition-all duration-500">
+              <div className="card card-compact w-72 shadow-xl md:w-96 hover:-translate-y-4 dark:bg-secondary transition-all duration-500">
                 <figure>
                   <img src={item.image} alt={item.title} />
                 </figure>

@@ -57,10 +57,10 @@ const Tentang = () => {
       <Navbar position="fixed" />
       {/* HERO */}
       <div
-        className="hero min-h-screen"
-        style={{
-          backgroundImage: `url("./Blood.png")`,
-        }}
+        className="hero min-h-screen bg-[url('./Blood.png')] dark:bg-[url('./blooddark.jpg')]"
+        // style={{
+        //   backgroundImage: `url("./Blood.png")`,
+        // }}
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content pt-16 md:pt-0">
@@ -90,7 +90,7 @@ const Tentang = () => {
                 spy={true}
                 smooth={true}
                 to="visi-misi"
-                className="btn btn-primary"
+                className="btn btn-primary bg-primary text-white dark:bg-secondary dark:hover:bg-accent transition-all duration-900 border-none"
                 offset={-100}
               >
                 Visi Dan Misi
@@ -101,7 +101,7 @@ const Tentang = () => {
       </div>
 
       {/* Visi Misi */}
-      <div className="w-full h-full hero bg-primary flex flex-col">
+      <div className="w-full h-full hero bg-primary dark:bg-secondary flex flex-col">
         <div
           id="visi-misi"
           className="prose flex flex-col gap-3 hero-content mx-auto"
@@ -280,13 +280,13 @@ const Tentang = () => {
       </div>
 
       {/* Contact US */}
-      <div className="bg-white hero">
+      <div className="bg-white dark:bg-accent hero">
         <div className="max-w-7xl w-full h-full flex flex-col py-8 gap-10 px-5">
           <h1 className="text-center text-4xl font-bold">Hubungi Kami</h1>
           <div className="w-full flex flex-col md:flex-row items-center gap-14">
             <AnimationOnScroll
               animateIn="animate__zoomIn"
-              className="w-full h-full md:w-1/2 max-w-[700px] bg-primary p-8 lg:p-8 rounded-xl shadow-2xl"
+              className="w-full h-full md:w-1/2 max-w-[700px] bg-primary dark:bg-secondary p-8 lg:p-8 rounded-xl shadow-2xl"
             >
               <h1 className="text-white text-center text-3xl font-bold mb-8">
                 Berikan Pesan
@@ -362,7 +362,7 @@ const Tentang = () => {
                   ></textarea>
                 </div>
                 <div>
-                  <button className="cursor-pointer text-base bg-white px-8 py-2 rounded-xl hover:shadow-lg hover:bg-teal-400 hover:opacity-90 transition-all duration-300 ease-in-out">
+                  <button className="btn btn-primary px-8 bg-primary text-white dark:bg-accent dark:hover:bg-slate-700 transition-all duration-900 border-none">
                     Submit
                   </button>
                 </div>
@@ -417,7 +417,7 @@ const Tentang = () => {
       </div>
 
       {/* Lokasi */}
-      <div className="hero bg-white">
+      <div className="hero bg-white dark:bg-accent">
         <div className="max-w-7xl w-full pb-28 flex flex-col gap-8 px-4 ">
           <h1 className="font-bold text-4xl text-center">Lokasi Kami</h1>
           <AnimationOnScroll animateIn="animate__zoomIn">

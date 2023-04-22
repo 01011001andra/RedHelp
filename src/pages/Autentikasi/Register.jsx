@@ -21,10 +21,10 @@ const Register = () => {
 
   return (
     <div className="h-screen flex">
-      <div className="flex w-full lg:w-1/2 justify-center items-center bg-white space-y-8">
+      <div className="flex w-full lg:w-1/2 justify-center items-center bg-white dark:bg-accent space-y-8">
         <div className="flex flex-col justify-center w-full px-3 md:px-32 lg:px-24">
           <img src="./Logo.png" alt="Logo" className="w-64 mx-auto mb-3" />
-          <form className="bg-white rounded-md shadow-2xl py-8 px-6">
+          <form className="bg-white dark:bg-secondary rounded-md shadow-2xl py-8 px-6">
             <h1 className="text-gray-800 font-bold text-2xl mb-3">
               Daftar Akun
             </h1>
@@ -146,7 +146,7 @@ const Register = () => {
             <button
               onClick={handleGoogleRegister}
               type="button"
-              className="flex justify-center text-sm  items-center gap-2 w-full bg-[#D9d9d9] mt-3 py-3 rounded-md hover:bg-gray-400 hover:-translate-y-1 transition-all duration-500 text-black font-semibold mb-2 px-4"
+              className="flex justify-center text-sm  items-center gap-2 w-full bg-[#D9d9d9] dark:bg-accent mt-3 py-3 rounded-md hover:bg-gray-400 hover:-translate-y-1 transition-all duration-500 text-black font-semibold mb-2 px-4"
             >
               <img src="./Google.png" alt="google" /> Daftar Dengan Akun Google
             </button>
@@ -163,7 +163,7 @@ const Register = () => {
       </div>
       <div
         className="hidden lg:flex w-full lg:w-1/2
-        justify-center items-center bg-primary"
+        justify-center items-center bg-primary dark:bg-secondary"
       >
         <div
           className=" 

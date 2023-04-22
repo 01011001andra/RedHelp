@@ -13,6 +13,7 @@ dist-ssr
 *.local
 
 firebaseConfig.js
+redhelp.json
 
 # Editor directories and files
 .vscode/*

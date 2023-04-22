@@ -5,5 +5,5 @@
 @tailwind utilities;
 
 * {
-  @apply font-poppins text-black break-words;
+  @apply font-poppins text-black break-words dark:text-white;
 }

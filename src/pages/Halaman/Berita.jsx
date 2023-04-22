@@ -67,7 +67,7 @@ const Berita = () => {
     <>
       <Helm title="Berita" />
       <Navbar position="fixed" />
-      <div className="hero min-h-screen bg-white overflow-x-hidden">
+      <div className="hero min-h-screen bg-white dark:bg-accent overflow-x-hidden">
         <div className="hero-content w-full flex flex-col pt-10">
           <h1 className="text-black text-4xl font-bold mt-24 2xl:mt-0">
             Berita Terkini
@@ -107,7 +107,7 @@ const Berita = () => {
                         <Link
                           to={item.url}
                           target={"_blank"}
-                          className="text-primary hover:text-black"
+                          className="text-primary dark:text-primary dark:hover:text-slate-600 hover:text-black"
                         >
                           Baca Lebih Lengkap
                         </Link>
@@ -120,7 +120,7 @@ const Berita = () => {
           )}
         </div>
       </div>
-      <div className="hero min-h-screen bg-white w-full flex flex-col gap-8">
+      <div className="hero min-h-screen bg-white dark:bg-accent w-full flex flex-col gap-8">
         <div className="hero-content w-full flex justify-start">
           <h1 className="text-black text-4xl font-bold ">Artikel Lainnya</h1>
         </div>
@@ -132,7 +132,7 @@ const Berita = () => {
               {newsData?.map((item) => {
                 return (
                   <div
-                    className="card w-full h-full bg-white shadow-xl rounded-xl p-5"
+                    className="card w-full h-full bg-white dark:bg-secondary shadow-xl rounded-xl p-5"
                     key={item.id}
                   >
                     <AnimationOnScroll
@@ -159,7 +159,7 @@ const Berita = () => {
                             <Link
                               to={item.url}
                               target={"_blank"}
-                              className="btn btn-primary bg-primary text-white hover:bg-black"
+                              className="btn btn-primary rounded-lg border-none bg-primary text-white hover:bg-black"
                             >
                               Baca Selengkapnya
                             </Link>

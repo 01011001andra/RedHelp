@@ -64,9 +64,9 @@ const RegistrasiEvent = () => {
   return (
     <>
       <Navbar position={"fixed"} />
-      <div className="min-h-screen py-[120px] xl:px-0 bg-white">
+      <div className="min-h-screen py-[120px] xl:px-0 bg-white dark:bg-accent">
         <div className="mx-auto px-4 xl:px-0 max-w-sm md:max-w-md xl:max-w-3xl">
-          <form className="py-10 px-4 bg-primary rounded-xl ">
+          <form className="py-10 px-4 bg-primary dark:bg-secondary rounded-xl ">
             <h1 className="text-white text-2xl font-bold text-center pb-5">
               Form Registrasi
             </h1>
@@ -82,7 +82,7 @@ const RegistrasiEvent = () => {
                 type="text"
                 id="nama"
                 className="input input-bordered w-full rounded-lg "
-                placeholder="Kanaya Putri Sari"
+                placeholder="ACCOUNTNAME"
                 required
               />
             </div>
@@ -284,7 +284,7 @@ const RegistrasiEvent = () => {
                 <button
                   onClick={handleNavigate}
                   type="submit"
-                  className="text-primary bg-white hover:bg-black focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+                  className="text-primary bg-white hover:bg-black dark:text-black dark:hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
                 >
                   Submit
                 </button>

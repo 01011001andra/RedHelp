@@ -43,7 +43,7 @@ const StockDarah = () => {
   // JIKA BELUM LOGIN
   const DisplayTrue = () => {
     return (
-      <div className="w-full min-h-screen items-center justify-center flex flex-col gap-10 max-w-xs xl:max-w-6xl mx-auto">
+      <div className="w-full min-h-screen items-center  justify-center flex flex-col gap-10 max-w-xs xl:max-w-6xl mx-auto">
         <Helm title="Stock Darah" />
         <p className="text-center">
           Kamu Tampaknya belum <span className="font-bold">Masuk</span>,
@@ -85,7 +85,7 @@ const StockDarah = () => {
     <>
       <Helm title="Stock Darah" />
       <Navbar position="fixed" />
-      <div className=" bg-white">
+      <div className=" bg-white dark:bg-accent">
         {!display ? (
           <DisplayTrue />
         ) : (
@@ -102,7 +102,7 @@ const StockDarah = () => {
                 Lihat Disini
               </Link>
             </div>
-            <div className="hero min-h-screen bg-white w-full flex flex-col gap-8 ">
+            <div className="hero min-h-screen bg-white dark:bg-accent w-full flex flex-col gap-8 ">
               <h1 className="text-black text-xl xl:text-3xl font-bold ">
                 Informasi Kebutuhan Stok Darah
               </h1>
@@ -110,7 +110,7 @@ const StockDarah = () => {
                 {newsData.map((item) => {
                   return (
                     <div
-                      className="card w-full bg-white shadow-md  flex flex-col gap-8"
+                      className="card w-full bg-white dark:bg-secondary shadow-md  flex flex-col gap-8"
                       key={item.id}
                     >
                       <div className="card-body shadow-xl rounded-lg">
