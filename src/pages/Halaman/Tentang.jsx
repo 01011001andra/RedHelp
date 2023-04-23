@@ -57,12 +57,12 @@ const Tentang = () => {
       <Navbar position="fixed" />
       {/* HERO */}
       <div
-        className="hero min-h-screen bg-[url('./Blood.png')] dark:bg-[url('./blooddark.jpg')]"
-        // style={{
-        //   backgroundImage: `url("./Blood.png")`,
-        // }}
+        className="hero min-h-screen"
+        style={{
+          backgroundImage: `url("./Blood.png")`,
+        }}
       >
-        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-overlay bg-opacity-60 dark:bg-accent"></div>
         <div className="hero-content text-center text-neutral-content pt-16 md:pt-0">
           <div className="w-full flex flex-col">
             <h1 className="mb-5 text-3xl font-bold text-white">
