@@ -238,14 +238,14 @@ const Tentang = () => {
               <Developer
                 img={"./Rizki.jpg"}
                 nama={"Designer"}
-                ig={"@w.rizkyramadhan"}
-                link={"https://www.instagram.com/w.rizkyramadhan/"}
+                ig={"@kyraaa_17"}
+                link={"https://www.instagram.com/kyraaa_17/"}
                 panggilan={"Rizky"}
                 deskripsi={
                   "Mentee at Infinite Learning Studi Independent Batch 4"
                 }
-                follower={"469"}
-                following={"281"}
+                follower={"774"}
+                following={"881"}
               />
             </SplideSlide>
           </Splide>
