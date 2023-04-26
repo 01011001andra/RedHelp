@@ -10,7 +10,7 @@ import {
   Navbar,
 } from "../../Components";
 import { TypeAnimation } from "react-type-animation";
-import { Link } from "react-scroll";
+import { Link as Links } from "react-scroll";
 import VoicesTTS from "speechsynthesisutterance";
 import { animateScroll as scroll } from "react-scroll";
 
@@ -119,14 +119,14 @@ const Beranda = () => {
               Palang Merah Indonesia (PMI) untuk menyelesaikan permasalahan
               kekurangan darah di Indonesia.
             </p>
-            <Link
+            <Links
+              to="#"
               className="btn btn-secondary bg-white text-primary dark:text-primary rounded-md hover:-translate-y-1 transition-all duration-500"
               spy={true}
-              smooth={true}
               onClick={handleMulai}
             >
               Ayo Mulai
-            </Link>
+            </Links>
             <div
               className="radial-progress ml-10 text-white transition-all duration-1000"
               style={{ "--value": `${mulai}` }}

@@ -10,12 +10,11 @@ const Login = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((res) => {
-        console.info(res.user);
         localStorage.setItem("user", JSON.stringify(res.user));
         navigate("/");
       })
       .catch((err) => {
-        return console.info(err);
+        return err;
       });
   }
 

@@ -85,7 +85,7 @@ const Profil = () => {
                 Anda dapat melihat aktivitas donor darah sebelumnya, event donor
                 darah yang diikuti, dan sebagainya.
               </p>
-              <Link className="font-extrabold text-primary">
+              <Link to={"#"} className="font-extrabold text-primary">
                 LIHAT LEBIH LANJUT
               </Link>
             </div>

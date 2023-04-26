@@ -55,30 +55,31 @@ const BerandaCarousel = () => {
                 <span className="text-xl md:text-2xl">
                   Apa saja syarat donor darah?
                 </span>
-                <ol type="1" className="list-decimal list-inside">
-                  <li className="text-black text-xs">
-                    Berat badan minimal 45 kg.
-                  </li>
-                  <li className="text-black text-xs">
-                    Tekanan darah, denyut nadi, dan kadar hemoglobin dalam batas
-                    normal yang ditetapkan.
-                  </li>
-                  <li className="text-black text-xs">
-                    Tidak sedang dalam keadaan sakit atau mengonsumsi
-                    obat-obatan tertentu yang dapat mempengaruhi kesehatan atau
-                    kualitas darah.
-                  </li>
-                  <li className="text-black text-xs">
-                    Tidak sedang hamil atau menyusui.
-                  </li>
-                  <li className="text-black text-xs">
-                    Tidak pernah melakukan tindakan-tindakan yang berisiko
-                    tinggi terhadap penularan penyakit menular, seperti
-                    melakukan hubungan seksual tidak aman, menggunakan narkoba
-                    suntik, atau mengonsumsi obat-obatan terlarang.
-                  </li>
-                </ol>
               </p>
+
+              <ol type="1" className="list-decimal list-inside">
+                <li className="text-black text-xs">
+                  Berat badan minimal 45 kg.
+                </li>
+                <li className="text-black text-xs">
+                  Tekanan darah, denyut nadi, dan kadar hemoglobin dalam batas
+                  normal yang ditetapkan.
+                </li>
+                <li className="text-black text-xs">
+                  Tidak sedang dalam keadaan sakit atau mengonsumsi obat-obatan
+                  tertentu yang dapat mempengaruhi kesehatan atau kualitas
+                  darah.
+                </li>
+                <li className="text-black text-xs">
+                  Tidak sedang hamil atau menyusui.
+                </li>
+                <li className="text-black text-xs">
+                  Tidak pernah melakukan tindakan-tindakan yang berisiko tinggi
+                  terhadap penularan penyakit menular, seperti melakukan
+                  hubungan seksual tidak aman, menggunakan narkoba suntik, atau
+                  mengonsumsi obat-obatan terlarang.
+                </li>
+              </ol>
               <img
                 src="./salaman.jpg"
                 alt="RedHelp"

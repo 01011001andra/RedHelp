@@ -88,7 +88,7 @@ const Jadwal = () => {
                       alt={item.title}
                       style={{ width: "350px" }}
                     />
-                    <p>
+                    <div className="w-full">
                       <span className="card-title text-primary text-3xl">
                         {item.title}
                       </span>
@@ -96,7 +96,7 @@ const Jadwal = () => {
                       <div className="flex items-center gap-2">
                         <MdDateRange /> {item.date}
                       </div>
-                    </p>
+                    </div>
                     <div className="justify-end mt-36">
                       <button
                         onClick={handleBelumLogin}

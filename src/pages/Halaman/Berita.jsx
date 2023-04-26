@@ -17,8 +17,6 @@ const Berita = () => {
     return state.news.loading;
   });
 
-  console.info(newsDataLoading);
-
   function formatDate(dateString) {
     const options = {
       year: "numeric",
@@ -129,11 +127,11 @@ const Berita = () => {
             <Loader />
           ) : (
             <>
-              {newsData?.map((item) => {
+              {newsData?.map((item, index) => {
                 return (
                   <div
                     className="card w-full h-full bg-white dark:bg-secondary shadow-xl rounded-xl p-5"
-                    key={item.id}
+                    key={index}
                   >
                     <AnimationOnScroll
                       duration={1}

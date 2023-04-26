@@ -35,7 +35,7 @@ const Footer = () => {
             <BsTwitter />
             Twitter
           </Link>
-          <Link className="flex items-center gap-2">
+          <Link to={"#"} className="flex items-center gap-2">
             <MdOutlineEmail /> Email
           </Link>
         </div>

@@ -22,8 +22,6 @@ const Navbar = ({ position }) => {
     return state.darkMode.isClicked;
   });
 
-  console.info(dark);
-
   function handleClick() {
     if (dark) {
       dispatch(resetButton());
@@ -56,7 +54,7 @@ const Navbar = ({ position }) => {
         navigate("/login");
       })
       .catch((err) => {
-        console.info(err);
+        return err;
       });
   }
 

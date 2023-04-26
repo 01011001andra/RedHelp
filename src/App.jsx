@@ -57,7 +57,7 @@ function App() {
   }
 
   return (
-    <d>
+    <>
       {isLogin ? (
         <Routes>
           <Route path="/" element={<Beranda />} />
@@ -85,7 +85,7 @@ function App() {
           <Route path="*" element={<Notfound />} />
         </Routes>
       )}
-    </d>
+    </>
   );
 }
 
