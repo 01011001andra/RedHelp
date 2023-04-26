@@ -90,7 +90,7 @@ const Tentang = () => {
                 spy={true}
                 smooth={true}
                 to="visi-misi"
-                className="btn btn-primary bg-primary text-white dark:bg-secondary dark:hover:bg-accent transition-all duration-900 border-none"
+                className="btn btn-primary bg-primary text-white dark:bg-secondary dark:hover:bg-slate-700 transition-all duration-900 border-none"
                 offset={-100}
               >
                 Visi Dan Misi
@@ -309,7 +309,7 @@ const Tentang = () => {
                     name="nama_lengkap"
                     id="nama_lengkap"
                     placeholder="Masukkan Nama Lengkap"
-                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-xs md:text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-xs md:text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md dark:text-black"
                     required
                   />
                 </div>
@@ -325,7 +325,7 @@ const Tentang = () => {
                     name="email"
                     id="email"
                     placeholder="contoh@domain.com"
-                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-xs md:text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md invalid:text-red-500 "
+                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-xs md:text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md invalid:text-red-500 dark:text-black"
                     required
                   />
                 </div>
@@ -341,7 +341,7 @@ const Tentang = () => {
                     name="subject"
                     id="subject"
                     placeholder="Masukkan subject"
-                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-xs md:text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-xs md:text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md dark:text-black"
                     required
                   />
                 </div>
@@ -357,7 +357,7 @@ const Tentang = () => {
                     name="message"
                     id="message"
                     placeholder="Masukkan Pesan"
-                    className="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-xs md:text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
+                    className="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-4 text-xs md:text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md dark:text-black"
                     required
                   ></textarea>
                 </div>

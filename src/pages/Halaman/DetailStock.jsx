@@ -5,8 +5,8 @@ const DetailStock = () => {
   return (
     <>
       <Navbar position={"fixed"} />
-      <div className="w-full py-32 min-h-screen ">
-        <div className="max-w-xs sm:max-w-xl md:max-w-3xl xl:max-w-6xl 2xl:max-w-7xl mx-auto flex flex-wrap gap-8 px-4">
+      <div className="w-full py-32 min-h-screen bg-white dark:bg-accent ">
+        <div className="max-w-xs sm:max-w-xl md:max-w-3xl xl:max-w-6xl 2xl:max-w-7xl mx-auto flex flex-wrap gap-8 px-4 ">
           <CardStock />
           <CardStock />
           <CardStock />

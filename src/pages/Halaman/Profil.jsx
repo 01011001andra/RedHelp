@@ -13,7 +13,7 @@ const Profil = () => {
     <>
       <Helm title="Profil" />
       <Navbar position="fixed" />
-      <div className="w-full h-full bg-white">
+      <div className="w-full h-full bg-white dark:bg-accent">
         <div className="min-h-screen py-[120px] xl:px-0">
           <div className="hero-content mx-auto flex flex-col">
             <div className="w-full border border-gray-400 shadow-xl rounded-lg flex items-center gap-6 py-3 px-6">

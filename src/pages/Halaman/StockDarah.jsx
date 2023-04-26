@@ -145,7 +145,7 @@ const StockDarah = () => {
                                 className="modal-toggle"
                               />
                               <div className="modal ">
-                                <div className="modal-box">
+                                <div className="modal-box bg-white dark:bg-accent">
                                   <h3 className="font-bold text-lg text-center">
                                     {item.heading}
                                   </h3>
