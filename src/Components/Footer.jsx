@@ -15,8 +15,6 @@ const Footer = () => {
             alt="Logo"
             className="w-32 select-none"
           />
-          <TfiClose size={30} className="mx-auto" />
-          <img src="../Il.png" alt="Logo" className="w-32 select-none" />
         </div>
         <div className="text-white">
           <span className="font-bold text-white">redhelp.my.id</span>

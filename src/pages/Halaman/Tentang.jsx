@@ -52,18 +52,75 @@ const Tentang = () => {
     });
   }, []);
   return (
-    <div className="bg-primary">
+    <div className="bg-white dark:bg-accent">
       <Helm title="Tentang" />
       <Navbar position="fixed" />
       {/* HERO */}
       <div
-        className="hero min-h-screen"
-        style={{
-          backgroundImage: `url("./Blood.png")`,
-        }}
+      // className="hero min-h-screen"
+      // style={{
+      //   backgroundImage: `url("./Blood.png")`,
+      // }}
       >
-        <div className="hero-overlay bg-opacity-60 dark:bg-accent"></div>
-        <div className="hero-content text-center text-neutral-content pt-16 md:pt-0">
+        {/* <div className="hero-overlay bg-opacity-60 dark:bg-accent"></div> */}
+        <div class="py-28 bg-white dark:bg-accent">
+          <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+            <div class="space-y-6 md:space-y-0 md:flex md:flex-col xl:flex-row md:gap-6 lg:items-center lg:gap-12">
+              <div class="md:5/12 lg:w-5/12">
+                <img
+                  className="dark:hidden"
+                  src="./Tentang.gif"
+                  alt="image"
+                  loading="lazy"
+                  width=""
+                  height=""
+                />
+                <img
+                  className="dark:flex hidden"
+                  src="./TentangDark.gif"
+                  alt="image"
+                  loading="lazy"
+                  width=""
+                  height=""
+                />
+              </div>
+              <div class="md:7/12 lg:w-6/12">
+                <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
+                  Tentang RedHelp
+                </h2>
+                <p class="mt-6 text-gray-600">
+                  Redhelp adalah sebuah platform yang hadir untuk berkolaborasi
+                  dan mendukung program Palang Merah Indonesia (PMI) dalam
+                  menyelesaikan permasalahan kekurangan darah di Indonesia.
+                  Melalui Redhelp, kami ingin mempermudah calon donor darah
+                  untuk melakukan registrasi dan mendapatkan informasi tentang
+                  kegiatan donor darah yang diadakan oleh PMI.
+                </p>
+                <p class="mt-4 text-gray-600">
+                  Kami berkomitmen untuk menjaga privasi dan keamanan data para
+                  pengguna kami. Dengan adanya Redhelp, masyarakat Indonesia
+                  dapat lebih mudah dan nyaman untuk berpartisipasi dalam
+                  kegiatan donor darah dan membantu PMI dalam menyelesaikan
+                  permasalahan kekurangan darah di Indonesia. Jangan ragu untuk
+                  bergabung dengan Redhelp dan menjadi bagian dari gerakan donor
+                  darah di Indonesia!
+                </p>
+                <div className="mt-4">
+                  <Link
+                    spy={true}
+                    smooth={true}
+                    to="visi-misi"
+                    className="btn btn-primary bg-primary hover:bg-black hover:text-white text-white dark:bg-secondary dark:hover:bg-slate-700 transition-all duration-900 border-none"
+                    offset={-100}
+                  >
+                    Visi Dan Misi
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* <div className="hero-content text-center text-neutral-content pt-16 md:pt-0">
           <div className="w-full flex flex-col">
             <h1 className="mb-5 text-3xl font-bold text-white">
               {" "}
@@ -90,14 +147,14 @@ const Tentang = () => {
                 spy={true}
                 smooth={true}
                 to="visi-misi"
-                className="btn btn-primary bg-primary text-white dark:bg-secondary dark:hover:bg-slate-700 transition-all duration-900 border-none"
+                className="btn btn-primary bg-primary hover:bg-white hover:text-black text-white dark:bg-secondary dark:hover:bg-slate-700 transition-all duration-900 border-none"
                 offset={-100}
               >
                 Visi Dan Misi
               </Link>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Visi Misi */}
@@ -120,7 +177,7 @@ const Tentang = () => {
               <SplideSlide className="md:px-6">
                 <div className="flex flex-col items-center justify-center gap-3 w-full h-full ">
                   <h1 className="text-xl md:text-3xl text-white">Visi</h1>
-                  <p className="flex flex-col gap-4 text-sm text-white">
+                  <p className="flex flex-col gap-4 text-xs sm:text-sm md:text-lg text-white ">
                     Visi Kami Menjadi platform yang memudahkan masyarakat
                     Indonesia untuk berpartisipasi dalam kegiatan donor darah
                     dan membantu PMI mencapai target jumlah donor darah yang
@@ -132,31 +189,31 @@ const Tentang = () => {
                 <div className="flex flex-col items-center justify-center gap-3">
                   <h1 className="text-xl md:text-3xl text-white">Misi</h1>
                   <ol type="1" className="list-decimal list-inside">
-                    <li className="text-white text-xs">
+                    <li className="text-white text-xs sm:text-sm md:text-lg ">
                       Meningkatkan kesadaran masyarakat tentang pentingnya donor
                       darah secara rutin.
                     </li>
-                    <li className="text-white text-xs">
+                    <li className="text-white text-xs sm:text-sm md:text-lg ">
                       Menyediakan informasi yang akurat dan terpercaya tentang
                       donor darah dan manfaatnya bagi kesehatan.
                     </li>
-                    <li className="text-white text-xs">
+                    <li className="text-white text-xs sm:text-sm md:text-lg">
                       Menyediakan jadwal kegiatan donor darah dari PMI untuk
                       memudahkan calon donor darah dalam melakukan donasi.
                     </li>
-                    <li className="text-white text-xs">
+                    <li className="text-white text-xs sm:text-sm md:text-lg">
                       Menghubungkan PMI dengan para calon donor darah melalui
                       platform Redhelp.
                     </li>
-                    <li className="text-white text-xs">
+                    <li className="text-white text-xs sm:text-sm md:text-lg">
                       Membantu PMI dalam mengumpulkan dan mengelola data donor
                       darah secara efektif dan efisien.
                     </li>
-                    <li className="text-white text-xs">
+                    <li className="text-white text-xs sm:text-sm md:text-lg">
                       Menyajikan berita terkini seputar donor darah dan kegiatan
                       PMI.
                     </li>
-                    <li className="text-white text-xs">
+                    <li className="text-white text-xs sm:text-sm md:text-lg">
                       Menyelenggarakan event-event yang bertujuan untuk
                       meningkatkan kesadaran masyarakat tentang pentingnya donor
                       darah.
@@ -362,7 +419,7 @@ const Tentang = () => {
                   ></textarea>
                 </div>
                 <div>
-                  <button className="btn btn-primary px-8 bg-primary text-white dark:bg-accent dark:hover:bg-slate-700 transition-all duration-900 border-none">
+                  <button className="btn btn-primary px-8 bg-primary text-white  hover:bg-white hover:text-black dark:bg-accent dark:hover:bg-slate-700 transition-all duration-900 border-none">
                     Submit
                   </button>
                 </div>
