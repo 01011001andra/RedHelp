@@ -57,15 +57,15 @@ const Tentang = () => {
       <Navbar position="fixed" />
       {/* HERO */}
       <div
-      // className="hero min-h-screen"
-      // style={{
-      //   backgroundImage: `url("./Blood.png")`,
-      // }}
+        className="hero-content min-h-screen mx-auto"
+        // style={{
+        //   backgroundImage: `url("./Blood.png")`,
+        // }}
       >
         {/* <div className="hero-overlay bg-opacity-60 dark:bg-accent"></div> */}
         <div class="py-28 bg-white dark:bg-accent">
           <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-            <div class="space-y-6 md:space-y-0 md:flex md:flex-col xl:flex-row md:gap-6 lg:items-center lg:gap-12">
+            <div class="space-y-6 md:space-y-0 md:flex md:flex-col xl:flex-row xl:justify-between md:gap-6 lg:items-center lg:gap-12">
               <div class="md:5/12 lg:w-5/12">
                 <img
                   className="dark:hidden"
@@ -88,22 +88,22 @@ const Tentang = () => {
                 <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">
                   Tentang RedHelp
                 </h2>
-                <p class="mt-6 text-gray-600">
-                  Redhelp adalah sebuah platform yang hadir untuk berkolaborasi
+                <p class="mt-6 text-gray-600 leading-7">
+                  <span className="ml-12">
+                    Redhelp adalah sebuah platform yang hadir untuk
+                    berkolaborasi
+                  </span>
                   dan mendukung program Palang Merah Indonesia (PMI) dalam
                   menyelesaikan permasalahan kekurangan darah di Indonesia.
                   Melalui Redhelp, kami ingin mempermudah calon donor darah
                   untuk melakukan registrasi dan mendapatkan informasi tentang
-                  kegiatan donor darah yang diadakan oleh PMI.
-                </p>
-                <p class="mt-4 text-gray-600">
-                  Kami berkomitmen untuk menjaga privasi dan keamanan data para
-                  pengguna kami. Dengan adanya Redhelp, masyarakat Indonesia
-                  dapat lebih mudah dan nyaman untuk berpartisipasi dalam
-                  kegiatan donor darah dan membantu PMI dalam menyelesaikan
-                  permasalahan kekurangan darah di Indonesia. Jangan ragu untuk
-                  bergabung dengan Redhelp dan menjadi bagian dari gerakan donor
-                  darah di Indonesia!
+                  kegiatan donor darah yang diadakan oleh PMI. Kami berkomitmen
+                  untuk menjaga privasi dan keamanan data para pengguna kami.
+                  Dengan adanya Redhelp, masyarakat Indonesia dapat lebih mudah
+                  dan nyaman untuk berpartisipasi dalam kegiatan donor darah dan
+                  membantu PMI dalam menyelesaikan permasalahan kekurangan darah
+                  di Indonesia. Jangan ragu untuk bergabung dengan Redhelp dan
+                  menjadi bagian dari gerakan donor darah di Indonesia!
                 </p>
                 <div className="mt-4">
                   <Link
@@ -177,7 +177,7 @@ const Tentang = () => {
               <SplideSlide className="md:px-6">
                 <div className="flex flex-col items-center justify-center gap-3 w-full h-full ">
                   <h1 className="text-xl md:text-3xl text-white">Visi</h1>
-                  <p className="flex flex-col gap-4 text-xs sm:text-sm md:text-lg text-white ">
+                  <p className="flex flex-col gap-4 text-xs sm:text-sm md:text-base text-white ">
                     Visi Kami Menjadi platform yang memudahkan masyarakat
                     Indonesia untuk berpartisipasi dalam kegiatan donor darah
                     dan membantu PMI mencapai target jumlah donor darah yang
@@ -189,31 +189,31 @@ const Tentang = () => {
                 <div className="flex flex-col items-center justify-center gap-3">
                   <h1 className="text-xl md:text-3xl text-white">Misi</h1>
                   <ol type="1" className="list-decimal list-inside">
-                    <li className="text-white text-xs sm:text-sm md:text-lg ">
+                    <li className="text-white text-xs sm:text-sm md:text-base ">
                       Meningkatkan kesadaran masyarakat tentang pentingnya donor
                       darah secara rutin.
                     </li>
-                    <li className="text-white text-xs sm:text-sm md:text-lg ">
+                    <li className="text-white text-xs sm:text-sm md:text-base ">
                       Menyediakan informasi yang akurat dan terpercaya tentang
                       donor darah dan manfaatnya bagi kesehatan.
                     </li>
-                    <li className="text-white text-xs sm:text-sm md:text-lg">
+                    <li className="text-white text-xs sm:text-sm md:text-base">
                       Menyediakan jadwal kegiatan donor darah dari PMI untuk
                       memudahkan calon donor darah dalam melakukan donasi.
                     </li>
-                    <li className="text-white text-xs sm:text-sm md:text-lg">
+                    <li className="text-white text-xs sm:text-sm md:text-base">
                       Menghubungkan PMI dengan para calon donor darah melalui
                       platform Redhelp.
                     </li>
-                    <li className="text-white text-xs sm:text-sm md:text-lg">
+                    <li className="text-white text-xs sm:text-sm md:text-base">
                       Membantu PMI dalam mengumpulkan dan mengelola data donor
                       darah secara efektif dan efisien.
                     </li>
-                    <li className="text-white text-xs sm:text-sm md:text-lg">
+                    <li className="text-white text-xs sm:text-sm md:text-base">
                       Menyajikan berita terkini seputar donor darah dan kegiatan
                       PMI.
                     </li>
-                    <li className="text-white text-xs sm:text-sm md:text-lg">
+                    <li className="text-white text-xs sm:text-sm md:text-base">
                       Menyelenggarakan event-event yang bertujuan untuk
                       meningkatkan kesadaran masyarakat tentang pentingnya donor
                       darah.
