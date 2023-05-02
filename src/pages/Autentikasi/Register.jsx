@@ -178,7 +178,15 @@ const Register = () => {
           <img
             src="./LoginAuth.gif"
             alt="Login"
-            className="w-96 h-96 mx-auto"
+            className="w-96 h-96 mx-auto dark:hidden"
+          />
+          <img
+            className="dark:flex hidden w-96 h-96 mx-auto"
+            src="./Blooddark.gif"
+            alt="image"
+            loading="lazy"
+            width=""
+            height=""
           />
           <p className="text-center text-white text-[32px] font-bold">
             Ayo donor darah lebih mudah <br />
