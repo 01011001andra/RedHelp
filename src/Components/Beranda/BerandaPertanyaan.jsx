@@ -48,11 +48,11 @@ const BerandaPertanyaan = () => {
             tabIndex={item.tabIndex}
             className="collapse collapse-arrow border border-base-300 rounded-box w-full shadow-lg"
           >
-            <div className="collapse-title text-xl font-medium">
+            <div className="collapse-title text-base xl:text-xl font-medium">
               {item.title}
             </div>
             <div className="collapse-content">
-              <p>{item.content}</p>
+              <p className="text-base">{item.content}</p>
             </div>
           </div>
         </AnimationOnScroll>

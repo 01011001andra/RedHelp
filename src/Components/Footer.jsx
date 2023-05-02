@@ -51,25 +51,40 @@ const Footer = () => {
           </Link>
         </div>
         <div>
-          <span className="font-bold text-white">Made with ❤️</span>
+          <span className="font-bold text-white">Resrouce</span>
           <div className="flex flex-wrap gap-2">
-            <img src="./html.png" alt="html" className="w-8" />
-            <img
-              src="./tailwindcss.png"
-              alt="tailwindcss"
-              className="w-8 h-6 my-auto"
-            />
-            <img src="./js.png" alt="js" className="w-8" />
-            <img src="./react.png" alt="react" className="w-8" />
-            <img src="./redux-icon.png" alt="redux" className="w-8" />
+            <Link>
+              <img src="./html.png" alt="html" className="w-8" />
+            </Link>
+            <Link>
+              <img
+                src="./tailwindcss.png"
+                alt="tailwindcss"
+                className="w-8 h-6 my-auto"
+              />
+            </Link>
+            <Link>
+              <img src="./js.png" alt="js" className="w-8" />
+            </Link>
+            <Link>
+              <img src="./react.png" alt="react" className="w-8" />
+            </Link>
+            <Link>
+              <img src="./redux-icon.png" alt="redux" className="w-8" />
+            </Link>
           </div>
           <div className="flex flex-wrap gap-2">
-            <img src="./daisyui.png" alt="daisyui" className="w-20" />
-            <img
-              src="./firebase.png"
-              alt="firebase"
-              className="w-24 dark:bg-white"
-            />
+            <Link>
+              <img src="./daisyui.png" alt="daisyui" className="w-20" />
+            </Link>
+            <Link>
+              {" "}
+              <img
+                src="./firebase.png"
+                alt="firebase"
+                className="w-24 bg-white"
+              />
+            </Link>
           </div>
         </div>
       </div>
