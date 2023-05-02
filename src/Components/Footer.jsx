@@ -53,38 +53,65 @@ const Footer = () => {
         <div>
           <span className="font-bold text-white">Resrouce</span>
           <div className="flex flex-wrap gap-2">
-            <Link>
+            <a
+              href="https://www.w3schools.com/html/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="./html.png" alt="html" className="w-8" />
-            </Link>
-            <Link>
+            </a>
+            <a
+              href="https://tailwindcss.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="./tailwindcss.png"
                 alt="tailwindcss"
                 className="w-8 h-6 my-auto"
               />
-            </Link>
-            <Link>
+            </a>
+            <a
+              href="https://www.javascript.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="./js.png" alt="js" className="w-8" />
-            </Link>
-            <Link>
+            </a>
+            <a
+              href="https://react.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="./react.png" alt="react" className="w-8" />
-            </Link>
-            <Link>
+            </a>
+            <a
+              href="https://react-redux.js.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="./redux-icon.png" alt="redux" className="w-8" />
-            </Link>
+            </a>
           </div>
           <div className="flex flex-wrap gap-2">
-            <Link>
+            <a
+              href="https://daisyui.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="./daisyui.png" alt="daisyui" className="w-20" />
-            </Link>
-            <Link>
-              {" "}
+            </a>
+            <a
+              href="https://firebase.google.com/?hl=id"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="./firebase.png"
                 alt="firebase"
                 className="w-24 bg-white"
               />
-            </Link>
+            </a>
           </div>
         </div>
       </div>
