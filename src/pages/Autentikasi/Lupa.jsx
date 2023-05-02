@@ -1,10 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Navbar } from "../../Components";
 
 const Lupa = () => {
   const navigate = useNavigate();
   return (
     <div className="h-screen flex">
+      <Navbar position="fixed hidden" />
+
       <div className="flex w-full lg:w-1/2 justify-center items-center bg-white dark:bg-accent space-y-8">
         <div className="flex flex-col justify-center w-full px-3 md:px-32 lg:px-24">
           <img src="./Logo.png" alt="Logo" className="w-64 mx-auto mb-3" />

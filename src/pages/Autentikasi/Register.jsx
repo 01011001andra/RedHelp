@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
+import { Navbar } from "../../Components";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -20,6 +21,8 @@ const Register = () => {
 
   return (
     <div className="min-h-screen flex">
+      <Navbar position="fixed hidden" />
+
       <div className="flex w-full lg:w-1/2 justify-center items-center bg-white dark:bg-accent space-y-8">
         <div className="flex flex-col justify-center w-full px-3 md:px-32 lg:px-24">
           <img src="./Logo.png" alt="Logo" className="w-64 mx-auto mb-3" />
