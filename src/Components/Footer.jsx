@@ -51,7 +51,7 @@ const Footer = () => {
           </Link>
         </div>
         <div>
-          <span className="font-bold text-white">Resrouce</span>
+          <span className="font-bold text-white">Resource</span>
           <div className="flex flex-wrap gap-2">
             <a
               href="https://www.w3schools.com/html/"

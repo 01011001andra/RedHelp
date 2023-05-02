@@ -86,7 +86,7 @@ const Tentang = () => {
                 <h2 className="text-2xl text-gray-900 font-bold md:text-4xl">
                   Tentang RedHelp
                 </h2>
-                <p className="mt-6 text-black leading-7">
+                <p className="mt-6 text-black leading-7 text-justify">
                   <span className="ml-12">
                     Redhelp adalah sebuah platform yang hadir untuk
                     berkolaborasi
@@ -118,41 +118,6 @@ const Tentang = () => {
             </div>
           </div>
         </div>
-        {/* <div className="hero-content text-center text-neutral-content pt-16 md:pt-0">
-          <div className="w-full flex flex-col">
-            <h1 className="mb-5 text-3xl font-bold text-white">
-              {" "}
-              Tentang RedHelp
-            </h1>
-            <p className="text-white text-sm md:text-base">
-              Redhelp adalah sebuah platform yang hadir untuk berkolaborasi dan
-              mendukung program Palang Merah Indonesia (PMI) dalam menyelesaikan
-              permasalahan kekurangan darah di Indonesia. Melalui Redhelp, kami
-              ingin mempermudah calon donor darah untuk melakukan registrasi dan
-              mendapatkan informasi tentang kegiatan donor darah yang diadakan
-              oleh PMI.
-            </p>
-            <p className="text-white mb-5 text-sm md:text-base">
-              Kami berkomitmen untuk menjaga privasi dan keamanan data para
-              pengguna kami. Dengan adanya Redhelp, masyarakat Indonesia dapat
-              lebih mudah dan nyaman untuk berpartisipasi dalam kegiatan donor
-              darah dan membantu PMI dalam menyelesaikan permasalahan kekurangan
-              darah di Indonesia. Jangan ragu untuk bergabung dengan Redhelp dan
-              menjadi bagian dari gerakan donor darah di Indonesia!
-            </p>
-            <div>
-              <Link
-                spy={true}
-                smooth={true}
-                to="visi-misi"
-                className="btn btn-primary bg-primary hover:bg-white hover:text-black text-white dark:bg-secondary dark:hover:bg-slate-700 transition-all duration-900 border-none"
-                offset={-100}
-              >
-                Visi Dan Misi
-              </Link>
-            </div>
-          </div>
-        </div> */}
       </div>
 
       {/* Visi Misi */}
@@ -227,111 +192,82 @@ const Tentang = () => {
             DEVELOPER
           </h1>
           <Splide
-            hasTrack={false}
             aria-label="My Favorite Images"
             options={{
               type: "loop",
-              autoplay: true,
-              pauseOnHover: false,
             }}
             className="mx-auto max-w-sm sm:max-w-md md:max-w-lg w-full h-full"
           >
-            <SplideTrack>
-              <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
-                <Developer
-                  img={"./yandramuslim.jpeg"}
-                  nama={"Coder"}
-                  ig={"@MusYandra"}
-                  link={"https://www.instagram.com/yandramuslim/"}
-                  panggilan={"Yandra"}
-                  deskripsi={
-                    "Mentee Infinite Learning yang ingin menjadi frontend developer Reactjs"
-                  }
-                  follower={"264"}
-                  following={"333"}
-                />
-              </SplideSlide>
-              <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
-                <Developer
-                  img={"./Budi.png"}
-                  nama={"Coder"}
-                  ig={"@budiiprayogaa"}
-                  link={"https://www.instagram.com/budiiprayogaa/"}
-                  panggilan={"Budi"}
-                  deskripsi={
-                    "Mentee at Infinite Learning Studi Independent Batch 4"
-                  }
-                  follower={"253"}
-                  following={"178"}
-                />
-              </SplideSlide>
-              <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
-                <Developer
-                  img={"./Nadila.jpg"}
-                  nama={"Project Manager"}
-                  ig={"@nadilaardd"}
-                  link={"https://www.instagram.com/nadilaardd/"}
-                  panggilan={"Nadila"}
-                  deskripsi={
-                    "Mentee at Infinite Learning Studi Independent Batch 4"
-                  }
-                  follower={"1.256"}
-                  following={"1.006"}
-                />
-              </SplideSlide>
-              <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
-                <Developer
-                  img={"./Salma1.jpg"}
-                  nama={"Designer"}
-                  ig={"@hy_saalma"}
-                  link={"https://www.instagram.com/hy_saalma/"}
-                  panggilan={"Salma"}
-                  deskripsi={
-                    "Mentee at Infinite Learning Studi Independent Batch 4"
-                  }
-                  follower={"189"}
-                  following={"235"}
-                />
-              </SplideSlide>
-              <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
-                <Developer
-                  img={"./Rizki.jpg"}
-                  nama={"Designer"}
-                  ig={"@kyraaa_17"}
-                  link={"https://www.instagram.com/kyraaa_17/"}
-                  panggilan={"Rizky"}
-                  deskripsi={
-                    "Mentee at Infinite Learning Studi Independent Batch 4"
-                  }
-                  follower={"774"}
-                  following={"881"}
-                />
-              </SplideSlide>
-            </SplideTrack>
-            <div className="splide__progress">
-              <div className="splide__progress__bar" />
-            </div>
-            <div className="w-full mx-auto flex justify-center">
-              <button
-                className="splide__toggle w-8 h-8 text-white mt-4 outline-none"
-                type="button"
-              >
-                <svg
-                  className="splide__toggle__play"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="m22 12-20 11v-22l10 5.5z" />
-                </svg>
-                <svg
-                  className="splide__toggle__pause"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="m2 1v22h7v-22zm13 0v22h7v-22z" />
-                </svg>
-              </button>
-            </div>
+            <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
+              <Developer
+                img={"./yandramuslim.jpeg"}
+                nama={"Coder"}
+                ig={"@MusYandra"}
+                link={"https://www.instagram.com/yandramuslim/"}
+                panggilan={"Yandra"}
+                deskripsi={
+                  "Mentee Infinite Learning yang ingin menjadi frontend developer Reactjs"
+                }
+                follower={"264"}
+                following={"333"}
+              />
+            </SplideSlide>
+            <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
+              <Developer
+                img={"./Budi.png"}
+                nama={"Coder"}
+                ig={"@budiiprayogaa"}
+                link={"https://www.instagram.com/budiiprayogaa/"}
+                panggilan={"Budi"}
+                deskripsi={
+                  "Mentee at Infinite Learning Studi Independent Batch 4"
+                }
+                follower={"253"}
+                following={"178"}
+              />
+            </SplideSlide>
+            <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
+              <Developer
+                img={"./Nadila.jpg"}
+                nama={"Project Manager"}
+                ig={"@nadilaardd"}
+                link={"https://www.instagram.com/nadilaardd/"}
+                panggilan={"Nadila"}
+                deskripsi={
+                  "Mentee at Infinite Learning Studi Independent Batch 4"
+                }
+                follower={"1.256"}
+                following={"1.006"}
+              />
+            </SplideSlide>
+            <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
+              <Developer
+                img={"./Salma1.jpg"}
+                nama={"Designer"}
+                ig={"@hy_saalma"}
+                link={"https://www.instagram.com/hy_saalma/"}
+                panggilan={"Salma"}
+                deskripsi={
+                  "Mentee at Infinite Learning Studi Independent Batch 4"
+                }
+                follower={"189"}
+                following={"235"}
+              />
+            </SplideSlide>
+            <SplideSlide className="md:px-4 pt-20 mr-5 h-full">
+              <Developer
+                img={"./Rizki.jpg"}
+                nama={"Designer"}
+                ig={"@kyraaa_17"}
+                link={"https://www.instagram.com/kyraaa_17/"}
+                panggilan={"Rizky"}
+                deskripsi={
+                  "Mentee at Infinite Learning Studi Independent Batch 4"
+                }
+                follower={"774"}
+                following={"881"}
+              />
+            </SplideSlide>
           </Splide>
         </div>
         <div className="max-w-7xl w-full h-full flex flex-col pt-10 pb-16 gap-16">
