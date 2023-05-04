@@ -86,7 +86,7 @@ const Footer = () => {
               <img src="./react.png" alt="react" className="w-8" />
             </a>
             <a
-              href="https://react-redux.js.org/"
+              href="https://redux-toolkit.js.org"
               target="_blank"
               rel="noopener noreferrer"
             >

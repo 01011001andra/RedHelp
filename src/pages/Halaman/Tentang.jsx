@@ -382,7 +382,7 @@ const Tentang = () => {
                   ></textarea>
                 </div>
                 <div>
-                  <button className="btn btn-primary px-8 bg-primary text-white  hover:bg-white hover:text-black dark:bg-accent dark:hover:bg-slate-700 transition-all duration-900 border-none">
+                  <button className="btn btn-primary px-8 bg-white text-black  hover:bg-black hover:text-white dark:bg-accent dark:hover:bg-slate-700 transition-all duration-900 border-none">
                     Submit
                   </button>
                 </div>
