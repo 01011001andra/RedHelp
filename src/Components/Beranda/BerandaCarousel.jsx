@@ -53,24 +53,26 @@ const BerandaCarousel = () => {
             <div class="flex items-center justify-center flex-row gap-3">
               <ol type="1" class="list-decimal list-inside">
                 <p class="flex flex-col gap-4 text-sm">
-                  <span class="text-xl md:text-2xl">
+                  <span class="text-sm md:text-xl font-bold mb-3">
                     Apa saja syarat donor darah?
                   </span>
                 </p>
-                <li class="text-black text-xs">Berat badan minimal 45 kg.</li>
-                <li class="text-black text-xs">
+                <li class="text-xs sm:text-sm md:text-base text-black">
+                  Berat badan minimal 45 kg.
+                </li>
+                <li class="text-xs sm:text-sm md:text-base text-black">
                   Tekanan darah, denyut nadi, dan kadar hemoglobin dalam batas
                   normal yang ditetapkan.
                 </li>
-                <li class="text-black text-xs">
+                <li class="text-xs sm:text-sm md:text-base text-black">
                   Tidak sedang dalam keadaan sakit atau mengonsumsi obat-obatan
                   tertentu yang dapat mempengaruhi kesehatan atau kualitas
                   darah.
                 </li>
-                <li class="text-black text-xs">
+                <li class="text-xs sm:text-sm md:text-base text-black">
                   Tidak sedang hamil atau menyusui.
                 </li>
-                <li class="text-black text-xs">
+                <li class="text-xs sm:text-sm md:text-base text-black">
                   Tidak pernah melakukan tindakan-tindakan yang berisiko tinggi
                   terhadap penularan penyakit menular, seperti melakukan
                   hubungan seksual tidak aman, menggunakan narkoba suntik, atau
