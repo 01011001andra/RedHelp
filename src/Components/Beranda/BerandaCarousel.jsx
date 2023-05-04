@@ -50,43 +50,6 @@ const BerandaCarousel = () => {
             </div>
           </SplideSlide>
           <SplideSlide className="md:px-6">
-<<<<<<< HEAD
-            <div className="flex flex-col items-center justify-center gap-3">
-              <p className="flex flex-col gap-4 text-xl">
-                Apa saja syarat donor darah?
-              </p>
-
-              <div className="flex">
-                <ol type="1" className="list-decimal list-inside">
-                  <li className="text-black text-xs">
-                    Berat badan minimal 45 kg.
-                  </li>
-                  <li className="text-black text-xs">
-                    Tekanan darah, denyut nadi, dan kadar hemoglobin dalam batas
-                    normal yang ditetapkan.
-                  </li>
-                  <li className="text-black text-xs">
-                    Tidak sedang dalam keadaan sakit atau mengonsumsi
-                    obat-obatan tertentu yang dapat mempengaruhi kesehatan atau
-                    kualitas darah.
-                  </li>
-                  <li className="text-black text-xs">
-                    Tidak sedang hamil atau menyusui.
-                  </li>
-                  <li className="text-black text-xs">
-                    Tidak pernah melakukan tindakan-tindakan yang berisiko
-                    tinggi terhadap penularan penyakit menular, seperti
-                    melakukan hubungan seksual tidak aman, menggunakan narkoba
-                    suntik, atau mengonsumsi obat-obatan terlarang.
-                  </li>
-                </ol>
-                <img
-                  src="./salaman.jpg"
-                  alt="RedHelp"
-                  className="mx-auto w-64 hidden md:flex"
-                />
-              </div>
-=======
             <div class="flex items-center justify-center flex-row gap-3">
               <ol type="1" class="list-decimal list-inside">
                 <p class="flex flex-col gap-4 text-sm">
@@ -114,8 +77,11 @@ const BerandaCarousel = () => {
                   mengonsumsi obat-obatan terlarang.
                 </li>
               </ol>
-              <img src="./salaman.jpg" alt="RedHelp" class="w-64 md:flex" />
->>>>>>> 22e546ec975086c3fdc7dea80c89a3e8e2aacd9d
+              <img
+                src="./salaman.jpg"
+                alt="RedHelp"
+                class="w-64 hidden md:flex"
+              />
             </div>
           </SplideSlide>
         </Splide>
