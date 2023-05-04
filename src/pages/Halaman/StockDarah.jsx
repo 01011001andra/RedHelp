@@ -157,7 +157,10 @@ const StockDarah = () => {
                                   />
                                   <p className="py-4">{item.isi}</p>
                                   <div className="modal-action">
-                                    <label htmlFor={item.id} className="btn">
+                                    <label
+                                      htmlFor={item.id}
+                                      className="btn bg-primary hover:bg-black"
+                                    >
                                       Close
                                     </label>
                                   </div>
